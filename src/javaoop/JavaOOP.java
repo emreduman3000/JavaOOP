@@ -26,7 +26,8 @@ import package2.*;//import all public classes
 //Each Package can have just 1 public class
 //If I want to create public class, I should creat another package in the same project folder
 public class JavaOOP extends KalitimliOrnek//main method var bu methodda onu kullanmak için inheritance yaptım
-{//public class'ın adı ile .java uzantılı class dosyası ile aynı olmalı
+{
+    //public class'ın adı ile .java uzantılı class dosyası ile aynı olmalı
     Scanner scan=new Scanner(System.in);
 
     /**
@@ -1319,8 +1320,9 @@ public class JavaOOP extends KalitimliOrnek//main method var bu methodda onu kul
           
 }
 
+
 //<editor-fold defaultstate="collapsed" desc=" CLASSES ">
-  
+
 
   //<editor-fold defaultstate="collapsed" desc=" Student(hashcode-equals-toString-get-set-const with/out params,this,default) ">
         
@@ -5988,363 +5990,366 @@ class genericMethod
 // </editor-fold>
 
   //<editor-fold defaultstate="collapsed" desc="ArrayList Generic ">
-class generic_ArrayList
-{
-    static public void main()
-    {
-        ArrayList arraylist=new ArrayList();//public class ArrayList<E> extends AbstractList<E>
-        arraylist.add("emre");
-        arraylist.add("duman");
-        arraylist.add("komando");
-        arraylist.add(1);
-        arraylist.add(1.1d);
-        arraylist.add(1.1f);
-        arraylist.add(true);
-        System.out.println(arraylist);//[emre, duman, komando, 1, 1.1, 1.1, true]
 
-        for(Object i: arraylist)
-            System.out.println(String.valueOf(i).length());
-        /*
-        4
-        5
-        7
-        1
-        3
-        3
-        4
-        */
-        
-        ArrayList<String> arraylist2=new ArrayList <>();//public class ArrayList<E> extends AbstractList<E>
-        arraylist2.add("emre");
-        arraylist2.add("duman");
-        arraylist2.add("komando");
-      
-        System.out.println(arraylist2);//[emre, duman, komando]
+        class generic_ArrayList
+        {
+            static public void main()
+            {
+                ArrayList arraylist=new ArrayList();//public class ArrayList<E> extends AbstractList<E>
+                arraylist.add("emre");
+                arraylist.add("duman");
+                arraylist.add("komando");
+                arraylist.add(1);
+                arraylist.add(1.1d);
+                arraylist.add(1.1f);
+                arraylist.add(true);
+                System.out.println(arraylist);//[emre, duman, komando, 1, 1.1, 1.1, true]
 
-        for(Object i: arraylist)
-            System.out.println(String.valueOf(i).length());
-         /*
-        4
-        5
-        7
-        */
-    }
-}
+                for(Object i: arraylist)
+                    System.out.println(String.valueOf(i).length());
+                /*
+                4
+                5
+                7
+                1
+                3
+                3
+                4
+                */
+
+                ArrayList<String> arraylist2=new ArrayList <>();//public class ArrayList<E> extends AbstractList<E>
+                arraylist2.add("emre");
+                arraylist2.add("duman");
+                arraylist2.add("komando");
+
+                System.out.println(arraylist2);//[emre, duman, komando]
+
+                for(Object i: arraylist)
+                    System.out.println(String.valueOf(i).length());
+                 /*
+                4
+                5
+                7
+                */
+            }
+        }
 
 
-// </editor-fold>
+    // </editor-fold>
 
   //<editor-fold defaultstate="collapsed" desc="Veteriner Application ">
-class Animal_Main
-{
-    static ANIMAL cat,dog;
-    static CUSTOMER customer;
-    static VETERINARIAN veterinarian;
-    static CITY_VETERINARY city;
-    
-    public static void main()
-    {      
-        System.out.println("\n-----------------------------------------CREATE OBJECTS------------------------------------------------------");
-        createObject();
-        System.out.println("\n-----------------------------------------ADD and SHOW Animals------------------------------------------------");
-        addAndShowAnimals();
-        System.out.println("\n-----------------------------------------ADD and SHOW Customers----------------------------------------------");
-        addAndShowCustomers();
-        System.out.println("\n-----------------------------------------ADD and SHOW Veterinarians----------------------------------------------");
-        addAndShowVeterinarians();
-        
-        System.out.println("----GENERIC CLASS----");
-        AllObjects <CITY_VETERINARY> o1 = new AllObjects<>();
-        o1.showObject(city);
-        
-        AllObjects<CUSTOMER> o2 =new AllObjects<>();
-        o2.showAnimals(customer);
 
-    }
+        class Animal_Main
+        {
+            static ANIMAL cat,dog;
+            static CUSTOMER customer;
+            static VETERINARIAN veterinarian;
+            static CITY_VETERINARY city;
 
-    private static void createObject()
-    {
-        cat=new CAT("Scottish","Dobi",2015,true);
-        System.out.println(cat);// - CAT{Breed=cat, Species=Scottish}
-        cat.showInformation();//CAT{Breed=cat, Species=Scottish} - Name:Dobi ,Date of birth:2015 ,Enrolled:true       
-        
-        dog=new DOG("Golden","Scooby",2014,true);
-        System.out.println(dog);// - DOG{Name:Scooby ,Date of birth:2014 ,Enrolled:true}
-        dog.showInformation();//ANIMAL{Breed=Dog, Species=Golden}DOG{Name:Scooby ,Date of birth:2014 ,Enrolled:true}
-        
-        customer=new CUSTOMER("Emre",123456789,"41 Warrender Avenue",3146);
-        System.out.println(customer);// - CUSTOMER{Address=41 Warrender Avenue, MemberID=3146}
-        customer.introduceYourself();//PERSON{Name=Emre, ID=123456789} - CUSTOMER{Address=41 Warrender Avenue, MemberID=3146}
-        
-        veterinarian=new VETERINARIAN("Tubi",123456788,"Istanbul University",4);
-        System.out.println(veterinarian);// - VETERINARIAN{Graduated-School=Istanbul University, WorkExperience=4}
-        veterinarian.introduceYourself();//PERSON{Name=Tubi, ID=123456788}  - VETERINARIAN{Graduated-School=Istanbul University, WorkExperience=4}
-        
-        city= new CITY_VETERINARY("Toronto");
-         
-    }
-    
-    public static void addAndShowAnimals()
-    {
-        customer.addAnimalToCustomer(cat);
-        customer.addAnimalToCustomer(dog);
-        customer.listAnimalsOfCustomer();
-    }
-    
-    public static void addAndShowCustomers()
-    {
-        veterinarian.addCustomerToVeterinarian(customer);
-        veterinarian.listCustomersOfVeterinarian();
-    }
-    public static void addAndShowVeterinarians()
-    {
-        city.addVeterinarianToCity(veterinarian);
-        city.listVeterinarians();
-    }
+            public static void main()
+            {
+                System.out.println("\n-----------------------------------------CREATE OBJECTS------------------------------------------------------");
+                createObject();
+                System.out.println("\n-----------------------------------------ADD and SHOW Animals------------------------------------------------");
+                addAndShowAnimals();
+                System.out.println("\n-----------------------------------------ADD and SHOW Customers----------------------------------------------");
+                addAndShowCustomers();
+                System.out.println("\n-----------------------------------------ADD and SHOW Veterinarians----------------------------------------------");
+                addAndShowVeterinarians();
 
-    
-    
-}
+                System.out.println("----GENERIC CLASS----");
+                AllObjects <CITY_VETERINARY> o1 = new AllObjects<>();
+                o1.showObject(city);
 
-abstract class PERSON
-{
-    private String name;
-    private int ID;
+                AllObjects<CUSTOMER> o2 =new AllObjects<>();
+                o2.showAnimals(customer);
 
-    public PERSON(String name, int ID) {
-        this.name = name;
-        this.ID = ID;
-    }
+            }
 
-    public String getName() {return name;}
-    public void setName(String name) {this.name = name; }
+            private static void createObject()
+            {
+                cat=new CAT("Scottish","Dobi",2015,true);
+                System.out.println(cat);// - CAT{Breed=cat, Species=Scottish}
+                cat.showInformation();//CAT{Breed=cat, Species=Scottish} - Name:Dobi ,Date of birth:2015 ,Enrolled:true
 
-    public int getID() { return ID; }
-    public void setID(int ID) {this.ID = ID; }  
-    
-    abstract void introduceYourself();
+                dog=new DOG("Golden","Scooby",2014,true);
+                System.out.println(dog);// - DOG{Name:Scooby ,Date of birth:2014 ,Enrolled:true}
+                dog.showInformation();//ANIMAL{Breed=Dog, Species=Golden}DOG{Name:Scooby ,Date of birth:2014 ,Enrolled:true}
 
-    @Override
-    public String toString() {
-        return "PERSON{" + "Name=" + name + ", ID=" + ID + '}';
-    }  
-}
+                customer=new CUSTOMER("Emre",123456789,"41 Warrender Avenue",3146);
+                System.out.println(customer);// - CUSTOMER{Address=41 Warrender Avenue, MemberID=3146}
+                customer.introduceYourself();//PERSON{Name=Emre, ID=123456789} - CUSTOMER{Address=41 Warrender Avenue, MemberID=3146}
 
-class CUSTOMER extends PERSON
-{
-    private String address;
-    private int memberID;
-    private int animalNumber;
-    private List<ANIMAL> animalsOfCustomer;
+                veterinarian=new VETERINARIAN("Tubi",123456788,"Istanbul University",4);
+                System.out.println(veterinarian);// - VETERINARIAN{Graduated-School=Istanbul University, WorkExperience=4}
+                veterinarian.introduceYourself();//PERSON{Name=Tubi, ID=123456788}  - VETERINARIAN{Graduated-School=Istanbul University, WorkExperience=4}
 
-    public CUSTOMER(String name, int ID,String address,int memberID) {
-        super(name, ID);
-        this.address=address;
-        this.memberID=memberID;
-        animalsOfCustomer=new ArrayList<>();
-        
-    }
+                city= new CITY_VETERINARY("Toronto");
 
-    public String getAddress() {return address;}
-    public void setAddress(String address) { this.address = address;}
+            }
 
-    public int getMemberID() { return memberID;}
-    public void setMemberID(int memberID) {this.memberID = memberID; }
+            public static void addAndShowAnimals()
+            {
+                customer.addAnimalToCustomer(cat);
+                customer.addAnimalToCustomer(dog);
+                customer.listAnimalsOfCustomer();
+            }
 
-    void addAnimalToCustomer(ANIMAL animal)     
-    {
-        System.out.println("***ADDING***");
-        animalsOfCustomer.add(animal);animalNumber++;
-        System.out.println(animal +" was added for the "+ this.getName()+" customer");
-    }
-    void listAnimalsOfCustomer()
-    {
-        System.out.println("***LISTING***");
-        for(ANIMAL i: animalsOfCustomer )
-            i.showInformation();
-        System.out.println("***Total Animal Number of "+getName()+" is "+ animalNumber);
-    }
-    
-    @Override
-    void introduceYourself() { System.out.println(super.toString()+ this.toString());}
-
-    @Override
-    public String toString() {
-        return " - CUSTOMER{" + "Address=" + address + ", MemberID=" + memberID + '}';
-    }
+            public static void addAndShowCustomers()
+            {
+                veterinarian.addCustomerToVeterinarian(customer);
+                veterinarian.listCustomersOfVeterinarian();
+            }
+            public static void addAndShowVeterinarians()
+            {
+                city.addVeterinarianToCity(veterinarian);
+                city.listVeterinarians();
+            }
 
 
 
-  
-}
+        }
 
-class VETERINARIAN extends PERSON
-{
-    private String graduatedSchool;
-    private int workExperience;
-    private int customerNumber;
-    private ArrayList<CUSTOMER> customersOfVeterinarians;
-   
-    public VETERINARIAN(String name, int ID, String graduatedSchool, int workExperience) {
-        super(name, ID);
-        this.graduatedSchool=graduatedSchool;
-        this.workExperience=workExperience;
-        customersOfVeterinarians=new ArrayList<>();
-    }
+        abstract class PERSON
+        {
+            private String name;
+            private int ID;
 
-    public String getGraduatedSchool() {return graduatedSchool;}
-    public void setGraduatedSchool(String graduatedSchool) {}
+            public PERSON(String name, int ID) {
+                this.name = name;
+                this.ID = ID;
+            }
 
-    public int getWorkExperience() {return workExperience;}
-    public void setWorkExperience(int workExperience) { this.workExperience = workExperience;}
+            public String getName() {return name;}
+            public void setName(String name) {this.name = name; }
 
-    @Override
-    void introduceYourself() {
-        System.out.println(super.toString()+this.toString());
-    }
+            public int getID() { return ID; }
+            public void setID(int ID) {this.ID = ID; }
 
-    @Override
-    public String toString() {
-        return " - VETERINARIAN{" + "Graduated-School=" + graduatedSchool + ", WorkExperience=" + workExperience + '}';
-    }
+            abstract void introduceYourself();
 
-    void addCustomerToVeterinarian(CUSTOMER customer)
-    {
-        System.out.println("***ADDING***");
-        customersOfVeterinarians.add(customer);customerNumber++;
-        System.out.println(customer+" was added for "+ this.getName()+ " veterinarian!");
-    }
+            @Override
+            public String toString() {
+                return "PERSON{" + "Name=" + name + ", ID=" + ID + '}';
+            }
+        }
 
-    void listCustomersOfVeterinarian()
-    {
-        System.out.println("***LISTING***");
-        for(CUSTOMER i:customersOfVeterinarians)
-            i.introduceYourself();
-        System.out.println("***Total Customer Number of "+getName()+" is "+customerNumber);
-    }
-   
-    
-}
+        class CUSTOMER extends PERSON
+        {
+            private String address;
+            private int memberID;
+            private int animalNumber;
+            private List<ANIMAL> animalsOfCustomer;
 
-abstract class ANIMAL
-{
-    private String breed,species,name;
-    private int dateOfBirth;
-    private boolean enrolled;
+            public CUSTOMER(String name, int ID,String address,int memberID) {
+                super(name, ID);
+                this.address=address;
+                this.memberID=memberID;
+                animalsOfCustomer=new ArrayList<>();
 
-    public ANIMAL( String species, String name, int dateOfBirth, boolean enrolled) {
-        this.species = species;
-        this.name = name;
-        this.dateOfBirth = dateOfBirth;
-        this.enrolled = enrolled;
-    }
+            }
 
-    public String getBreed() { return breed; }
-    public void setBreed(String breed) {this.breed = breed;}
+            public String getAddress() {return address;}
+            public void setAddress(String address) { this.address = address;}
 
-    public String getSpecies() {return species; }
-    public void setSpecies(String species) { this.species = species;}
+            public int getMemberID() { return memberID;}
+            public void setMemberID(int memberID) {this.memberID = memberID; }
 
-    public String getName() {return name; }
-    public void setName(String name) {this.name = name; }
+            void addAnimalToCustomer(ANIMAL animal)
+            {
+                System.out.println("***ADDING***");
+                animalsOfCustomer.add(animal);animalNumber++;
+                System.out.println(animal +" was added for the "+ this.getName()+" customer");
+            }
+            void listAnimalsOfCustomer()
+            {
+                System.out.println("***LISTING***");
+                for(ANIMAL i: animalsOfCustomer )
+                    i.showInformation();
+                System.out.println("***Total Animal Number of "+getName()+" is "+ animalNumber);
+            }
 
-    public int getDateOfBirth() {return dateOfBirth;}
-    public void setDateOfBirth(int dateOfBirth) {   this.dateOfBirth = dateOfBirth;}
-    
-    public boolean isEnrolled() {  return enrolled;}
-    public void setEnrolled(boolean enrolled) {this.enrolled = enrolled;  }
+            @Override
+            void introduceYourself() { System.out.println(super.toString()+ this.toString());}
 
-    abstract void showInformation();
+            @Override
+            public String toString() {
+                return " - CUSTOMER{" + "Address=" + address + ", MemberID=" + memberID + '}';
+            }
 
-    @Override
-    public String toString() {
-        return "ANIMAL{" + "Breed=" + breed + ", Species=" + species + '}';
-    }
-}
 
-class CAT extends ANIMAL
-{
-    public CAT(String species, String name, int dateOfBirth, boolean enrolled) {
-        super(species, name, dateOfBirth, enrolled);
-        setBreed("Cat");
-    }
-    
-    @Override
-    void showInformation() {
-        System.out.println(super.toString()+this.toString() );
-    }
 
-    @Override
-    public String toString() {
-        return " - CAT{" + "Name:"+this.getName()+" ,Date of birth:"+this.getDateOfBirth()+" ,Enrolled:"+this.isEnrolled() + '}';
-    }
-}
 
-class DOG extends ANIMAL
-{
-    public DOG(String species, String name, int dateOfBirth, boolean enrolled) {
-        super(species, name, dateOfBirth, enrolled);
-        setBreed("Dog");
-    }
-    
-    @Override
-    void showInformation() {
-        System.out.println(super.toString()+this.toString() );
-    }
+        }
 
-    @Override
-    public String toString() {
-        return " - DOG{" + "Name:"+this.getName()+" ,Date of birth:"+this.getDateOfBirth()+" ,Enrolled:"+this.isEnrolled() + '}';
-    }
-}
+        class VETERINARIAN extends PERSON
+        {
+            private String graduatedSchool;
+            private int workExperience;
+            private int customerNumber;
+            private ArrayList<CUSTOMER> customersOfVeterinarians;
 
-class CITY_VETERINARY
-{
-    private String city;
-    private int veterinarianNumber;
-    private ArrayList<VETERINARIAN> veterinariansInCity;
+            public VETERINARIAN(String name, int ID, String graduatedSchool, int workExperience) {
+                super(name, ID);
+                this.graduatedSchool=graduatedSchool;
+                this.workExperience=workExperience;
+                customersOfVeterinarians=new ArrayList<>();
+            }
 
-    public CITY_VETERINARY(String city) {
-        this.city = city;
-        veterinariansInCity =new ArrayList<>();
-    }
+            public String getGraduatedSchool() {return graduatedSchool;}
+            public void setGraduatedSchool(String graduatedSchool) {}
 
-    public String getCity() { return city;}
-    public void setCity(String city) {this.city = city;}
-    
-    public void addVeterinarianToCity(VETERINARIAN veterinarian)
-    {
-        System.out.println("***ADDING***");
-        veterinariansInCity.add(veterinarian);veterinarianNumber++;
-        System.out.println(veterinarian +" was added in the city of "+ getCity());
-    }
-    public void listVeterinarians()
-    {
-        System.out.println("***LISTING***");
-        for(VETERINARIAN i : veterinariansInCity )
-            System.out.println(i);
-        System.out.println("Total Veterinarian Number of the "+getCity()+" is "+veterinarianNumber);
-    }
+            public int getWorkExperience() {return workExperience;}
+            public void setWorkExperience(int workExperience) { this.workExperience = workExperience;}
 
-    @Override
-    public String toString() {
-        return "CITY_VETERINARY{" + "city=" + city  + '}';
-    }
-    
-       
-}
+            @Override
+            void introduceYourself() {
+                System.out.println(super.toString()+this.toString());
+            }
 
-class AllObjects <T>
-{
-    public void showObject(T object){
-        System.out.println(object);
-    }
-    
-    public <T extends CUSTOMER> void showAnimals(T customer)
-    {
-        customer.listAnimalsOfCustomer();
-    }
-}
+            @Override
+            public String toString() {
+                return " - VETERINARIAN{" + "Graduated-School=" + graduatedSchool + ", WorkExperience=" + workExperience + '}';
+            }
+
+            void addCustomerToVeterinarian(CUSTOMER customer)
+            {
+                System.out.println("***ADDING***");
+                customersOfVeterinarians.add(customer);customerNumber++;
+                System.out.println(customer+" was added for "+ this.getName()+ " veterinarian!");
+            }
+
+            void listCustomersOfVeterinarian()
+            {
+                System.out.println("***LISTING***");
+                for(CUSTOMER i:customersOfVeterinarians)
+                    i.introduceYourself();
+                System.out.println("***Total Customer Number of "+getName()+" is "+customerNumber);
+            }
+
+
+        }
+
+        abstract class ANIMAL
+        {
+            private String breed,species,name;
+            private int dateOfBirth;
+            private boolean enrolled;
+
+            public ANIMAL( String species, String name, int dateOfBirth, boolean enrolled) {
+                this.species = species;
+                this.name = name;
+                this.dateOfBirth = dateOfBirth;
+                this.enrolled = enrolled;
+            }
+
+            public String getBreed() { return breed; }
+            public void setBreed(String breed) {this.breed = breed;}
+
+            public String getSpecies() {return species; }
+            public void setSpecies(String species) { this.species = species;}
+
+            public String getName() {return name; }
+            public void setName(String name) {this.name = name; }
+
+            public int getDateOfBirth() {return dateOfBirth;}
+            public void setDateOfBirth(int dateOfBirth) {   this.dateOfBirth = dateOfBirth;}
+
+            public boolean isEnrolled() {  return enrolled;}
+            public void setEnrolled(boolean enrolled) {this.enrolled = enrolled;  }
+
+            abstract void showInformation();
+
+            @Override
+            public String toString() {
+                return "ANIMAL{" + "Breed=" + breed + ", Species=" + species + '}';
+            }
+        }
+
+        class CAT extends ANIMAL
+        {
+            public CAT(String species, String name, int dateOfBirth, boolean enrolled) {
+                super(species, name, dateOfBirth, enrolled);
+                setBreed("Cat");
+            }
+
+            @Override
+            void showInformation() {
+                System.out.println(super.toString()+this.toString() );
+            }
+
+            @Override
+            public String toString() {
+                return " - CAT{" + "Name:"+this.getName()+" ,Date of birth:"+this.getDateOfBirth()+" ,Enrolled:"+this.isEnrolled() + '}';
+            }
+        }
+
+        class DOG extends ANIMAL
+        {
+            public DOG(String species, String name, int dateOfBirth, boolean enrolled) {
+                super(species, name, dateOfBirth, enrolled);
+                setBreed("Dog");
+            }
+
+            @Override
+            void showInformation() {
+                System.out.println(super.toString()+this.toString() );
+            }
+
+            @Override
+            public String toString() {
+                return " - DOG{" + "Name:"+this.getName()+" ,Date of birth:"+this.getDateOfBirth()+" ,Enrolled:"+this.isEnrolled() + '}';
+            }
+        }
+
+        class CITY_VETERINARY
+        {
+            private String city;
+            private int veterinarianNumber;
+            private ArrayList<VETERINARIAN> veterinariansInCity;
+
+            public CITY_VETERINARY(String city) {
+                this.city = city;
+                veterinariansInCity =new ArrayList<>();
+            }
+
+            public String getCity() { return city;}
+            public void setCity(String city) {this.city = city;}
+
+            public void addVeterinarianToCity(VETERINARIAN veterinarian)
+            {
+                System.out.println("***ADDING***");
+                veterinariansInCity.add(veterinarian);veterinarianNumber++;
+                System.out.println(veterinarian +" was added in the city of "+ getCity());
+            }
+            public void listVeterinarians()
+            {
+                System.out.println("***LISTING***");
+                for(VETERINARIAN i : veterinariansInCity )
+                    System.out.println(i);
+                System.out.println("Total Veterinarian Number of the "+getCity()+" is "+veterinarianNumber);
+            }
+
+            @Override
+            public String toString() {
+                return "CITY_VETERINARY{" + "city=" + city  + '}';
+            }
+
+
+        }
+
+        class AllObjects <T>
+        {
+            public void showObject(T object){
+                System.out.println(object);
+            }
+
+            public <T extends CUSTOMER> void showAnimals(T customer)
+            {
+                customer.listAnimalsOfCustomer();
+            }
+        }
+
 // </editor-fold>
 
   //<editor-fold defaultstate="collapsed" desc="Naming Convention ">
@@ -6781,195 +6786,198 @@ class RationalNumbers implements Comparable<RationalNumbers>
   //<editor-fold defaultstate="collapsed" desc=" QUESTIONS ">
   
     //<editor-fold defaultstate="collapsed" desc="create your own stack area with arrayList ">
-class stackArea {
-    public static void main() {
 
-        MyStack myStack = new MyStack();//arrayList olusturuldu.
-       
-        pupil ogr1=new pupil(10,"emre");    ogr1.setPupilName("dmn");
-        pupil ogr2=new pupil(20,"hasan");
-        pupil ogr3=new pupil(30,"ayşe");
-        pupil ogr4=new pupil(40,"ali");
-        pupil ogr5=new pupil(50,"duman");
-        
-        //ogr1.getPupilName()="emmmre";error - Exception in thread "main" java.lang.RuntimeException: Uncompilable source code - unexpected type
-        System.out.println(ogr1.getPupilName());//dmn
+            class stackArea {
+            public static void main() {
 
-        myStack.push(ogr1);
-        System.out.println(myStack.getListe().get(0).hashCode()==ogr1.hashCode());// true - aynı alanı temsil ederler//ogr1 ile liste.get(0) aynı referansa sahiptir
-        myStack.push(ogr2);
-        myStack.push(ogr3);
-        myStack.push(ogr4);
-        
-        myStack.yazdir();
-        /*
-            ************** YIGIN ICERIGI *******************
-            0 indekste :This Student is not Active!!!
-            1 indekste :This Student is not Active!!!
-            2 indekste :This Student is not Active!!!
-            3 indekste :This Student is not Active!!!
-        */
+                MyStack myStack = new MyStack();//arrayList olusturuldu.
 
-        ogr1.setAktivity(true);//statictir değişim sadece nesne içinde değil class'a mal olmustur.yani tüm nesnelerin içi de değişir
-        System.out.println(ogr1.getPupilClassroom());//0 
-        ogr1.setPupilName("EMRE");System.out.println(myStack.getListe().get(0));//pupil{pupilNumber=10, pupilName=EMRE, pupilClassroom=0, aktif=true}
-        //myStack.getListe().get(0).setPupilName("qwe");                        //Exception in thread "main" java.lang.RuntimeException: Uncompilable source code - Erroneous sym type: java.lang.Object.setPupilName
-        //System.out.println(myStack.getListe().get(0).getPupilClassroom());    //Exception in thread "main" java.lang.RuntimeException: Uncompilable source code - Erroneous tree type: <any>
-        //arrayList de arrayler gibi array[0] gibi ifade ile objeye ulasıp object içinden variable cagıramazsın 
-       
-        myStack.yazdir();
-        /*
-            ************** YIGIN ICERIGI *******************
-            0 indekste :pupil{pupilNumber=10, pupilName=EMRE, pupilClassroom=0, aktif=true}
-            1 indekste :pupil{pupilNumber=20, pupilName=hasan, pupilClassroom=0, aktif=true}
-            2 indekste :pupil{pupilNumber=30, pupilName=ayşe, pupilClassroom=0, aktif=true}
-            3 indekste :pupil{pupilNumber=40, pupilName=ali, pupilClassroom=0, aktif=true}
-        */
-        
-        
-        
-        ArrayList<Object> liste2=myStack.getListe();//liste2 ile liste aynı araylist alanını temsil eder
-        System.out.println(liste2);//aynısı liste ile 
-        liste2.set(0, ogr5);
-        System.out.println(liste2);//degisti
-        System.out.println(myStack.getListe());//degisti aynı  zamanda liste de desişir
-                          
-        
+                pupil ogr1=new pupil(10,"emre");    ogr1.setPupilName("dmn");
+                pupil ogr2=new pupil(20,"hasan");
+                pupil ogr3=new pupil(30,"ayşe");
+                pupil ogr4=new pupil(40,"ali");
+                pupil ogr5=new pupil(50,"duman");
 
-        myStack.pop();
-        System.out.println(myStack.kacElemanVar()+ " tane eleman var");//3 tane eleman var
-        myStack.pop();
-        System.out.println(myStack.kacElemanVar()+ " tane eleman var");//2 tane eleman var
-        System.out.println(myStack.bosMu());
-        System.out.println(myStack.SonelemanGoster());
-        myStack.yazdir();
-        myStack.pop();
-        myStack.pop();
-        myStack.pop();
-        myStack.yazdir();
-        myStack.pop();
-        myStack.pop();
-        myStack.pop();
+                //ogr1.getPupilName()="emmmre";error - Exception in thread "main" java.lang.RuntimeException: Uncompilable source code - unexpected type
+                System.out.println(ogr1.getPupilName());//dmn
 
-    }
-}
+                myStack.push(ogr1);
+                System.out.println(myStack.getListe().get(0).hashCode()==ogr1.hashCode());// true - aynı alanı temsil ederler//ogr1 ile liste.get(0) aynı referansa sahiptir
+                myStack.push(ogr2);
+                myStack.push(ogr3);
+                myStack.push(ogr4);
 
-class pupil
-{
-    private int pupilNumber;
-    private String pupilName;
-    private byte pupilClassroom;
-    static private boolean aktivity;
+                myStack.yazdir();
+                /*
+                    ************** YIGIN ICERIGI *******************
+                    0 indekste :This Student is not Active!!!
+                    1 indekste :This Student is not Active!!!
+                    2 indekste :This Student is not Active!!!
+                    3 indekste :This Student is not Active!!!
+                */
 
-    public pupil() {//1
-    }
+                ogr1.setAktivity(true);//statictir değişim sadece nesne içinde değil class'a mal olmustur.yani tüm nesnelerin içi de değişir
+                System.out.println(ogr1.getPupilClassroom());//0
+                ogr1.setPupilName("EMRE");System.out.println(myStack.getListe().get(0));//pupil{pupilNumber=10, pupilName=EMRE, pupilClassroom=0, aktif=true}
+                //myStack.getListe().get(0).setPupilName("qwe");                        //Exception in thread "main" java.lang.RuntimeException: Uncompilable source code - Erroneous sym type: java.lang.Object.setPupilName
+                //System.out.println(myStack.getListe().get(0).getPupilClassroom());    //Exception in thread "main" java.lang.RuntimeException: Uncompilable source code - Erroneous tree type: <any>
+                //arrayList de arrayler gibi array[0] gibi ifade ile objeye ulasıp object içinden variable cagıramazsın
 
-    public pupil(int pupilNumber) {//2
-        this.pupilNumber = pupilNumber;
-    }
+                myStack.yazdir();
+                /*
+                    ************** YIGIN ICERIGI *******************
+                    0 indekste :pupil{pupilNumber=10, pupilName=EMRE, pupilClassroom=0, aktif=true}
+                    1 indekste :pupil{pupilNumber=20, pupilName=hasan, pupilClassroom=0, aktif=true}
+                    2 indekste :pupil{pupilNumber=30, pupilName=ayşe, pupilClassroom=0, aktif=true}
+                    3 indekste :pupil{pupilNumber=40, pupilName=ali, pupilClassroom=0, aktif=true}
+                */
 
-    public pupil(int pupilNumber, String pupilName) {//3
-        this.pupilNumber = pupilNumber;
-        this.pupilName = pupilName;
-    }
-   
-    public pupil(int pupilNumber, String pupilName, byte pupilClassroom) {//4
-        this.pupilNumber = pupilNumber;
-        this.pupilName = pupilName;
-        this.pupilClassroom = pupilClassroom;
-    }
-    public pupil(int pupilNumber, String pupilName, byte pupilClassroom, boolean a) {//5
-        this.pupilNumber = pupilNumber;
-        this.pupilName = pupilName;
-        this.pupilClassroom = pupilClassroom;
-        pupil.aktivity = a;
-    }
-    
-    
-    public int getPupilNumber() {return pupilNumber;}
-    public void setPupilNumber(int pupilNumber) {this.pupilNumber = pupilNumber;}
 
-    public String getPupilName() {return pupilName;}
-    public void setPupilName(String pupilName) {this.pupilName = pupilName;}
 
-    public byte getPupilClassroom() { return pupilClassroom; }
-    public void setPupilClassroom(byte pupilClassroom) { this.pupilClassroom = pupilClassroom; }
+                ArrayList<Object> liste2=myStack.getListe();//liste2 ile liste aynı araylist alanını temsil eder
+                System.out.println(liste2);//aynısı liste ile
+                liste2.set(0, ogr5);
+                System.out.println(liste2);//degisti
+                System.out.println(myStack.getListe());//degisti aynı  zamanda liste de desişir
 
-    public boolean getAktivity() { return aktivity;}
-    public void setAktivity(boolean aktivity) {pupil.aktivity = aktivity;}
 
-    @Override
-    public String toString() {
-        if(aktivity==true)
-            return "pupil{" + "pupilNumber=" + pupilNumber + ", pupilName=" + pupilName + ", pupilClassroom=" + pupilClassroom + ", aktif=" + aktivity+ '}';
-        else
-            return "This Student is not Active!!!";
-    }
-    
-    
-}
 
-class MyStack
-{
-    private ArrayList<Object> liste;
+                myStack.pop();
+                System.out.println(myStack.kacElemanVar()+ " tane eleman var");//3 tane eleman var
+                myStack.pop();
+                System.out.println(myStack.kacElemanVar()+ " tane eleman var");//2 tane eleman var
+                System.out.println(myStack.bosMu());
+                System.out.println(myStack.SonelemanGoster());
+                myStack.yazdir();
+                myStack.pop();
+                myStack.pop();
+                myStack.pop();
+                myStack.yazdir();
+                myStack.pop();
+                myStack.pop();
+                myStack.pop();
 
-    public ArrayList<Object> getListe() {
-        return liste;
-    }
-
-    public MyStack(){
-        liste = new ArrayList<>();
-    }
-
-    public int kacElemanVar(){
-        return liste.size();
-    }
-
-    public boolean bosMu(){
-        if(liste.size()>0)
-            return false;       
-        else 
-            return true;
-        //return liste.isEmpty();
-    }
-
-    public Object SonelemanGoster(){
-        return liste.get(kacElemanVar() - 1);
-    }
-
-    public Object pop(){
-        if(kacElemanVar()>0){
-            Object geriyeDondurulecekEleman = liste.get(kacElemanVar() - 1 );
-            liste.remove(kacElemanVar() - 1);
-            return geriyeDondurulecekEleman;
-        }else{
-            System.out.println("Yığın boş pop yapılamaz");
-            return null;
+            }
         }
 
-    }
+        class pupil
+        {
+            private int pupilNumber;
+            private String pupilName;
+            private byte pupilClassroom;
+            static private boolean aktivity;
 
-    public void push(Object eklenecekEleman){
-        liste.add(eklenecekEleman);
-    }
+            public pupil() {//1
+            }
 
-    public void yazdir(){
+            public pupil(int pupilNumber) {//2
+                this.pupilNumber = pupilNumber;
+            }
 
-        System.out.println("************** YIGIN ICERIGI *******************");
-        for(int i=0; i<liste.size() ; i++){
+            public pupil(int pupilNumber, String pupilName) {//3
+                this.pupilNumber = pupilNumber;
+                this.pupilName = pupilName;
+            }
 
-            System.out.println(i+" indekste :"+ liste.get(i));
+            public pupil(int pupilNumber, String pupilName, byte pupilClassroom) {//4
+                this.pupilNumber = pupilNumber;
+                this.pupilName = pupilName;
+                this.pupilClassroom = pupilClassroom;
+            }
+            public pupil(int pupilNumber, String pupilName, byte pupilClassroom, boolean a) {//5
+                this.pupilNumber = pupilNumber;
+                this.pupilName = pupilName;
+                this.pupilClassroom = pupilClassroom;
+                pupil.aktivity = a;
+            }
+
+
+            public int getPupilNumber() {return pupilNumber;}
+            public void setPupilNumber(int pupilNumber) {this.pupilNumber = pupilNumber;}
+
+            public String getPupilName() {return pupilName;}
+            public void setPupilName(String pupilName) {this.pupilName = pupilName;}
+
+            public byte getPupilClassroom() { return pupilClassroom; }
+            public void setPupilClassroom(byte pupilClassroom) { this.pupilClassroom = pupilClassroom; }
+
+            public boolean getAktivity() { return aktivity;}
+            public void setAktivity(boolean aktivity) {pupil.aktivity = aktivity;}
+
+            @Override
+            public String toString() {
+                if(aktivity==true)
+                    return "pupil{" + "pupilNumber=" + pupilNumber + ", pupilName=" + pupilName + ", pupilClassroom=" + pupilClassroom + ", aktif=" + aktivity+ '}';
+                else
+                    return "This Student is not Active!!!";
+            }
+
 
         }
 
-    }
+        class MyStack
+        {
+            private ArrayList<Object> liste;
+
+            public ArrayList<Object> getListe() {
+                return liste;
+            }
+
+            public MyStack(){
+                liste = new ArrayList<>();
+            }
+
+            public int kacElemanVar(){
+                return liste.size();
+            }
+
+            public boolean bosMu(){
+                if(liste.size()>0)
+                    return false;
+                else
+                    return true;
+                //return liste.isEmpty();
+            }
+
+            public Object SonelemanGoster(){
+                return liste.get(kacElemanVar() - 1);
+            }
+
+            public Object pop(){
+                if(kacElemanVar()>0){
+                    Object geriyeDondurulecekEleman = liste.get(kacElemanVar() - 1 );
+                    liste.remove(kacElemanVar() - 1);
+                    return geriyeDondurulecekEleman;
+                }else{
+                    System.out.println("Yığın boş pop yapılamaz");
+                    return null;
+                }
+
+            }
+
+            public void push(Object eklenecekEleman){
+                liste.add(eklenecekEleman);
+            }
+
+            public void yazdir(){
+
+                System.out.println("************** YIGIN ICERIGI *******************");
+                for(int i=0; i<liste.size() ; i++){
+
+                    System.out.println(i+" indekste :"+ liste.get(i));
+
+                }
+
+            }
 
 
 
-}
+        }
     // </editor-fold>
-    
+
+
     //<editor-fold defaultstate="collapsed" desc=" QUESTION-1 ">
+
     class a       
     {  
      
@@ -6993,35 +7001,39 @@ class MyStack
         }
     }
     // </editor-fold>
+
     //<editor-fold defaultstate="collapsed" desc=" QUESTION-2 ">
-    class ASinifi
-    {
 
-        public ASinifi() {  System.out.println("ASinifi"); }//constructor en son bu yazdırılır
-        
-        {//INSTANCE INITIALIZER BLOCK
-            System.out.println(11);//Sonra bu
-        }
-        
-        static {//STATIC INITIALIZER BLOCK - FIRSTLY, STATIC BLOCKS RUN
-            System.out.println(1);//ilk bu
-        }
-    }
-
-    class BSinifi extends ASinifi
-    {
+        class ASinifi
         {
-            System.out.println(2);
-        }
-    }
 
-    class CSinifi extends BSinifi
-    {
-        {
-            System.out.println(3);
+            public ASinifi() {  System.out.println("ASinifi"); }//constructor en son bu yazdırılır
+
+            {//INSTANCE INITIALIZER BLOCK
+                System.out.println(11);//Sonra bu
+            }
+
+            static {//STATIC INITIALIZER BLOCK - FIRSTLY, STATIC BLOCKS RUN
+                System.out.println(1);//ilk bu
+            }
         }
-    }
+
+        class BSinifi extends ASinifi
+        {
+            {
+                System.out.println(2);
+            }
+        }
+
+        class CSinifi extends BSinifi
+        {
+            {
+                System.out.println(3);
+            }
+        }
     // </editor-fold>
+
+
     //<editor-fold defaultstate="collapsed" desc=" QUESTION-3 ">
 
 class ASinif
@@ -7451,1595 +7463,1599 @@ class Q15_Main{
     // </editor-fold>
 
     //<editor-fold defaultstate="collapsed" desc=" TV ">
-    class TV_Main
-    {
-        static Scanner scan =new Scanner(System.in);
-        static TV tvObject;//null 
 
-        public static void  main()
-        {
-            showMenu();           
-            boolean systemExit=false;
-            while(systemExit==false)
+            class TV_Main
             {
-                System.out.println("Type Your Selection:(Return main menu press 8)");
-                int selection=scan.nextInt();
-                switch(selection)
+                static Scanner scan =new Scanner(System.in);
+                static TV tvObject;//null
+
+                public static void  main()
                 {
-                    case 1:setUpTV();           break;
-                    case 2:turnOnTV();          break;
-                    case 3:volumeUP();          break;
-                    case 4:volumeDOWN();        break;         
-                    case 5:changeChannel();     break;
-                    case 6:showChannelINFOs();  break;
-                    case 7:turnOffTV();         break;
-                    case 8:showMenu();          break;
-                    case 9:addNewChannel();     break;
-                    case 0:systemExit=true;    System.out.println("Sistemden çıkılıyor");   break;
-                    default: System.out.println("0 ile 9 arasında bir değer giriniz");      break;
+                    showMenu();
+                    boolean systemExit=false;
+                    while(systemExit==false)
+                    {
+                        System.out.println("Type Your Selection:(Return main menu press 8)");
+                        int selection=scan.nextInt();
+                        switch(selection)
+                        {
+                            case 1:setUpTV();           break;
+                            case 2:turnOnTV();          break;
+                            case 3:volumeUP();          break;
+                            case 4:volumeDOWN();        break;
+                            case 5:changeChannel();     break;
+                            case 6:showChannelINFOs();  break;
+                            case 7:turnOffTV();         break;
+                            case 8:showMenu();          break;
+                            case 9:addNewChannel();     break;
+                            case 0:systemExit=true;    System.out.println("Sistemden çıkılıyor");   break;
+                            default: System.out.println("0 ile 9 arasında bir değer giriniz");      break;
+                        }
+                    }
                 }
-            }            
-        }
-        
-    //if(tvObject!=null) if a tv object was created
-    private static void showChannelINFOs() {
-        if(tvObject!=null){
-            tvObject.showAactiveChannel();
-        }else{
-            System.out.println("Firstly, set up TV and creat channels!");
-        }
-    }
 
-    private static void changeChannel() {
-        if(tvObject!=null){
-            System.out.println("Which Channel do you want to open?\n");
-            int desiredChannel = scan.nextInt();
-            tvObject.changeChannel(desiredChannel);
-        }else{
-            System.out.println("Firstly, set up TV and creat channels!");
-        }
-    }
-
-    private static void volumeUP() {
-        if(tvObject!=null){
-            tvObject.volumeUP();
-        }else{
-            System.out.println("Firstly, set up TV and creat channels!");
-        }
-    }
-
-    private static void volumeDOWN() {
-        if(tvObject!=null){
-            tvObject.volumeDOWN();
-        }else{
-            System.out.println("Firstly, set up TV and creat channels!");
-        }
-    }
-
-    private static void turnOffTV() {
-        if(tvObject != null){
-            tvObject.TurnOffTV();
-        }else{
-            System.out.println("Firstly, set up TV and creat channels!");
-        }
-    }
-
-    private static void turnOnTV() {
-        if(tvObject != null){
-            tvObject.TurnOnTV();
-        }else{
-            System.out.println("Firstly, set up TV and creat channels!");
-        }
-    }
-
-    private static void setUpTV() {
-        if(tvObject==null){
-            scan.nextLine();
-            System.out.println("Enter Brand Name of the TV!");
-            String brand = scan.nextLine();
-            System.out.println("Enter inch size of the TV!");
-            int size = scan.nextInt();
-            tvObject=new TV(brand,size);//I SET UP A TV
-            System.out.println("TV is set up --> "+tvObject);
-        }
-        else
-        {
-            System.out.println("TV is ALREADY set up! --> "+tvObject);
-        }
-
-    }
-
-    private static void showMenu() {
-        System.out.println("************ MENU ***************");
-        System.out.println("0 -- Çıkış\n" +
-                "1 -- Televizyonu Kur \n" +
-                "2 -- Televizyonu Aç\n" +
-                "3 -- Sesini Arttır\n" +
-                "4 -- Sesi Azalt\n" +
-                "5 -- Kanal Değiştir\n" +
-                "6 -- Kanal Bilgisini Goster\n" +
-                "7 -- Televizyon Kapat\n" +
-                "8 -- Menüyü Göster\n");
-    }
-  
-    private static void addNewChannel()
-    {
-         if(tvObject != null){
-            tvObject.addNewChannel();
-        }else{
-            System.out.println("Firstly, set up TV and creat channels!");
-        }
-    }
-        
-       
-
-        
-
-    }
-class TV
-{
-    Scanner scan=new Scanner(System.in);
-    private String Brand;
-    private int Size;
-    ArrayList <Channel> ChannelList ;//composition - Channel data type polimorphism - baska sınıfın nesnesi
-   
-    private boolean turnOn;//false
-    private int volume;//0
-    int activeChannel;//0
-
-
-    
-    public TV(String Brand, int Size) {
-        this.Brand = Brand;
-        this.Size = Size;
-        volume=10;
-        activeChannel=1;
-        ChannelList=new ArrayList<>();//CHANNELSLIST
-        setUpDefaultChannels();//CHANNELS
-    }
-
-    public String getBrand() {return Brand;}
-    public void setBrand(String Brand) { this.Brand = Brand;}
-  
-    public int getSize() {  return Size;}
-    public void setSize(int Size) {this.Size = Size;}
-
-    public Scanner getScan() {return scan; }
-    public void setScan(Scanner scan) { this.scan = scan;}
-
-    public ArrayList<Channel> getChannelList() { return ChannelList;}
-    public void setChannelList(ArrayList<Channel> ChannelList) {this.ChannelList = ChannelList;}
-
-    public boolean isTurnOn() { return turnOn;}
-    public void setTurnOn(boolean turnOn) { this.turnOn = turnOn;}
-    
-    public int getActiveChannel() {return activeChannel;}
-    public void setActiveChannel(int activeChannel) { this.activeChannel = activeChannel;}
-
-    
-    public void setUpDefaultChannels()
-    {
-        newsChannel cnn         =new newsChannel("cnn","news",1);         ChannelList.add(cnn);//name,type,no
-        newsChannel trtWorld    =new newsChannel("trtWorld","news",2);    ChannelList.add(trtWorld);//name,type,no
-        musicChannel powerTürk  =new musicChannel("powerTürk","music",3); ChannelList.add(powerTürk);
-        musicChannel joyTürk    =new musicChannel("joyTürk","music",4);   ChannelList.add(joyTürk);
-    }
-    
-    public void addNewChannel()
-    {
-        if(turnOn==true)
-        {
-            System.out.println("What kind of channel do you want to add?\n(for news press 1)\n(for music press 2)");
-            int option=scan.nextInt();
-            if(option==1 )
-            {
-                Channel newChannel;
-                scan.nextLine();
-                System.out.println("Enter channel's name:");
-                String newChannelName=scan.nextLine();
-                System.out.println("Determine channel's no:");
-                int channelNo=scan.nextInt();
-                
-                if(channelNo<ChannelList.size())
-                {
-                    newChannel= new newsChannel(newChannelName,"news",channelNo);
-                    ChannelList.add(channelNo-1, newChannel);
-                }
-                else if(channelNo>=ChannelList.size())
-                {
-                    newChannel= new newsChannel(newChannelName,"news",channelNo);
-                    ChannelList.add(newChannel);
-                }
-            }
-            else if(option==2 )
-            {
-                Channel newChannel;
-                scan.nextLine();
-                System.out.println("Enter channel's name:");
-                String newChannelName=scan.nextLine();
-                System.out.println("Determine channel's no:");
-                int channelNo=scan.nextInt();
-                if(channelNo<ChannelList.size())
-                {
-                    newChannel= new newsChannel(newChannelName,"news",channelNo);
-                    ChannelList.add(channelNo-1, newChannel);
-                }
-                else if(channelNo>=ChannelList.size())
-                {
-                    newChannel= new newsChannel(newChannelName,"news",channelNo);
-                    ChannelList.add(newChannel);
-                }
-            }
-        }
-        else
-            System.out.println("TV is turned off!!!");
-        
-        
-    }
-    
-    public void TurnOnTV()
-    {
-        if(turnOn==false){
-            turnOn=true;    
-            System.out.println("TV is Turned ON!");}
-        else
-            System.out.println("TV is already Turned ON!");        
-    } 
-    
-    public void TurnOffTV()
-    {
-        if(turnOn==true){
-            turnOn=false;          
-            System.out.println("TV is Turn OFF!");}
-        else
-            System.out.println("TV is already Turned OFF!");        
-    }
-    
-    public void volumeUP()
-    {
-        if(volume <20 && turnOn==true){
-            volume++;
-            System.out.println("Volume Level :"+volume);
-        }
-        else if(volume == 20 && turnOn==true){
-            System.out.println("Volume is at max. point, you cannot get it up any more!!!");
-        
-        }
-        else if(turnOn==false){
-            System.out.println("TV is turned off!!!");
-        }
-    }
-    
-    public void volumeDOWN()
-    {
-        if(volume > 0 && turnOn==true){
-            volume--;
-            System.out.println("Volume Level :" + volume);
-        }
-        else if(volume == 0 && turnOn==true){
-            System.out.println("Volume is at min. point, you cannot get it down any more!!!");
-        }
-        else if(turnOn==false){
-            System.out.println("TV is turned off!!!");
-        }
-
-    }
-  
-    public void showAactiveChannel()
-    {
-        if(turnOn==true)
-            System.out.println("Active Channel:"+ChannelList.get(activeChannel-1));
-        else
-            System.out.println("Firstly, turn on the TV!!!");
-    }
-
-    public void changeChannel(int DesiredChannel)
-    {
-        if(turnOn==true){
-            if(DesiredChannel != activeChannel){
-
-                if(DesiredChannel <= ChannelList.size() && DesiredChannel>=0){
-                    activeChannel = DesiredChannel;
-                    System.out.println("Channel :"+DesiredChannel+" INFO:"+ChannelList.get(activeChannel-1));
+            //if(tvObject!=null) if a tv object was created
+            private static void showChannelINFOs() {
+                if(tvObject!=null){
+                    tvObject.showAactiveChannel();
                 }else{
-                    System.out.println("PLEASE TYPE A PRESENT TV CHANNEL NUMBER");
+                    System.out.println("Firstly, set up TV and creat channels!");
+                }
+            }
+
+            private static void changeChannel() {
+                if(tvObject!=null){
+                    System.out.println("Which Channel do you want to open?\n");
+                    int desiredChannel = scan.nextInt();
+                    tvObject.changeChannel(desiredChannel);
+                }else{
+                    System.out.println("Firstly, set up TV and creat channels!");
+                }
+            }
+
+            private static void volumeUP() {
+                if(tvObject!=null){
+                    tvObject.volumeUP();
+                }else{
+                    System.out.println("Firstly, set up TV and creat channels!");
+                }
+            }
+
+            private static void volumeDOWN() {
+                if(tvObject!=null){
+                    tvObject.volumeDOWN();
+                }else{
+                    System.out.println("Firstly, set up TV and creat channels!");
+                }
+            }
+
+            private static void turnOffTV() {
+                if(tvObject != null){
+                    tvObject.TurnOffTV();
+                }else{
+                    System.out.println("Firstly, set up TV and creat channels!");
+                }
+            }
+
+            private static void turnOnTV() {
+                if(tvObject != null){
+                    tvObject.TurnOnTV();
+                }else{
+                    System.out.println("Firstly, set up TV and creat channels!");
+                }
+            }
+
+            private static void setUpTV() {
+                if(tvObject==null){
+                    scan.nextLine();
+                    System.out.println("Enter Brand Name of the TV!");
+                    String brand = scan.nextLine();
+                    System.out.println("Enter inch size of the TV!");
+                    int size = scan.nextInt();
+                    tvObject=new TV(brand,size);//I SET UP A TV
+                    System.out.println("TV is set up --> "+tvObject);
+                }
+                else
+                {
+                    System.out.println("TV is ALREADY set up! --> "+tvObject);
                 }
 
-            }else{
-                System.out.println("You are already at "+activeChannel+". channel, changing the channel was not done!");
             }
-        }else{
-            System.out.println("Firstly, turn on the TV!!!");
-        }
-    }
-    
-    
 
-    @Override
-    public String toString() {
-        return "TV{" + "Brand=" + Brand + ", Size=" + Size + '}';
-    }
+            private static void showMenu() {
+                System.out.println("************ MENU ***************");
+                System.out.println("0 -- Çıkış\n" +
+                        "1 -- Televizyonu Kur \n" +
+                        "2 -- Televizyonu Aç\n" +
+                        "3 -- Sesini Arttır\n" +
+                        "4 -- Sesi Azalt\n" +
+                        "5 -- Kanal Değiştir\n" +
+                        "6 -- Kanal Bilgisini Goster\n" +
+                        "7 -- Televizyon Kapat\n" +
+                        "8 -- Menüyü Göster\n");
+            }
 
-  
-    
-}
-
-class Channel
-{
-    private String channel;
-    private int no;
-
-    public Channel(String channel, int no)
-    {
-        this.channel = channel;
-        this.no = no;
-    }
-
-    public String getChannel() {return channel; }
-    public void setChannel(String channel) {this.channel = channel;}
-    public int getNo() {  return no; }
-    public void setNo(int no) {  this.no = no;}
-
-    @Override
-    public String toString() {
-        return "Channel{" + "channel=" + channel + ", no=" + no + '}';
-    }
-
-    
-   
-}
-
-class newsChannel extends Channel
-{
-    private String Type;
-
-    public newsChannel(String channel, String Type, int no)  
-    {
-        super(channel, no);
-        this.Type = Type;
-    }
-
-    public String getNewsType() {return Type;}
-    public void setNewsType(String NewsType) {this.Type = NewsType; }  
-
-    @Override
-    public String toString() {
-        return super.toString()+" newsChannel{" + "Type=" + Type + '}';
-    }
-    
-}
-
-class musicChannel extends Channel
-{
-    private String Type;
-    
-    public musicChannel(String channel,String Type, int no ) 
-    {
-        super(channel, no);
-        this.Type=Type;
-    }   
-
-    public String getMusicType() { return Type;}
-    public void setMusicType(String Type) {this.Type = Type;}
-
-    @Override
-    public String toString() {
-        return super.toString()+" musicChannel{" + "type=" + Type + '}';
-    }
-
-    
-    
-    
-}
-
-    // </editor-fold>
-
-//<editor-fold defaultstate="collapsed" desc=" QUESTION-16(static inner class) ">
-
-class Q16
-{
-    static int x = 1212;
- 
-    static class BSinifi
-    {
-        static int y = x++;//1212 x:1211
- 
-        static class Z
-        {
-            static int z = y++;//1212 y:1211
-        }
-    }
-}
- 
-class Q16_Main
-{
-    public static void main()
-    {
-        System.out.println(Q16.x);//1212
- 
-        System.out.println(Q16.BSinifi.y);//1212
- 
-        System.out.println(Q16.BSinifi.Z.z);//1212
-    }
-}
-    // </editor-fold>
-//<editor-fold defaultstate="collapsed" desc=" QUESTION-17(LOCAL CLASS) ">
-class Q17
-{
-    void metotA()
-    {
-        class B
-        {
-            void metotB()
+            private static void addNewChannel()
             {
-                System.out.println("Metot B");
+                 if(tvObject != null){
+                    tvObject.addNewChannel();
+                }else{
+                    System.out.println("Firstly, set up TV and creat channels!");
+                }
+            }
+
+
+
+
+
+            }
+        class TV
+        {
+            Scanner scan=new Scanner(System.in);
+            private String Brand;
+            private int Size;
+            ArrayList <Channel> ChannelList ;//composition - Channel data type polimorphism - baska sınıfın nesnesi
+
+            private boolean turnOn;//false
+            private int volume;//0
+            int activeChannel;//0
+
+
+
+            public TV(String Brand, int Size) {
+                this.Brand = Brand;
+                this.Size = Size;
+                volume=10;
+                activeChannel=1;
+                ChannelList=new ArrayList<>();//CHANNELSLIST
+                setUpDefaultChannels();//CHANNELS
+            }
+
+            public String getBrand() {return Brand;}
+            public void setBrand(String Brand) { this.Brand = Brand;}
+
+            public int getSize() {  return Size;}
+            public void setSize(int Size) {this.Size = Size;}
+
+            public Scanner getScan() {return scan; }
+            public void setScan(Scanner scan) { this.scan = scan;}
+
+            public ArrayList<Channel> getChannelList() { return ChannelList;}
+            public void setChannelList(ArrayList<Channel> ChannelList) {this.ChannelList = ChannelList;}
+
+            public boolean isTurnOn() { return turnOn;}
+            public void setTurnOn(boolean turnOn) { this.turnOn = turnOn;}
+
+            public int getActiveChannel() {return activeChannel;}
+            public void setActiveChannel(int activeChannel) { this.activeChannel = activeChannel;}
+
+
+            public void setUpDefaultChannels()
+            {
+                newsChannel cnn         =new newsChannel("cnn","news",1);         ChannelList.add(cnn);//name,type,no
+                newsChannel trtWorld    =new newsChannel("trtWorld","news",2);    ChannelList.add(trtWorld);//name,type,no
+                musicChannel powerTürk  =new musicChannel("powerTürk","music",3); ChannelList.add(powerTürk);
+                musicChannel joyTürk    =new musicChannel("joyTürk","music",4);   ChannelList.add(joyTürk);
+            }
+
+            public void addNewChannel()
+            {
+                if(turnOn==true)
+                {
+                    System.out.println("What kind of channel do you want to add?\n(for news press 1)\n(for music press 2)");
+                    int option=scan.nextInt();
+                    if(option==1 )
+                    {
+                        Channel newChannel;
+                        scan.nextLine();
+                        System.out.println("Enter channel's name:");
+                        String newChannelName=scan.nextLine();
+                        System.out.println("Determine channel's no:");
+                        int channelNo=scan.nextInt();
+
+                        if(channelNo<ChannelList.size())
+                        {
+                            newChannel= new newsChannel(newChannelName,"news",channelNo);
+                            ChannelList.add(channelNo-1, newChannel);
+                        }
+                        else if(channelNo>=ChannelList.size())
+                        {
+                            newChannel= new newsChannel(newChannelName,"news",channelNo);
+                            ChannelList.add(newChannel);
+                        }
+                    }
+                    else if(option==2 )
+                    {
+                        Channel newChannel;
+                        scan.nextLine();
+                        System.out.println("Enter channel's name:");
+                        String newChannelName=scan.nextLine();
+                        System.out.println("Determine channel's no:");
+                        int channelNo=scan.nextInt();
+                        if(channelNo<ChannelList.size())
+                        {
+                            newChannel= new newsChannel(newChannelName,"news",channelNo);
+                            ChannelList.add(channelNo-1, newChannel);
+                        }
+                        else if(channelNo>=ChannelList.size())
+                        {
+                            newChannel= new newsChannel(newChannelName,"news",channelNo);
+                            ChannelList.add(newChannel);
+                        }
+                    }
+                }
+                else
+                    System.out.println("TV is turned off!!!");
+
+
+            }
+
+            public void TurnOnTV()
+            {
+                if(turnOn==false){
+                    turnOn=true;
+                    System.out.println("TV is Turned ON!");}
+                else
+                    System.out.println("TV is already Turned ON!");
+            }
+
+            public void TurnOffTV()
+            {
+                if(turnOn==true){
+                    turnOn=false;
+                    System.out.println("TV is Turn OFF!");}
+                else
+                    System.out.println("TV is already Turned OFF!");
+            }
+
+            public void volumeUP()
+            {
+                if(volume <20 && turnOn==true){
+                    volume++;
+                    System.out.println("Volume Level :"+volume);
+                }
+                else if(volume == 20 && turnOn==true){
+                    System.out.println("Volume is at max. point, you cannot get it up any more!!!");
+
+                }
+                else if(turnOn==false){
+                    System.out.println("TV is turned off!!!");
+                }
+            }
+
+            public void volumeDOWN()
+            {
+                if(volume > 0 && turnOn==true){
+                    volume--;
+                    System.out.println("Volume Level :" + volume);
+                }
+                else if(volume == 0 && turnOn==true){
+                    System.out.println("Volume is at min. point, you cannot get it down any more!!!");
+                }
+                else if(turnOn==false){
+                    System.out.println("TV is turned off!!!");
+                }
+
+            }
+
+            public void showAactiveChannel()
+            {
+                if(turnOn==true)
+                    System.out.println("Active Channel:"+ChannelList.get(activeChannel-1));
+                else
+                    System.out.println("Firstly, turn on the TV!!!");
+            }
+
+            public void changeChannel(int DesiredChannel)
+            {
+                if(turnOn==true){
+                    if(DesiredChannel != activeChannel){
+
+                        if(DesiredChannel <= ChannelList.size() && DesiredChannel>=0){
+                            activeChannel = DesiredChannel;
+                            System.out.println("Channel :"+DesiredChannel+" INFO:"+ChannelList.get(activeChannel-1));
+                        }else{
+                            System.out.println("PLEASE TYPE A PRESENT TV CHANNEL NUMBER");
+                        }
+
+                    }else{
+                        System.out.println("You are already at "+activeChannel+". channel, changing the channel was not done!");
+                    }
+                }else{
+                    System.out.println("Firstly, turn on the TV!!!");
+                }
+            }
+
+
+
+            @Override
+            public String toString() {
+                return "TV{" + "Brand=" + Brand + ", Size=" + Size + '}';
+            }
+
+
+
+        }
+
+        class Channel
+        {
+            private String channel;
+            private int no;
+
+            public Channel(String channel, int no)
+            {
+                this.channel = channel;
+                this.no = no;
+            }
+
+            public String getChannel() {return channel; }
+            public void setChannel(String channel) {this.channel = channel;}
+            public int getNo() {  return no; }
+            public void setNo(int no) {  this.no = no;}
+
+            @Override
+            public String toString() {
+                return "Channel{" + "channel=" + channel + ", no=" + no + '}';
+            }
+
+
+
+        }
+
+        class newsChannel extends Channel
+        {
+            private String Type;
+
+            public newsChannel(String channel, String Type, int no)
+            {
+                super(channel, no);
+                this.Type = Type;
+            }
+
+            public String getNewsType() {return Type;}
+            public void setNewsType(String NewsType) {this.Type = NewsType; }
+
+            @Override
+            public String toString() {
+                return super.toString()+" newsChannel{" + "Type=" + Type + '}';
+            }
+
+        }
+
+        class musicChannel extends Channel
+        {
+            private String Type;
+
+            public musicChannel(String channel,String Type, int no )
+            {
+                super(channel, no);
+                this.Type=Type;
+            }
+
+            public String getMusicType() { return Type;}
+            public void setMusicType(String Type) {this.Type = Type;}
+
+            @Override
+            public String toString() {
+                return super.toString()+" musicChannel{" + "type=" + Type + '}';
+            }
+
+
+
+
+        }
+
+    // </editor-fold>
+
+    //<editor-fold defaultstate="collapsed" desc=" QUESTION-16(static inner class) ">
+
+    class Q16
+    {
+        static int x = 1212;
+
+        static class BSinifi
+        {
+            static int y = x++;//1212 x:1211
+
+            static class Z
+            {
+                static int z = y++;//1212 y:1211
             }
         }
     }
- 
-    void method()
-    {
-        //new B().metotB(); ERROR VERIR LOCAL CLASS SADECE METHODA OZGUDUR
-    }
-}
 
-
-
-    // </editor-fold>
-//<editor-fold defaultstate="collapsed" desc=" QUESTION-18 ">
-
-class Q18
-{
-    int i = 102;
- 
+    class Q16_Main
     {
-        i--;//i=101
-        
-    }
- 
-    public Q18()
-    {
-        --i;//i=100
-    }
- 
-    class XYZ
-    {
-        int i = this.i;//0 this.i demek XYZ içindeki i demek, i ye bir şey etanmamış, default value:0
-        //int i=this.i(0);
+        public static void main()
         {
-            i++;//1
-        }
- 
-        public XYZ()
-        {
-            ++i;//2
+            System.out.println(Q16.x);//1212
+
+            System.out.println(Q16.BSinifi.y);//1212
+
+            System.out.println(Q16.BSinifi.Z.z);//1212
         }
     }
-}
- 
-class Q18_Main
-{
-    public static void main()
+        // </editor-fold>
+    //<editor-fold defaultstate="collapsed" desc=" QUESTION-17(LOCAL CLASS) ">
+    class Q17
     {
-        Q18 abc = new Q18();
- 
-        System.out.println(abc.i);//100
- 
-        Q18.XYZ xyz = abc.new XYZ();
- 
-        System.out.println(xyz.i);//2
- 
-        Q18.XYZ xyz1 = new Q18().new XYZ();
- 
-        System.out.println(xyz1.i);//2
-    }
-}
-    // </editor-fold>
-//<editor-fold defaultstate="collapsed" desc=" QUESTION-19 ">
+        void metotA()
+        {
+            class B
+            {
+                void metotB()
+                {
+                    System.out.println("Metot B");
+                }
+            }
+        }
 
-class Q19
-{
-    {//2
-        System.out.println(1);
+        void method()
+        {
+            //new B().metotB(); ERROR VERIR LOCAL CLASS SADECE METHODA OZGUDUR
+        }
     }
- 
-    static//1 ve once
+
+
+
+        // </editor-fold>
+    //<editor-fold defaultstate="collapsed" desc=" QUESTION-18 ">
+
+    class Q18
     {
-        System.out.println(2);
+        int i = 102;
+
+        {
+            i--;//i=101
+
+        }
+
+        public Q18()
+        {
+            --i;//i=100
+        }
+
+        class XYZ
+        {
+            int i = this.i;//0 this.i demek XYZ içindeki i demek, i ye bir şey etanmamış, default value:0
+            //int i=this.i(0);
+            {
+                i++;//1
+            }
+
+            public XYZ()
+            {
+                ++i;//2
+            }
+        }
     }
- 
-    public Q19()//3
+
+    class Q18_Main
     {
-        new Y();
+        public static void main()
+        {
+            Q18 abc = new Q18();
+
+            System.out.println(abc.i);//100
+
+            Q18.XYZ xyz = abc.new XYZ();
+
+            System.out.println(xyz.i);//2
+
+            Q18.XYZ xyz1 = new Q18().new XYZ();
+
+            System.out.println(xyz1.i);//2
+        }
     }
- 
-    static class Y
+        // </editor-fold>
+    //<editor-fold defaultstate="collapsed" desc=" QUESTION-19 ">
+
+    class Q19
     {
         {//2
-            System.out.println(3);
+            System.out.println(1);
         }
- 
-        static
-        {//1 and once
-            System.out.println(4);
+
+        static//1 ve once
+        {
+            System.out.println(2);
+        }
+
+        public Q19()//3
+        {
+            new Y();
+        }
+
+        static class Y
+        {
+            {//2
+                System.out.println(3);
+            }
+
+            static
+            {//1 and once
+                System.out.println(4);
+            }
         }
     }
-}
- 
-class Q19_Main
-{
-    public static void main()
+
+    class Q19_Main
     {
-        Q19 x = new Q19();// 2 1 4 3nesne olusturunca ils static sonra intance block en son constructor calsıır
- 
-        Q19.Y y = new Q19.Y();//3
+        public static void main()
+        {
+            Q19 x = new Q19();// 2 1 4 3nesne olusturunca ils static sonra intance block en son constructor calsıır
+
+            Q19.Y y = new Q19.Y();//3
+        }
     }
-}
+        // </editor-fold>
+
+    //<editor-fold defaultstate="collapsed" desc=" QUESTION-20 =review questions">
+
+        class IfPractice
+        {
+            public static void main()
+            {
+                System.out.println(" \n****QUESTION-20****");
+                fibonacci();
+
+                System.out.println("\n``````FACTORIAL````");
+                Scanner scan = new Scanner(System.in);
+                System.out.println("Sayı giriniz : ");
+                long sayi = scan.nextLong();
+                long faktoriel = getFaktoriel(sayi);
+                System.out.println("Sonuç : " + faktoriel);
+                // 5 * 4 * 3 * 2 * 1 = 120
+
+                System.out.println("\n******NEW FACTORIAL****");
+                long faktorielYeni = getFaktorielYeni(sayi);
+                System.out.println("SonuçYeni : " + faktorielYeni);
+
+                System.out.println("*****SUM OF DIGITS*****");
+                System.out.println("bir sayi giriniz");
+                int num=scan.nextInt();
+                int sonuc=getSum(num);
+                System.out.println(sonuc);
+
+                System.out.println("*****GET THE GREATEST ELEMENT OF ARRAY*****");
+                int[] array = {12,56,788,4,1,0,999,4};
+                int enBuyukSayi = getEnBuyukSayi(array);
+                System.out.println("En büyük sayı :" + enBuyukSayi);
+
+
+                System.out.println("\n---REVERSE OF THE NUMBER----");
+                System.out.println("Lütfen sayı giriniz : ");
+                int sayi3 = scan.nextInt();
+                int ters = getSayininTersi(sayi3);
+                System.out.println("Sayının Tersi " + ters);
+
+                System.out.println("\n---POLINDROM----");
+                System.out.println(isPolindrom("EdipPide"));//FALSE
+
+                System.out.println("\n---POLINDROM2----");
+                System.out.println("Lütfen bir ifade yazınız : ");
+                String ifade = scan.nextLine();
+                if(getPolindrom(ifade.toLowerCase())) {
+                        System.out.println("Polindrom");
+                }else {
+                        System.out.println("Polindrom Değil");
+                }
+
+                System.out.println("\n---POLINDROM NEW----");
+                System.out.println("Lütfen bir ifade yazınız : ");
+                String ifade2 = scan.nextLine();
+                if(getPolindromYeni(ifade2.toLowerCase())) {
+                        System.out.println("Polindrom");
+                }else {
+                        System.out.println("Polindrom Değil");
+                }
+
+
+                System.out.println("\n---GET REVERSE BY USING CHAR ARRAY----");
+                System.out.println("Lütfen bir ifade yazınız : ");
+                String ifade3 = scan.nextLine();
+                char[] array3 = ifade.toCharArray();
+                String ters3 = getTersiByArray(array3);
+                System.out.println("Tersi : " + ters);
+
+                System.out.println("\n******CHECK IF THE EMAIL ENTERED IS TRUE******");
+                System.out.println("Lütfen bir e-mail yazınız : ");
+                String email = scan.next();
+                boolean dogruMu = getEmailDogruMu(email);
+                System.out.println("Email : " +dogruMu);
+
+
+
+            }
+
+            private static void fibonacci()
+            {
+                System.out.println("\n````````FIBONACCI````");
+                Scanner scan = new Scanner(System.in);
+                System.out.println("Sayı giriniz : ");
+                int sayi = scan.nextInt();
+                int sayi1 = 0;
+                int sayi2 = 1;
+                int ilkIkiSayininToplami = 0;
+                System.out.print(sayi1+" "+sayi2);
+                for(int i = 2; i < sayi ; ++i )
+                {
+                    ilkIkiSayininToplami = sayi1 + sayi2;     // 0 + 1			1 + 1        1  + 2     2   +  3
+                    sayi1 = sayi2 ;							  // sayi1 = 1;		sayi1 = 1    2          3
+                    sayi2 = ilkIkiSayininToplami;			  // sayi2 = 1;     sayi2 = 2    3          5
+                    System.out.print(" " + ilkIkiSayininToplami);
+
+            }
+
+            }
+
+           private static long getFaktoriel(long sayi)
+           {
+                if(sayi == 0 || sayi == 1) {
+                        return 1;
+                }
+                long faktoriyel = 1;
+                for(int i = 1; i <= sayi ; i++ ) {   //  1  -  5
+                        faktoriyel *= i;			//  1*1 = faktoriyel   2*2   2 * 3 = 6    4 * 6 = 24      24 * 5 = 120
+                }
+                return faktoriyel;
+            }
+
+             private static long getFaktorielYeni(long sayi)
+           {
+                if(sayi == 0 || sayi == 1) {
+                        return 1;
+                }else {
+                        return sayi * getFaktorielYeni(sayi - 1 );
+                }
+           }
+
+           public static int getSum(int num)
+           {
+                int sum=0;
+                int sonbasamak=0;
+                while (num>0){
+
+                        sonbasamak=num%10;
+                        sum=sum+sonbasamak;
+                        num=num/10;
+
+                }return sum;
+            }
+
+
+           private static int getEnBuyukSayi(int[] array)
+           {
+                int max = 0;
+                for(int i = 0 ; i < array.length ; i++) {
+                        if(array[i] > max) {   //  12 > 0       56 > 12      788 > 56    4 > 788   1 > 788    0 > 788    999 > 788   4 > 999
+                                max = array[i];	   //  max = 12     max = 56    max  = 788   -------   -------    -------    max = 999   -------
+                        }
+                }
+                return max;
+           }
+
+            private static int getSayininTersi(int n)
+            {
+                //      1654 - 456
+                //	4000
+                //	500
+                //	60
+                //      1
+                int sonuc = 0;
+                while(n>0) {
+                        int sayi = n % 10;  	//  4				5		   6
+                        n/=10;              	//  65				6		   0
+                        sonuc = sonuc*10+sayi;	// 0*10 + 4 = 4;    45	      456
+                }
+                return sonuc;
+            }
+
+            private static String getTersiByArray(char[] array)
+            {
+                String ters = "";
+                for(int i = array.length - 1 ; i >= 0; i--) {
+                        ters += array[i];
+                }
+                return ters;
+            }
+
+            private static boolean isPolindrom(String str)
+            {
+                String ters = "";
+                for (int i = str.length()-1; i >= 0; i--) {
+                    ters +="" + str.charAt(i);
+                }
+                return (str.equals(ters));
+            }
+
+            private static boolean getPolindrom(String ifade)
+            {
+                int i = 0;
+                int j = ifade.length()-1;
+                while(i < j)
+                {
+                    if(ifade.charAt(i) != ifade.charAt(j)){
+                            return false;
+                    }
+
+                    i++;
+                    j--;
+                }
+                return true;
+            }
+
+            private static boolean getPolindromYeni(String word)
+            {
+                String wordTers = "";
+                boolean ne = false;
+                for(int i = word.length()-1; i>=0; i--) {
+                        wordTers = wordTers + word.charAt(i);
+                }
+
+                if(wordTers.equalsIgnoreCase(word)) {
+                    ne = true;
+                }
+                else {
+                    ne = false;
+                }
+                return ne;
+            }
+
+            private static boolean getEmailDogruMu(String email) {
+
+                if(!email.contains("@"))
+                        return false;
+                if(!email.contains("."))
+                        return false;
+                if(email.length()<=4)
+                        return false;
+                String[] array = email.split("@");
+                if(array[0].length()<1)
+                        return false;
+                if(array[1].length()<3)
+                        return false;
+                if(array.length > 2)
+                        return false;
+                return true;
+            }
+
+        }
+
+
+
     // </editor-fold>
 
-//<editor-fold defaultstate="collapsed" desc=" QUESTION-20 =review questions"> 
-class IfPractice
-{
-    public static void main()
-    {
-        System.out.println(" \n****QUESTION-20****");
-        fibonacci();
-        
-        System.out.println("\n``````FACTORIAL````");
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Sayı giriniz : ");
-        long sayi = scan.nextLong();
-        long faktoriel = getFaktoriel(sayi);
-        System.out.println("Sonuç : " + faktoriel);
-        // 5 * 4 * 3 * 2 * 1 = 120
-        
-        System.out.println("\n******NEW FACTORIAL****");
-        long faktorielYeni = getFaktorielYeni(sayi);
-        System.out.println("SonuçYeni : " + faktorielYeni);
-        
-        System.out.println("*****SUM OF DIGITS*****");
-        System.out.println("bir sayi giriniz");
-        int num=scan.nextInt();
-        int sonuc=getSum(num);
-        System.out.println(sonuc);
-        
-        System.out.println("*****GET THE GREATEST ELEMENT OF ARRAY*****");
-        int[] array = {12,56,788,4,1,0,999,4};
-        int enBuyukSayi = getEnBuyukSayi(array);
-        System.out.println("En büyük sayı :" + enBuyukSayi);
-        
-        
-        System.out.println("\n---REVERSE OF THE NUMBER----");
-        System.out.println("Lütfen sayı giriniz : ");
-		int sayi3 = scan.nextInt();
-		int ters = getSayininTersi(sayi3);
-		System.out.println("Sayının Tersi " + ters);
-                
-        System.out.println("\n---POLINDROM----");
-        System.out.println(isPolindrom("EdipPide"));//FALSE
-        
-        System.out.println("\n---POLINDROM2----");
-        System.out.println("Lütfen bir ifade yazınız : ");
-        String ifade = scan.nextLine();
-        if(getPolindrom(ifade.toLowerCase())) {
-                System.out.println("Polindrom");
-        }else {
-                System.out.println("Polindrom Değil");
-        }
-       
-        System.out.println("\n---POLINDROM NEW----");
-        System.out.println("Lütfen bir ifade yazınız : ");
-        String ifade2 = scan.nextLine();
-        if(getPolindromYeni(ifade2.toLowerCase())) {
-                System.out.println("Polindrom");
-        }else {
-                System.out.println("Polindrom Değil");
-        }
+    //<editor-fold defaultstate="collapsed" desc=" var misin=uok musun">
 
-        
-        System.out.println("\n---GET REVERSE BY USING CHAR ARRAY----");
-        System.out.println("Lütfen bir ifade yazınız : ");
-        String ifade3 = scan.nextLine();
-        char[] array3 = ifade.toCharArray();
-        String ters3 = getTersiByArray(array3);
-        System.out.println("Tersi : " + ters);
-        
-        System.out.println("\n******CHECK IF THE EMAIL ENTERED IS TRUE******");
-        System.out.println("Lütfen bir e-mail yazınız : ");
-        String email = scan.next();
-        boolean dogruMu = getEmailDogruMu(email);
-        System.out.println("Email : " +dogruMu);
-
-
-        
-    }
-    
-    private static void fibonacci()
-    {
-        System.out.println("\n````````FIBONACCI````");
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Sayı giriniz : ");
-        int sayi = scan.nextInt();
-        int sayi1 = 0;
-        int sayi2 = 1;
-        int ilkIkiSayininToplami = 0;
-        System.out.print(sayi1+" "+sayi2);
-        for(int i = 2; i < sayi ; ++i )
+        class OyunaGiris
         {
-            ilkIkiSayininToplami = sayi1 + sayi2;     // 0 + 1			1 + 1        1  + 2     2   +  3                                         
-            sayi1 = sayi2 ;							  // sayi1 = 1;		sayi1 = 1    2          3
-            sayi2 = ilkIkiSayininToplami;			  // sayi2 = 1;     sayi2 = 2    3          5
-            System.out.print(" " + ilkIkiSayininToplami);
-		
-	}        
-     
-    }
+            /*
+             * "Var Mısın Yok Musun ?" oyunu oluşturalım.
+             *
+             * Oyunun mantığı : 10 tane kutu vardır, ve her kutunun içinde para miktarını gösteren bir sayı vardır.
+             * Oyunu oynayan kişinin sahip olduğu bir kutu vardır.
+             * Kalan 9 kutuyu sırasıyla açtırır ve her 3 kutu açtığında, yarışmanın sahibi tarafından teklifte bulunulur.
+             * Oyuncu isterse teklifi kabul eder, isterse de oyuna devam edip kendi kutusundaki miktarı kazanabilir.
+             *
+             * Örnek : 10 kutunun içinde rastgele olarak dizilmiş şu şekilde miktarlar olsun.
+             *
+             * 1. Kutu : 1 TL
+             * 2. Kutu : 10 TL
+             * 3. Kutu : 500 TL
+             * 4. Kutu : 1000 TL
+             * 5. Kutu : 5000 TL
+             * 6. Kutu : 10000 TL
+             * 7. Kutu : 50000 TL
+             * 8. Kutu : 100000 TL
+             * 9. Kutu : 250000 TL
+             * 10. Kutu : 500000 TL
+             *
+             *
+             * Bizim kutumuz 8. kutu olsun.
+             *
+             * Biz her seferinde kalan 9 kutudan birisini seçip açtıracağız, her üç kutu açtıktan sonra
+             * yapımcıdan teklif alacağız. Diyelim ki ilk 3 kutu açıldıktan sonra yapımcı bize 10.000 TL teklif etti,
+             * istersek bunu kabul edeceğiz, istemezsek devam edeceğiz.
+             *
+             * Son kutu kalana kadar devam edebiliyoruz.
+             *
+             *
+             * 1. Adım : Önce 10 farklı para miktarını tutmak için List<Integer> paraListesi
+             * 			adında ArrayList oluşturalım ve miktarları ekleyelim.
+             *
+             * 2. Adım : 10 Tane kutu oluşturalım ve her kutunun içine rastgele bir miktar atayalım.
+             * 			 Bu miktarları paraListesi adlı arrayList'imizden alalım.
+             * 			 Bunun için Kutu isimli bir class oluşturalım.
+             * 			 içerisine kutuNumarasi ve paraMiktari diye iki tane integer oluşturalım.
+             *
+             *
+             * 			 ayrıca paraMiktarını ve kutuNumarasini almak için
+             * 			 "getter" methodlarımızı oluşturalım.
+             *
+             * 			 constructor ile de ayrıca bu iki değişkenin verilerini, obje oluştururken ekleyebilelim.
+             *
+             * 3. Adım : Kutuları ekleyebilmek, ve kutular üzerinde işlemler yapabilmek için Kutular classı oluşturulım
+             * 			 Oluşturduğumuz tüm Kutu nesnelerini Kutular a ekleyelim.
+             * 			 Bunun için Kutular class'ı içerisinde çeşitli methodlar oluşturalım.
+             * 			 Ayrıca yapımcinin teklifini de bu class içerisinden alalım.
+             *
+             * 			 public void kutuEkle(Kutu kutu)
+             * 			 kalanKutuSayisiniAl()
+             * 			 kutulardakiToplamParaMiktari()
+             * 			 secilenKutuyuKutularListesindenKaldir(int kutuNumarasi)
+             * 			 public String acilmamisKutulariGoster()
+             * 			 public void kutuActir(int kutuNumarasi)
+             * 			 public int yapimcininTeklifAl(Kutular kutular , int kendiParaMiktarim)
+             *
+             * 5. Adım : Oyunu başlatalım, kullanıcıdan seçmek istediği kutu numarasını alalım.
+             *
+             * 6. Adım : Yapimci adında bir tane class class oluşturalım.
+             * 			 Yapımcı classından bir tane nesne üretelim ve her 3 kutu açıldığnda
+             * 			 kendisinin içerisindeki teklifVer() methodu ile teklif alalım.
+             *
+             */
 
-   private static long getFaktoriel(long sayi) 
-   {
-        if(sayi == 0 || sayi == 1) {
-                return 1;
-        }
-        long faktoriyel = 1;
-        for(int i = 1; i <= sayi ; i++ ) {   //  1  -  5
-                faktoriyel *= i;			//  1*1 = faktoriyel   2*2   2 * 3 = 6    4 * 6 = 24      24 * 5 = 120      
-        }
-        return faktoriyel;
-    }
-   
-     private static long getFaktorielYeni(long sayi) 
-   {
-        if(sayi == 0 || sayi == 1) {
-                return 1;
-        }else {
-                return sayi * getFaktorielYeni(sayi - 1 );
-        }
-   }
-          
-   public static int getSum(int num) 
-   {
-        int sum=0;
-        int sonbasamak=0;
-        while (num>0){
-
-                sonbasamak=num%10;
-                sum=sum+sonbasamak;
-                num=num/10;
-
-        }return sum;
-    }
-   
-   
-   private static int getEnBuyukSayi(int[] array)
-   {
-        int max = 0;
-        for(int i = 0 ; i < array.length ; i++) {  
-                if(array[i] > max) {   //  12 > 0       56 > 12      788 > 56    4 > 788   1 > 788    0 > 788    999 > 788   4 > 999                   
-                        max = array[i];	   //  max = 12     max = 56    max  = 788   -------   -------    -------    max = 999   -------
-                }
-        }
-        return max;
-   }
-
-    private static int getSayininTersi(int n) 
-    {
-        //      1654 - 456
-        //	4000
-        //	500
-        //	60
-        //      1
-        int sonuc = 0;
-        while(n>0) {
-                int sayi = n % 10;  	//  4				5		   6
-                n/=10;              	//  65				6		   0	
-                sonuc = sonuc*10+sayi;	// 0*10 + 4 = 4;    45	      456
-        }
-        return sonuc;
-    }
-    
-    private static String getTersiByArray(char[] array)
-    {
-        String ters = "";
-        for(int i = array.length - 1 ; i >= 0; i--) {
-                ters += array[i];
-        }
-        return ters;
-    }
-
-    private static boolean isPolindrom(String str)
-    {
-        String ters = "";
-        for (int i = str.length()-1; i >= 0; i--) {
-            ters +="" + str.charAt(i);
-        }
-        return (str.equals(ters));
-    }
-
-    private static boolean getPolindrom(String ifade) 
-    {
-        int i = 0;
-        int j = ifade.length()-1;
-        while(i < j) 
-        {
-            if(ifade.charAt(i) != ifade.charAt(j)){
-                    return false;
-            }
-            
-            i++;
-            j--;
-        }
-        return true;
-    }
-
-    private static boolean getPolindromYeni(String word) 
-    {
-        String wordTers = "";
-        boolean ne = false;
-        for(int i = word.length()-1; i>=0; i--) {
-                wordTers = wordTers + word.charAt(i);
-        }
-
-        if(wordTers.equalsIgnoreCase(word)) {
-            ne = true;
-        }
-        else {
-            ne = false;
-        }  	
-        return ne;
-    }
-
-    private static boolean getEmailDogruMu(String email) {
-        
-        if(!email.contains("@"))
-                return false;
-        if(!email.contains("."))
-                return false;
-        if(email.length()<=4)
-                return false;
-        String[] array = email.split("@");
-        if(array[0].length()<1)
-                return false;
-        if(array[1].length()<3)
-                return false;
-        if(array.length > 2)
-                return false;
-        return true;
-    }
-
-}
-
-
-
-// </editor-fold>
-
-//<editor-fold defaultstate="collapsed" desc=" var misin=uok musun"> 
-class OyunaGiris 
-{
-    /*
-     * "Var Mısın Yok Musun ?" oyunu oluşturalım.
-     * 
-     * Oyunun mantığı : 10 tane kutu vardır, ve her kutunun içinde para miktarını gösteren bir sayı vardır.
-     * Oyunu oynayan kişinin sahip olduğu bir kutu vardır.
-     * Kalan 9 kutuyu sırasıyla açtırır ve her 3 kutu açtığında, yarışmanın sahibi tarafından teklifte bulunulur.
-     * Oyuncu isterse teklifi kabul eder, isterse de oyuna devam edip kendi kutusundaki miktarı kazanabilir.
-     * 
-     * Örnek : 10 kutunun içinde rastgele olarak dizilmiş şu şekilde miktarlar olsun.
-     * 
-     * 1. Kutu : 1 TL
-     * 2. Kutu : 10 TL
-     * 3. Kutu : 500 TL
-     * 4. Kutu : 1000 TL
-     * 5. Kutu : 5000 TL
-     * 6. Kutu : 10000 TL
-     * 7. Kutu : 50000 TL
-     * 8. Kutu : 100000 TL
-     * 9. Kutu : 250000 TL
-     * 10. Kutu : 500000 TL
-     * 
-     * 
-     * Bizim kutumuz 8. kutu olsun.
-     * 
-     * Biz her seferinde kalan 9 kutudan birisini seçip açtıracağız, her üç kutu açtıktan sonra 
-     * yapımcıdan teklif alacağız. Diyelim ki ilk 3 kutu açıldıktan sonra yapımcı bize 10.000 TL teklif etti,
-     * istersek bunu kabul edeceğiz, istemezsek devam edeceğiz.
-     * 
-     * Son kutu kalana kadar devam edebiliyoruz.
-     * 
-     * 
-     * 1. Adım : Önce 10 farklı para miktarını tutmak için List<Integer> paraListesi  
-     * 			adında ArrayList oluşturalım ve miktarları ekleyelim.
-     * 				
-     * 2. Adım : 10 Tane kutu oluşturalım ve her kutunun içine rastgele bir miktar atayalım.
-     * 			 Bu miktarları paraListesi adlı arrayList'imizden alalım.
-     * 			 Bunun için Kutu isimli bir class oluşturalım.
-     * 			 içerisine kutuNumarasi ve paraMiktari diye iki tane integer oluşturalım.
-     * 			 
-     *
-     * 			 ayrıca paraMiktarını ve kutuNumarasini almak için 
-     * 			 "getter" methodlarımızı oluşturalım.
-     * 
-     * 			 constructor ile de ayrıca bu iki değişkenin verilerini, obje oluştururken ekleyebilelim.
-     * 
-     * 3. Adım : Kutuları ekleyebilmek, ve kutular üzerinde işlemler yapabilmek için Kutular classı oluşturulım
-     * 			 Oluşturduğumuz tüm Kutu nesnelerini Kutular a ekleyelim.
-     * 			 Bunun için Kutular class'ı içerisinde çeşitli methodlar oluşturalım.
-     * 			 Ayrıca yapımcinin teklifini de bu class içerisinden alalım.
-     * 
-     * 			 public void kutuEkle(Kutu kutu)
-     * 			 kalanKutuSayisiniAl() 
-     * 			 kutulardakiToplamParaMiktari()
-     * 			 secilenKutuyuKutularListesindenKaldir(int kutuNumarasi)
-     * 			 public String acilmamisKutulariGoster()
-     * 			 public void kutuActir(int kutuNumarasi)
-     * 			 public int yapimcininTeklifAl(Kutular kutular , int kendiParaMiktarim)
-     * 	
-     * 5. Adım : Oyunu başlatalım, kullanıcıdan seçmek istediği kutu numarasını alalım.
-     * 
-     * 6. Adım : Yapimci adında bir tane class class oluşturalım.
-     * 			 Yapımcı classından bir tane nesne üretelim ve her 3 kutu açıldığnda
-     * 			 kendisinin içerisindeki teklifVer() methodu ile teklif alalım.
-     * 
-     */
-
-    static List<Integer> paraListesi = new ArrayList<>();
-    static Scanner scan = new Scanner(System.in);
-    static int kutuNumaram , kutumdakiParaMiktari;
-    static Kutular kutular = new Kutular();
-    public static void main() 
-    {
-        paraListesi.add(1);         
-        paraListesi.add(10);        
-        paraListesi.add(500);
-        paraListesi.add(1000);
-        paraListesi.add(5000);
-        paraListesi.add(10000);   
-        paraListesi.add(50000);
-        paraListesi.add(100000);
-        paraListesi.add(250000);
-        paraListesi.add(500000);
-        Collections.shuffle(paraListesi);
-        kutulariOlustur();
-        System.out.println("     OYUNUMUZA HOŞGELDİNİZ     ");
-        System.out.println("Lütfen Kutunuzu Seçiniz : ");
-        kutuNumaram = scan.nextInt();     // 2
-        kutumdakiParaMiktari = paraListesi.get(kutuNumaram-1);
-        System.out.println("Kutu Numaranız : " + kutuNumaram);
-        //System.out.println("Kutunuzdaki Para : " + kutumdakiParaMiktari);
-        kutular.kendiKutumuKaldir(kutuNumaram);
-        kutuSecmeActirma();
-    }
-
-    private static void kutuSecmeActirma()
-    {
-        System.out.println("\nKalan Kutular : " + kutular.acilmamisKutulariGoster());
-        System.out.println("\nHangi kutuyu açtırmak istiyorsunuz ? : ");
-        int secim = scan.nextInt();
-        kutular.kutuActir(secim);
-        if(kutular.kalanKutuSayisiniAl() == 7 
-                        || kutular.kalanKutuSayisiniAl() == 4 
-                        || kutular.kalanKutuSayisiniAl() == 1) 
-        {
-            System.out.println("Teklif :" + kutular.teklifAl());
-            System.out.println("*****Kabul Ediyor musun******\n1-Evet\n2-Hayır");
-            int kabul = scan.nextInt();
-            if(kabul == 1) 
+            static List<Integer> paraListesi = new ArrayList<>();
+            static Scanner scan = new Scanner(System.in);
+            static int kutuNumaram , kutumdakiParaMiktari;
+            static Kutular kutular = new Kutular();
+            public static void main()
             {
-                System.out.println("Oyun Bitti. Kazandığın Para : " + kutular.teklifAl());
-                System.out.println("Kutunda da " + kutumdakiParaMiktari + " TL vardı.");
-            }
-            else 
-            {
-                kutuSecmeActirma();
-            }
-        }
-
-        else 
-        {
-            if(kutular.kalanKutuSayisiniAl() > 0 )
-            {
+                paraListesi.add(1);
+                paraListesi.add(10);
+                paraListesi.add(500);
+                paraListesi.add(1000);
+                paraListesi.add(5000);
+                paraListesi.add(10000);
+                paraListesi.add(50000);
+                paraListesi.add(100000);
+                paraListesi.add(250000);
+                paraListesi.add(500000);
+                Collections.shuffle(paraListesi);
+                kutulariOlustur();
+                System.out.println("     OYUNUMUZA HOŞGELDİNİZ     ");
+                System.out.println("Lütfen Kutunuzu Seçiniz : ");
+                kutuNumaram = scan.nextInt();     // 2
+                kutumdakiParaMiktari = paraListesi.get(kutuNumaram-1);
+                System.out.println("Kutu Numaranız : " + kutuNumaram);
+                //System.out.println("Kutunuzdaki Para : " + kutumdakiParaMiktari);
+                kutular.kendiKutumuKaldir(kutuNumaram);
                 kutuSecmeActirma();
             }
 
-            else 
+            private static void kutuSecmeActirma()
             {
-                System.out.println("Oyun Bitti !\nKutundaki Para : "+ kutumdakiParaMiktari);
-            }
-        }
-    }
-
-    private static void kutulariOlustur()
-    {
-        for(int i = 0 ; i < 10 ; i++) 
-        {
-            Kutu kutu = new Kutu();
-            kutu.setKutuNumarasi(i + 1); /// 1 2 3 4 5 6 7 8 9 10
-            kutu.setKutudakiParaMiktari(paraListesi.get(i));
-            // Oluşturduğumuz kutu nesnelerini kutular classın içindeki arrayliste ekledik.
-            kutular.kutuEkle(kutu);
-            //System.out.println("Kutu No : " + ( i + 1 ) + " Para Miktarı : " + paraListesi.get(i));
-        }
-    }
-}
-
-class Kutu
-{
-    private int kutuNumarasi, kutudakiParaMiktari ;
-    public int getKutuNumarasi() {
-            return kutuNumarasi;
-    }
-    public void setKutuNumarasi(int kutuNumarasi) {
-            this.kutuNumarasi = kutuNumarasi;
-    }
-    public int getKutudakiParaMiktari() {
-            return kutudakiParaMiktari;
-    }
-    public void setKutudakiParaMiktari(int kutudakiParaMiktari) {
-            this.kutudakiParaMiktari = kutudakiParaMiktari;
-    }
-}
-
-class Kutular 
-{
-    private List<Kutu> kutuListesi = new ArrayList<>();  // 10 kutu vardı. 9 8 7 6 5 4 3 2 1
-    //    10  9 8 7 6 5 4 3 2 1
-    //	bizim
-    //    9 8 7 6 5 4 3 2 1
-    //    9   7 6 5 4 3 2 1
-    //    9   7 6   4 3 2 1
-    //        7 6   4 3 2 1
-    // 1 2 3 4 5 6 7 8 9 10
-    // remove(5-1);
-    // 1 2 3 4 6 7 8 9 10
-    // remove(7-1)
-    public void kutuEkle(Kutu gelenKutu) 
-    {
-        kutuListesi.add(gelenKutu);
-    }
-    public int kalanKutuSayisiniAl()
-    {
-        return kutuListesi.size();
-    }
-    
-    public int kutulardakiToplamPara()
-    {
-        int toplamPara = 0;
-        for(Kutu kutu : kutuListesi) 
-        {
-            toplamPara +=  kutu.getKutudakiParaMiktari();
-        }
-        return toplamPara;
-    }
-    
-    public String acilmamisKutulariGoster()
-    {
-        String acilmamislar = "";
-        for(Kutu kutu : kutuListesi) 
-        {
-            acilmamislar += " " + kutu.getKutuNumarasi();
-        }
-        return acilmamislar;
-    }
-    
-    public void kendiKutumuKaldir(int kutuNumarasi) 
-    { 
-        for(Kutu kutu : kutuListesi) 
-        {
-            if(kutu.getKutuNumarasi() == kutuNumarasi) 
-            {
-                kutuListesi.remove(kutu);
-                break;
-            }
-        }
-    }
-    
-    public void kutuActir(int kutuNumarasi) 
-    { 
-        for(Kutu kutu : kutuListesi) 
-        {
-            if(kutu.getKutuNumarasi() == kutuNumarasi) {
-                    System.out.println("Kutudaki Para Miktarı : " + kutu.getKutudakiParaMiktari());
-                    kutuListesi.remove(kutu);
-                    break;
-            }
-        }
-    }
-    
-    public int teklifAl() 
-    {
-            return kutulardakiToplamPara() / 7;
-    }
-}
-
-
-
-
-// </editor-fold>
-
-//<editor-fold defaultstate="collapsed" desc=" QUESTION-21 ">
-
-class PerfectNumber 
-{
-	/* Perfect Number (Mükemmel sayı)
-	 * Bir sayının mükemmel olup olmadığını bulan method yazınız.
-	 * getMukemmelMi(int sayi)
-	 *  return true/false
-	 *  
-	 * Mükemmel sayı : bir sayının kendisi hariç bölenlerinin toplamı, kendisine eşitse
-	 * 		o sayı mükemmeldir.
-	 * 		örnek :  6 -> 1,2,3 	1+2+3 = 6 = 6 (Mükemmel)
-	 * 
-	 * süre 3 dk.
-	 * 
-	 * */
-	public static void main() 
-        {
-            Scanner scan = new Scanner(System.in);
-            System.out.println("Bir Sayı giriniz: ");
-            int num = scan.nextInt();
-            System.out.println(getMukemmelMi(num));
-	}
-	private static boolean getMukemmelMi(int num) {
-		int i;
-        int count = 0;
-        for (i = 1; i <= num/2; i++) {   
-            if (num % i == 0) {
-                count += i;
-            }
-        }
-        return count == num;
-	}
-}
-
-// </editor-fold>
-
-
-
-//<editor-fold defaultstate="collapsed" desc=" QUESTION-22 ">
-class QUESTIONS
-{
-    static public void main()
-    {
-        Q1.main();
-        Q2.main();
-        Q3.main();
-        Q4.main();
-        Q5.main();
-    }
-    static class Q1
-    {
-	/* İki farklı Array'i birleştiren ve oluşturduğu yeni Array'i return eden
-	 * bir method yazınız.
-	 * 
-	 * getBirlestirilmisArray(int[] array1, int[] array2)
-	 * 	return yeniArray;
-	 * 
-	 * [1,2,3] ve [5,6,7]
-	 * 
-	 * [1,2,3,5,6,7]
-	 * 
-	 * 3 dk süre verelim.
-	 * 
-	 * */
-	public static void main() 
-        {
-            int[] array1 = {1,2,3};
-            int[] array2 = {5,6,7};
-            int[] yeniArray = getBirlestirilmisArray(array1,array2);
-            System.out.println(Arrays.toString(yeniArray));
-	}
-        
-	private static int[] getBirlestirilmisArray(int[] array1, int[] array2)
-        {
-            int uzunluk = array1.length + array2.length;
-            int[] yeniArray = Arrays.copyOf(array1, uzunluk); 
-            for(int i = 0; i < array2.length ; i++) { 
-                    yeniArray[array1.length+i] = array2[i];
-            }
-            return yeniArray;
-	}
-    }
-    
-    static class Q2 
-    {
-	/* int ahmetinOkulNumarasi
-	 * 
-	 * örnek : merhaba java nasilsin
-	 * çıktı : merhabaJavaNasilsin
-	 * 
-	 * 
-	 * 5 dk verelim
-	 * 30 geçe başlayalım.
-	 * 
-	 * */
-	public static void main() 
-        {
-            Scanner scan = new Scanner(System.in);
-            System.out.println("Lütfen method ismini giriniz : ");
-            String isim = scan.nextLine(); // MERHABA java
-            String methodIsmi = getFormataUygunIsim(isim);
-            System.out.println("Normal İsim : " + methodIsmi);
-            System.out.println("Gherkin İsim : " + getGherkinLanguageMethodIsmi(isim));
-	}
-	private static String getFormataUygunIsim (String isim)
-        {
-            String yeniMethodIsmi = "";
-            String[] kelimeler = isim.split(" ");  // [" MERHABA", " java"];
-            System.out.println(Arrays.toString(kelimeler));
-            for(int i = 0; i < kelimeler.length; i++)
-            {
-                String kelime = kelimeler[i].replace(" ", "");
-                if(kelime.length() > 0) 
+                System.out.println("\nKalan Kutular : " + kutular.acilmamisKutulariGoster());
+                System.out.println("\nHangi kutuyu açtırmak istiyorsunuz ? : ");
+                int secim = scan.nextInt();
+                kutular.kutuActir(secim);
+                if(kutular.kalanKutuSayisiniAl() == 7
+                                || kutular.kalanKutuSayisiniAl() == 4
+                                || kutular.kalanKutuSayisiniAl() == 1)
                 {
-                    if(i == 0)
+                    System.out.println("Teklif :" + kutular.teklifAl());
+                    System.out.println("*****Kabul Ediyor musun******\n1-Evet\n2-Hayır");
+                    int kabul = scan.nextInt();
+                    if(kabul == 1)
                     {
-                        yeniMethodIsmi += kelime.toLowerCase(); // "merhaba"
+                        System.out.println("Oyun Bitti. Kazandığın Para : " + kutular.teklifAl());
+                        System.out.println("Kutunda da " + kutumdakiParaMiktari + " TL vardı.");
                     }
-                    else 
+                    else
                     {
-                        String ilkHarf = kelime.substring(0, 1).toUpperCase(); // j J
-                        String kalanHarfler = kelime.substring(1,kelime.length()).toLowerCase(); // ava   ava
-                        yeniMethodIsmi += ilkHarf;
-                        yeniMethodIsmi += kalanHarfler;				
+                        kutuSecmeActirma();
                     }
                 }
-            }
-            return yeniMethodIsmi;
-	}
-	// Kullanıcı elma kelimesini arar -> kullanici_elma_kelimesini_arar
-	private static String getGherkinLanguageMethodIsmi(String isim)
-        {
-		return isim.toLowerCase().replace(" ", "_");
-	}
-    }
-    
-    static public class Q3 
-    {
-	/* Kullanıcının yazmış olduğu kelimenin içerisindeki harfleri, alfabeye göre bir sonraki
-	 * harf ile değiştiriniz.
-	 * 
-	 * araba
-	 * bsbcb
-	 * 
-	 * arabaz	
-	 * bsbcba
-	 * 
-	 * 5 dk
-	 * 9 geçe başlayacağız.
-	 * */
-	public static void main()
-        {
-		Scanner scan = new Scanner(System.in);
-		System.out.println("Lütfen kelimeyi yazınız :");
-		String kelime = scan.next();
-		String yeniKelime = getYeniKelime(kelime);
-		System.out.println(yeniKelime);
-	}
-	private static String getYeniKelime(String kelime) 
-        {
-            String yeniKelime = "";
-            for(int i = 0 ; i < kelime.length() ; i++)
-            {
-                char harf = kelime.charAt(i);   /// araba  charAt(0) > a     charAt(1) > b
-                if(harf == 'z')
-                        harf = 'a';
-                else if(harf == 'Z')
-                        harf = 'A';
+
                 else
-                        harf += 1;
-                yeniKelime += harf;
-            }
-            return yeniKelime;
-	}
-    }
-    
-    static private class Q4 
-    {
-	/* araba -> a 		(String)
-	 * bebek -> b  e    (String)
-	 * klavye -> 
-	 * 
-	 * 4 dk
-	 * 
-	 * 43 geçe başlayalım.
-	 * 
-	 * */
-	public static void main()
-        {
-            Scanner scan = new Scanner(System.in);
-            System.out.println("Lütfen kelimeyi yazınız :");
-            String kelime = scan.next();
-            String kopyaHarfler = getKopyaHarflerBirinciYol(kelime);
-            System.out.println(kopyaHarfler);
-            String kopyaHarfler2 = getKopyaHarflerIkinciYol(kelime);
-            System.out.println(kopyaHarfler2);
-	}
-	private static String getKopyaHarflerIkinciYol(String kelime)
-        {
-            String kopyaHarfler = "";
-            char[] charArray = kelime.toCharArray();
-            Arrays.sort(charArray);
-            for(int i = 0 ; i < charArray.length - 1 ; i++) {   // aaabr
-                    if( charArray[i] == charArray[i+1] ) {
-                            if(!kopyaHarfler.contains(""+charArray[i]))
-                                    kopyaHarfler += charArray[i];   // a
-                    }
-            }
-            return kopyaHarfler;
-	}
-        
-	private static String getKopyaHarflerBirinciYol(String kelime)
-        {
-            // iki tane bos String olusturalim.
-            String bosString = "";
-            String kopyaHarfler = "";
-            for(int i = 0 ; i < kelime.length() ; i++) 
-            {   // araba
-                String harf = ""+kelime.charAt(i);
-                if( !bosString.contains(harf) ) 
-                {  // false
-                    bosString+=harf;			  // arb
-                }
-                else 
                 {
-                    if(!kopyaHarfler.contains(harf)) 
+                    if(kutular.kalanKutuSayisiniAl() > 0 )
                     {
-                        kopyaHarfler+=harf;
+                        kutuSecmeActirma();
+                    }
+
+                    else
+                    {
+                        System.out.println("Oyun Bitti !\nKutundaki Para : "+ kutumdakiParaMiktari);
                     }
                 }
             }
-            return kopyaHarfler;
-	}
-    }
 
-    static class Q5 
-    {
-	/* "ab" -> "aba" -> "kaba" -> "kabak" ->
-	 * 
-	 * 5 dk
-	 * 
-	 * */
-	public static void main() 
-        {
-            List<String> kelimeler = new ArrayList<>();
-            Scanner scan = new Scanner(System.in);
-            boolean devamMi = true;
-            int siraKimde = 0;
-            int oyunSayisi = 0;
-            while(devamMi) {
-                    siraKimde = oyunSayisi % 2 + 1;  // 2.kullanıcı
-                    System.out.println(siraKimde +" Kullanıcı kelime yazınız : ");
-                    String kelime = scan.next();
-                    kelimeler.add(kelime);
-                    devamMi = getDevamMi(kelimeler); // false
-                    oyunSayisi++; // 1 2 3 4 5 6
-            }
-            int siraBelirle = siraKimde == 1 ? 2 : 1;
-            System.out.println(siraBelirle + ". kullanıcı kazandı.");
-            System.out.println(kelimeler);
-	}
-	private static boolean getDevamMi(List<String> kelimeler) 
-        {
-            // yazılan kelime, bir önceki yazılan kelimeyi kapsıyor mu (kaba - kabak)
-            // yazılan kelimenin uzunluğu ile bir önceki kelimenin uzunluğu farkı 1 mi
-            if(kelimeler.size() < 2)
-                return true;
-            
-            String sonKelime = kelimeler.get(kelimeler.size() - 1);
-            String birOncekiKelime = kelimeler.get(kelimeler.size() - 2);
-            
-            if(sonKelime.length() - birOncekiKelime.length() != 1)
-                return false;
-            if(!sonKelime.contains(birOncekiKelime))
-                return false;
-            return true;
-	}
-    }
-    
-}
-
-// </editor-fold>
-//<editor-fold defaultstate="collapsed" desc=" java practice questions ">
-
-class JavaReviewQuestions
-{
-    public static void main()
-    {
-        int input=6;
-        faktoryel(input);
-        
-        getSubString();
-        squareRoot();
-        multiplicationTable();
-        
-        String input2="AAABBCDD";
-        frekans(input2);
-        
-        String input3[][]={{"Ali","Veli","Ayse"},{"Hasan","Can"},{"Suzan"}};
-        printList(input3);
-        
-        varargAddition(1,2,3,4);
-        
-        String input4 = "ade1r4d3a2";
-        numbersInString(input4);
-        
-        
-        int input5=65;
-        asalCarpan(input5);
-
-        
-    }
-    
-    public static void faktoryel(int input) 
-    {
-          /*
-         * Pozitif bir tamsayıyı input kabul edip, faktöryelini hesaplayan 
-         * ve ornekte istenildigi şekilde konsola yazdıran bir METHOD yazınız
-         * 
-         * Ör: Input : 6 
-         * Output: 6!=6*5*4*3*2*1=720
-        */
-        
-        System.out.print(input+"!=");
-        int sonuc=1;
-        for (int i = input; i >1; i--) 
-        {
-            sonuc*=i;
-            System.out.print(i+"*");            
-        }
-        System.out.println("1=" + sonuc);
-    }    
-    
-    
-    public static void getSubString()
-    {
-        /*
-         * Kullanıcıdan bir cümle ve bir String isteyin 
-         * Stringin cümlede kaç defa kullanıldığını bulan 
-         * ve örnekteki gibi sonuç yazdıran bir program yazın
-         * (Büyük harf küçük harf olması önemli değil)
-         * 
-         * Cümle =“Hasan sanayiye gitti” String=“san” 
-         * output = cümlede 2 tane “san” var.
-         * 
-         * 
-         */
-
-
-        Scanner scan= new Scanner(System.in);
-        System.out.println("Lutfen bir cumle giriniz");
-        String input= scan.nextLine();
-        System.out.println("Lutfen bulmak istediginiz String'i yaziniz");
-        String arananStr=scan.next();
-
-        int count=0;
-        for (int i = 0; i < input.length()-arananStr.length(); i++) 
-        {
-            if (input.substring(i, i+arananStr.length()).equalsIgnoreCase(arananStr))
+            private static void kutulariOlustur()
             {
-                count++;
-            }
-        }
-        System.out.println("Cumlede " + count + " tane " + arananStr + " var.");
-    }
-    
-    public static void squareRoot() 
-    {
-        /*
-         * Kullanıcıdan bir tamsayı isteyip, 
-         * sayının karekökünü bulan bir program yazınız. 
-         * Sonuçta, virgülden sonra 3 rakam olmalıdır.
-         * 
-         * Ör : Input =2 Output=1,415 
-         *      Input =9 Output=3,000
-         */
-        Scanner scan=new Scanner(System.in);
-        System.out.println("Bir sayı giriniz: ");
-        int input = scan.nextInt();
-
-        double count = 0;
-        for(double i=1; i*i<input; i+=0.001) { // i++==> i=i+1 i=i+0.001==>i+=0.001
-                count=i;
-
+                for(int i = 0 ; i < 10 ; i++)
+                {
+                    Kutu kutu = new Kutu();
+                    kutu.setKutuNumarasi(i + 1); /// 1 2 3 4 5 6 7 8 9 10
+                    kutu.setKutudakiParaMiktari(paraListesi.get(i));
+                    // Oluşturduğumuz kutu nesnelerini kutular classın içindeki arrayliste ekledik.
+                    kutular.kutuEkle(kutu);
+                    //System.out.println("Kutu No : " + ( i + 1 ) + " Para Miktarı : " + paraListesi.get(i));
                 }
-        System.out.println("karekok= " + count);
-
-        System.out.printf("girdiginiz sayi=%-10d, karekoku %.3f", input,count);
-
-		
-    }
-    
-    
-    public static void multiplicationTable() 
-    {
-		
-        /*
-         * Kullanıcıdan bir tamsayı isteyip, çarpım tablosu oluşturan bir program yazın
-         * 
-         * Ör : Input =3 
-         *      Output= 1 2 3 
-         *              2 4 6 
-         *              3 6 9 
-         * Ipucu : printf(%4d) kullanın
-         */ 
-
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Bir sayı giriniz: ");
-
-        int input = scan.nextInt();
-
-        for(int i=1;i<=input;i++) 
-        {
-            for(int j=1;j<=input;j++) 
-            {
-                 System.out.printf("%4d", i*j);
+            }
         }
-            System.out.println("");
-        }
-		
-    }
-	
-    public static void frekans(String input) 
-    {
-        /*
-         * Interview sorusu 
-         * Verilen bir metindeki harflerin frekansını bulup yazdıran bir METHOD yazınız. 
-         * (Büyük harf-küçük harf ayrımına dikkat edilecek) 
-         * 
-         * 
-         * Input = AAABBCDD 
-         * output = A3B2C1D2
-         */
 
-        int count=0;
-        String sonuc="";
-
-        for (int i = 0; i < input.length(); i++)
+        class Kutu
         {
-            for (int j = i; j < input.length(); j++) 
+            private int kutuNumarasi, kutudakiParaMiktari ;
+            public int getKutuNumarasi() {
+                    return kutuNumarasi;
+            }
+            public void setKutuNumarasi(int kutuNumarasi) {
+                    this.kutuNumarasi = kutuNumarasi;
+            }
+            public int getKutudakiParaMiktari() {
+                    return kutudakiParaMiktari;
+            }
+            public void setKutudakiParaMiktari(int kutudakiParaMiktari) {
+                    this.kutudakiParaMiktari = kutudakiParaMiktari;
+            }
+        }
+
+        class Kutular
+        {
+            private List<Kutu> kutuListesi = new ArrayList<>();  // 10 kutu vardı. 9 8 7 6 5 4 3 2 1
+            //    10  9 8 7 6 5 4 3 2 1
+            //	bizim
+            //    9 8 7 6 5 4 3 2 1
+            //    9   7 6 5 4 3 2 1
+            //    9   7 6   4 3 2 1
+            //        7 6   4 3 2 1
+            // 1 2 3 4 5 6 7 8 9 10
+            // remove(5-1);
+            // 1 2 3 4 6 7 8 9 10
+            // remove(7-1)
+            public void kutuEkle(Kutu gelenKutu)
             {
-                if (input.substring(i, i+1).equals(input.substring(j, j+1)))
+                kutuListesi.add(gelenKutu);
+            }
+            public int kalanKutuSayisiniAl()
+            {
+                return kutuListesi.size();
+            }
+
+            public int kutulardakiToplamPara()
+            {
+                int toplamPara = 0;
+                for(Kutu kutu : kutuListesi)
+                {
+                    toplamPara +=  kutu.getKutudakiParaMiktari();
+                }
+                return toplamPara;
+            }
+
+            public String acilmamisKutulariGoster()
+            {
+                String acilmamislar = "";
+                for(Kutu kutu : kutuListesi)
+                {
+                    acilmamislar += " " + kutu.getKutuNumarasi();
+                }
+                return acilmamislar;
+            }
+
+            public void kendiKutumuKaldir(int kutuNumarasi)
+            {
+                for(Kutu kutu : kutuListesi)
+                {
+                    if(kutu.getKutuNumarasi() == kutuNumarasi)
+                    {
+                        kutuListesi.remove(kutu);
+                        break;
+                    }
+                }
+            }
+
+            public void kutuActir(int kutuNumarasi)
+            {
+                for(Kutu kutu : kutuListesi)
+                {
+                    if(kutu.getKutuNumarasi() == kutuNumarasi) {
+                            System.out.println("Kutudaki Para Miktarı : " + kutu.getKutudakiParaMiktari());
+                            kutuListesi.remove(kutu);
+                            break;
+                    }
+                }
+            }
+
+            public int teklifAl()
+            {
+                    return kutulardakiToplamPara() / 7;
+            }
+        }
+
+
+
+
+    // </editor-fold>
+
+    //<editor-fold defaultstate="collapsed" desc=" QUESTION-21 ">
+
+    class PerfectNumber
+    {
+        /* Perfect Number (Mükemmel sayı)
+         * Bir sayının mükemmel olup olmadığını bulan method yazınız.
+         * getMukemmelMi(int sayi)
+         *  return true/false
+         *
+         * Mükemmel sayı : bir sayının kendisi hariç bölenlerinin toplamı, kendisine eşitse
+         * 		o sayı mükemmeldir.
+         * 		örnek :  6 -> 1,2,3 	1+2+3 = 6 = 6 (Mükemmel)
+         *
+         * süre 3 dk.
+         *
+         * */
+        public static void main()
+            {
+                Scanner scan = new Scanner(System.in);
+                System.out.println("Bir Sayı giriniz: ");
+                int num = scan.nextInt();
+                System.out.println(getMukemmelMi(num));
+        }
+        private static boolean getMukemmelMi(int num) {
+            int i;
+            int count = 0;
+            for (i = 1; i <= num/2; i++) {
+                if (num % i == 0) {
+                    count += i;
+                }
+            }
+            return count == num;
+        }
+    }
+
+    // </editor-fold>
+
+
+
+    //<editor-fold defaultstate="collapsed" desc=" QUESTION-22 ">
+
+        class QUESTIONS
+        {
+            static public void main()
+            {
+                Q1.main();
+                Q2.main();
+                Q3.main();
+                Q4.main();
+                Q5.main();
+            }
+            static class Q1
+            {
+            /* İki farklı Array'i birleştiren ve oluşturduğu yeni Array'i return eden
+             * bir method yazınız.
+             *
+             * getBirlestirilmisArray(int[] array1, int[] array2)
+             * 	return yeniArray;
+             *
+             * [1,2,3] ve [5,6,7]
+             *
+             * [1,2,3,5,6,7]
+             *
+             * 3 dk süre verelim.
+             *
+             * */
+            public static void main()
+                {
+                    int[] array1 = {1,2,3};
+                    int[] array2 = {5,6,7};
+                    int[] yeniArray = getBirlestirilmisArray(array1,array2);
+                    System.out.println(Arrays.toString(yeniArray));
+            }
+
+            private static int[] getBirlestirilmisArray(int[] array1, int[] array2)
+                {
+                    int uzunluk = array1.length + array2.length;
+                    int[] yeniArray = Arrays.copyOf(array1, uzunluk);
+                    for(int i = 0; i < array2.length ; i++) {
+                            yeniArray[array1.length+i] = array2[i];
+                    }
+                    return yeniArray;
+            }
+            }
+
+            static class Q2
+            {
+            /* int ahmetinOkulNumarasi
+             *
+             * örnek : merhaba java nasilsin
+             * çıktı : merhabaJavaNasilsin
+             *
+             *
+             * 5 dk verelim
+             * 30 geçe başlayalım.
+             *
+             * */
+            public static void main()
+                {
+                    Scanner scan = new Scanner(System.in);
+                    System.out.println("Lütfen method ismini giriniz : ");
+                    String isim = scan.nextLine(); // MERHABA java
+                    String methodIsmi = getFormataUygunIsim(isim);
+                    System.out.println("Normal İsim : " + methodIsmi);
+                    System.out.println("Gherkin İsim : " + getGherkinLanguageMethodIsmi(isim));
+            }
+            private static String getFormataUygunIsim (String isim)
+                {
+                    String yeniMethodIsmi = "";
+                    String[] kelimeler = isim.split(" ");  // [" MERHABA", " java"];
+                    System.out.println(Arrays.toString(kelimeler));
+                    for(int i = 0; i < kelimeler.length; i++)
+                    {
+                        String kelime = kelimeler[i].replace(" ", "");
+                        if(kelime.length() > 0)
+                        {
+                            if(i == 0)
+                            {
+                                yeniMethodIsmi += kelime.toLowerCase(); // "merhaba"
+                            }
+                            else
+                            {
+                                String ilkHarf = kelime.substring(0, 1).toUpperCase(); // j J
+                                String kalanHarfler = kelime.substring(1,kelime.length()).toLowerCase(); // ava   ava
+                                yeniMethodIsmi += ilkHarf;
+                                yeniMethodIsmi += kalanHarfler;
+                            }
+                        }
+                    }
+                    return yeniMethodIsmi;
+            }
+            // Kullanıcı elma kelimesini arar -> kullanici_elma_kelimesini_arar
+            private static String getGherkinLanguageMethodIsmi(String isim)
+                {
+                return isim.toLowerCase().replace(" ", "_");
+            }
+            }
+
+            static public class Q3
+            {
+            /* Kullanıcının yazmış olduğu kelimenin içerisindeki harfleri, alfabeye göre bir sonraki
+             * harf ile değiştiriniz.
+             *
+             * araba
+             * bsbcb
+             *
+             * arabaz
+             * bsbcba
+             *
+             * 5 dk
+             * 9 geçe başlayacağız.
+             * */
+            public static void main()
+                {
+                Scanner scan = new Scanner(System.in);
+                System.out.println("Lütfen kelimeyi yazınız :");
+                String kelime = scan.next();
+                String yeniKelime = getYeniKelime(kelime);
+                System.out.println(yeniKelime);
+            }
+            private static String getYeniKelime(String kelime)
+                {
+                    String yeniKelime = "";
+                    for(int i = 0 ; i < kelime.length() ; i++)
+                    {
+                        char harf = kelime.charAt(i);   /// araba  charAt(0) > a     charAt(1) > b
+                        if(harf == 'z')
+                                harf = 'a';
+                        else if(harf == 'Z')
+                                harf = 'A';
+                        else
+                                harf += 1;
+                        yeniKelime += harf;
+                    }
+                    return yeniKelime;
+            }
+            }
+
+            static private class Q4
+            {
+            /* araba -> a 		(String)
+             * bebek -> b  e    (String)
+             * klavye ->
+             *
+             * 4 dk
+             *
+             * 43 geçe başlayalım.
+             *
+             * */
+            public static void main()
+                {
+                    Scanner scan = new Scanner(System.in);
+                    System.out.println("Lütfen kelimeyi yazınız :");
+                    String kelime = scan.next();
+                    String kopyaHarfler = getKopyaHarflerBirinciYol(kelime);
+                    System.out.println(kopyaHarfler);
+                    String kopyaHarfler2 = getKopyaHarflerIkinciYol(kelime);
+                    System.out.println(kopyaHarfler2);
+            }
+            private static String getKopyaHarflerIkinciYol(String kelime)
+                {
+                    String kopyaHarfler = "";
+                    char[] charArray = kelime.toCharArray();
+                    Arrays.sort(charArray);
+                    for(int i = 0 ; i < charArray.length - 1 ; i++) {   // aaabr
+                            if( charArray[i] == charArray[i+1] ) {
+                                    if(!kopyaHarfler.contains(""+charArray[i]))
+                                            kopyaHarfler += charArray[i];   // a
+                            }
+                    }
+                    return kopyaHarfler;
+            }
+
+            private static String getKopyaHarflerBirinciYol(String kelime)
+                {
+                    // iki tane bos String olusturalim.
+                    String bosString = "";
+                    String kopyaHarfler = "";
+                    for(int i = 0 ; i < kelime.length() ; i++)
+                    {   // araba
+                        String harf = ""+kelime.charAt(i);
+                        if( !bosString.contains(harf) )
+                        {  // false
+                            bosString+=harf;			  // arb
+                        }
+                        else
+                        {
+                            if(!kopyaHarfler.contains(harf))
+                            {
+                                kopyaHarfler+=harf;
+                            }
+                        }
+                    }
+                    return kopyaHarfler;
+            }
+            }
+
+            static class Q5
+            {
+            /* "ab" -> "aba" -> "kaba" -> "kabak" ->
+             *
+             * 5 dk
+             *
+             * */
+            public static void main()
+                {
+                    List<String> kelimeler = new ArrayList<>();
+                    Scanner scan = new Scanner(System.in);
+                    boolean devamMi = true;
+                    int siraKimde = 0;
+                    int oyunSayisi = 0;
+                    while(devamMi) {
+                            siraKimde = oyunSayisi % 2 + 1;  // 2.kullanıcı
+                            System.out.println(siraKimde +" Kullanıcı kelime yazınız : ");
+                            String kelime = scan.next();
+                            kelimeler.add(kelime);
+                            devamMi = getDevamMi(kelimeler); // false
+                            oyunSayisi++; // 1 2 3 4 5 6
+                    }
+                    int siraBelirle = siraKimde == 1 ? 2 : 1;
+                    System.out.println(siraBelirle + ". kullanıcı kazandı.");
+                    System.out.println(kelimeler);
+            }
+            private static boolean getDevamMi(List<String> kelimeler)
+                {
+                    // yazılan kelime, bir önceki yazılan kelimeyi kapsıyor mu (kaba - kabak)
+                    // yazılan kelimenin uzunluğu ile bir önceki kelimenin uzunluğu farkı 1 mi
+                    if(kelimeler.size() < 2)
+                        return true;
+
+                    String sonKelime = kelimeler.get(kelimeler.size() - 1);
+                    String birOncekiKelime = kelimeler.get(kelimeler.size() - 2);
+
+                    if(sonKelime.length() - birOncekiKelime.length() != 1)
+                        return false;
+                    if(!sonKelime.contains(birOncekiKelime))
+                        return false;
+                    return true;
+            }
+            }
+
+        }
+
+    // </editor-fold>
+    //<editor-fold defaultstate="collapsed" desc=" java practice questions ">
+
+    class JavaReviewQuestions
+    {
+        public static void main()
+        {
+            int input=6;
+            faktoryel(input);
+
+            getSubString();
+            squareRoot();
+            multiplicationTable();
+
+            String input2="AAABBCDD";
+            frekans(input2);
+
+            String input3[][]={{"Ali","Veli","Ayse"},{"Hasan","Can"},{"Suzan"}};
+            printList(input3);
+
+            varargAddition(1,2,3,4);
+
+            String input4 = "ade1r4d3a2";
+            numbersInString(input4);
+
+
+            int input5=65;
+            asalCarpan(input5);
+
+
+        }
+
+        public static void faktoryel(int input)
+        {
+              /*
+             * Pozitif bir tamsayıyı input kabul edip, faktöryelini hesaplayan
+             * ve ornekte istenildigi şekilde konsola yazdıran bir METHOD yazınız
+             *
+             * Ör: Input : 6
+             * Output: 6!=6*5*4*3*2*1=720
+            */
+
+            System.out.print(input+"!=");
+            int sonuc=1;
+            for (int i = input; i >1; i--)
+            {
+                sonuc*=i;
+                System.out.print(i+"*");
+            }
+            System.out.println("1=" + sonuc);
+        }
+
+
+        public static void getSubString()
+        {
+            /*
+             * Kullanıcıdan bir cümle ve bir String isteyin
+             * Stringin cümlede kaç defa kullanıldığını bulan
+             * ve örnekteki gibi sonuç yazdıran bir program yazın
+             * (Büyük harf küçük harf olması önemli değil)
+             *
+             * Cümle =“Hasan sanayiye gitti” String=“san”
+             * output = cümlede 2 tane “san” var.
+             *
+             *
+             */
+
+
+            Scanner scan= new Scanner(System.in);
+            System.out.println("Lutfen bir cumle giriniz");
+            String input= scan.nextLine();
+            System.out.println("Lutfen bulmak istediginiz String'i yaziniz");
+            String arananStr=scan.next();
+
+            int count=0;
+            for (int i = 0; i < input.length()-arananStr.length(); i++)
+            {
+                if (input.substring(i, i+arananStr.length()).equalsIgnoreCase(arananStr))
                 {
                     count++;
                 }
-            } 
-            if (sonuc.contains(input.substring(i, i+1))) 
-            {} 
-            else 
-                sonuc+=input.substring(i, i+1)+count;
-
-            count=0;
-        }
-       
-        System.out.println(sonuc);
-    }
-
-
-    public static void printList(String input[][])
-    {
-        /*
-        * 2 Boyutlu bir Multidimensional array'i input kabul edip, 
-        * arraydeki tüm elemanları bir listeye kopyalayan ve
-        * harf sırasına göre yazdıran bir METHOD yazınız.
-        * 
-        * Eg : Input : {{Ali,Veli,Ayse},{Hasan,Can},{Suzan}} 
-        * Output:[Ali, Ayse, Can,Hasan, Suzan, Veli]
-        */
-
-        List<String> list = new ArrayList<>();
-
-        for(int i=0;i<input.length;i++)  
-        {
-            for(int j=0;j<input[i].length;j++) 
-            {
-                list.add(input[i][j]);
             }
+            System.out.println("Cumlede " + count + " tane " + arananStr + " var.");
         }
 
-        Collections.sort(list);
-        System.out.println(list);
-
-    }
-
-    public static void varargAddition(int ...a)
-    {
-        int sum=0;
-         for (int i: a) 
-            sum+=i;
-        System.out.print("sum:"+sum ); 
-    }
-    
-    public static void numbersInString(String input)
-    {
-
-        /*
-         * Bir Stringi input olarak alıp, 
-         * String içindeki sayıların toplamını veren bir METHOD yazınız
-         * 
-         * Ör: input : ade1r4d3 
-         *     output : 8 
-         *     İpucu :     Character.isDigit()
-         *                 Integer.valueOf()
-         */
-        int sum=0;
-        for (int i = 0; i < input.length(); i++)
+        public static void squareRoot()
         {
-            if(Character.isDigit(input.charAt(i))) 
-            {
-                sum+= Integer.valueOf(""+input.charAt(i));//"" koyfduk ki charların ascıı degerlerini almasın
-                //Stringe dönustursun
-            }
-        } 
-        System.out.println("string icindeki rakamlarin toplami= " + sum);
-    }
-    
-    
-    
-    static int bolen=0;
-    static boolean isAsal=true;
+            /*
+             * Kullanıcıdan bir tamsayı isteyip,
+             * sayının karekökünü bulan bir program yazınız.
+             * Sonuçta, virgülden sonra 3 rakam olmalıdır.
+             *
+             * Ör : Input =2 Output=1,415
+             *      Input =9 Output=3,000
+             */
+            Scanner scan=new Scanner(System.in);
+            System.out.println("Bir sayı giriniz: ");
+            int input = scan.nextInt();
 
-    public static void asalCarpan(int input) 
-    {
-        /*
-        Pozitif bir tamsayıyı input kabul edip en büyük asal çarpanını veren bir METHOD yazınız
-        Ör:       Input    : 50
-        Bolenler : 2,5,10,20,50
-        Asal Bolenler: 2,5 
-        En buyuk asal carpan: 5
-        */
-	int asalCarpan=2;
-        for (int i = 2; i <= input ; i++) 
+            double count = 0;
+            for(double i=1; i*i<input; i+=0.001) { // i++==> i=i+1 i=i+0.001==>i+=0.001
+                    count=i;
+
+                    }
+            System.out.println("karekok= " + count);
+
+            System.out.printf("girdiginiz sayi=%-10d, karekoku %.3f", input,count);
+
+
+        }
+
+
+        public static void multiplicationTable()
         {
-            if (input%i==0)
+
+            /*
+             * Kullanıcıdan bir tamsayı isteyip, çarpım tablosu oluşturan bir program yazın
+             *
+             * Ör : Input =3
+             *      Output= 1 2 3
+             *              2 4 6
+             *              3 6 9
+             * Ipucu : printf(%4d) kullanın
+             */
+
+            Scanner scan = new Scanner(System.in);
+            System.out.println("Bir sayı giriniz: ");
+
+            int input = scan.nextInt();
+
+            for(int i=1;i<=input;i++)
             {
-                bolen=i;
-                asalKontrol(bolen);
-                if (isAsal) 
+                for(int j=1;j<=input;j++)
                 {
-                        asalCarpan=bolen;
+                     System.out.printf("%4d", i*j);
+            }
+                System.out.println("");
+            }
+
+        }
+
+        public static void frekans(String input)
+        {
+            /*
+             * Interview sorusu
+             * Verilen bir metindeki harflerin frekansını bulup yazdıran bir METHOD yazınız.
+             * (Büyük harf-küçük harf ayrımına dikkat edilecek)
+             *
+             *
+             * Input = AAABBCDD
+             * output = A3B2C1D2
+             */
+
+            int count=0;
+            String sonuc="";
+
+            for (int i = 0; i < input.length(); i++)
+            {
+                for (int j = i; j < input.length(); j++)
+                {
+                    if (input.substring(i, i+1).equals(input.substring(j, j+1)))
+                    {
+                        count++;
+                    }
+                }
+                if (sonuc.contains(input.substring(i, i+1)))
+                {}
+                else
+                    sonuc+=input.substring(i, i+1)+count;
+
+                count=0;
+            }
+
+            System.out.println(sonuc);
+        }
+
+
+        public static void printList(String input[][])
+        {
+            /*
+            * 2 Boyutlu bir Multidimensional array'i input kabul edip,
+            * arraydeki tüm elemanları bir listeye kopyalayan ve
+            * harf sırasına göre yazdıran bir METHOD yazınız.
+            *
+            * Eg : Input : {{Ali,Veli,Ayse},{Hasan,Can},{Suzan}}
+            * Output:[Ali, Ayse, Can,Hasan, Suzan, Veli]
+            */
+
+            List<String> list = new ArrayList<>();
+
+            for(int i=0;i<input.length;i++)
+            {
+                for(int j=0;j<input[i].length;j++)
+                {
+                    list.add(input[i][j]);
                 }
             }
+
+            Collections.sort(list);
+            System.out.println(list);
+
         }
-        System.out.println(asalCarpan);
-	}
-	
-	public static boolean asalKontrol(int bolen) {
-		
-		for (int i = 2; i < bolen; i++) {
-			if(bolen%i==0) {
-				isAsal=false;
-				break;
-			}
-		}
-		
-	return isAsal;
-		
-	}
 
-}      
- 
+        public static void varargAddition(int ...a)
+        {
+            int sum=0;
+             for (int i: a)
+                sum+=i;
+            System.out.print("sum:"+sum );
+        }
 
-// </editor-fold>
+        public static void numbersInString(String input)
+        {
 
-//<editor-fold defaultstate="collapsed" desc=" QUESTION-21 ">
-
-
-// </editor-fold>
-//<editor-fold defaultstate="collapsed" desc=" QUESTION-21 ">
-
-
-// </editor-fold>
-//<editor-fold defaultstate="collapsed" desc=" QUESTION-21 ">
-
-
-// </editor-fold>
-//<editor-fold defaultstate="collapsed" desc=" QUESTION-21 ">
+            /*
+             * Bir Stringi input olarak alıp,
+             * String içindeki sayıların toplamını veren bir METHOD yazınız
+             *
+             * Ör: input : ade1r4d3
+             *     output : 8
+             *     İpucu :     Character.isDigit()
+             *                 Integer.valueOf()
+             */
+            int sum=0;
+            for (int i = 0; i < input.length(); i++)
+            {
+                if(Character.isDigit(input.charAt(i)))
+                {
+                    sum+= Integer.valueOf(""+input.charAt(i));//"" koyfduk ki charların ascıı degerlerini almasın
+                    //Stringe dönustursun
+                }
+            }
+            System.out.println("string icindeki rakamlarin toplami= " + sum);
+        }
 
 
-// </editor-fold>
-//<editor-fold defaultstate="collapsed" desc=" QUESTION-21 ">
+
+        static int bolen=0;
+        static boolean isAsal=true;
+
+        public static void asalCarpan(int input)
+        {
+            /*
+            Pozitif bir tamsayıyı input kabul edip en büyük asal çarpanını veren bir METHOD yazınız
+            Ör:       Input    : 50
+            Bolenler : 2,5,10,20,50
+            Asal Bolenler: 2,5
+            En buyuk asal carpan: 5
+            */
+        int asalCarpan=2;
+            for (int i = 2; i <= input ; i++)
+            {
+                if (input%i==0)
+                {
+                    bolen=i;
+                    asalKontrol(bolen);
+                    if (isAsal)
+                    {
+                            asalCarpan=bolen;
+                    }
+                }
+            }
+            System.out.println(asalCarpan);
+        }
+
+        public static boolean asalKontrol(int bolen) {
+
+            for (int i = 2; i < bolen; i++) {
+                if(bolen%i==0) {
+                    isAsal=false;
+                    break;
+                }
+            }
+
+        return isAsal;
+
+        }
+
+    }
 
 
-// </editor-fold>
+    // </editor-fold>
+
+    //<editor-fold defaultstate="collapsed" desc=" QUESTION-21 ">
+
+
+    // </editor-fold>
+    //<editor-fold defaultstate="collapsed" desc=" QUESTION-21 ">
+
+
+    // </editor-fold>
+    //<editor-fold defaultstate="collapsed" desc=" QUESTION-21 ">
+
+
+    // </editor-fold>
+    //<editor-fold defaultstate="collapsed" desc=" QUESTION-21 ">
+
+
+    // </editor-fold>
+    //<editor-fold defaultstate="collapsed" desc=" QUESTION-21 ">
+
+
+    // </editor-fold>
 
 
 
@@ -9051,6 +9067,7 @@ class JavaReviewQuestions
 // </editor-fold>
 
 //<editor-fold defaultstate="collapsed" desc=" JAVA INTERVIEW QUESTIONS ">
+
 //1) Java "Platform Independent" programlama dilidir.
 	//   Yani; herhangi bir platformda yazilan Java kodu diger platformlarda da calisir.
 	//   Mesela kodu Mac'de yazdiniz, Windowsda da calisir.
