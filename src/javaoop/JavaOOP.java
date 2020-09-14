@@ -45,13 +45,15 @@ public class JavaOOP extends KalitimliOrnek//main method var bu methodda onu kul
         //obje1.student3();
         //OkulSistemiGiris.main();
         //television();
-        //personnel();   
+        //personnel();
         //obje1.computer();  //static yani class a özgü method olmadığı için nesneye bağlı method olduğu için static main methodun içinde nesne üretmek zorundayz       
         //calculator();//main ile JavaOOP sınıfının methodları
         //obje1.calculator();
         //JavaOOP.calculator();     
         //thisClasss();
         //car();
+        //cocuk n=new cocuk(1);
+        //cocuk2 n=new cocuk2(1);
         //Circle_Cylinder();
         //override();
         //Square_Rectangle();
@@ -61,35 +63,33 @@ public class JavaOOP extends KalitimliOrnek//main method var bu methodda onu kul
         //mainU.main();  
         //binding();
         //KonuyuToparlayalim.main();//main static olmasaydı nesne olusturmak zorunda kalacaktım
-        methodsOfObjectClass();
+        //methodsOfObjectClass();
         //finalKeyword();
        
          
         //<editor-fold defaultstate="collapsed" desc=" QUESTIONS ">
 
          
-        //stackArea.main();       
+        //stackArea.main();
         //<editor-fold defaultstate="collapsed" desc=" QUESTION-1 ">
        
-        
-        //System.out.println("------Q1------");
-        //a obj=new b();//bu  constructor methodu calıstırır, BLOKLARI CALISTIRIR
-        //System.out.println(obj.a);//10//aclass dan miras alınmıs bclass de override edilmiş bi a variable yok
-        //System.out.println(obj.b);//1//b variable'ı bclass'ta method içinde islendi
-        //obj.method();//2//b variable'ı bclass'ta method içinde islendi- void method hiç bie suretle sout içine yazılamaz
 
+       // System.out.println("------Q1------");
+        //        a obj=new b();//bu  constructor methodu calıstırır, BLOKLARI CALISTIRIR
+        //        System.out.println(obj.a);//10//bclassındaki a calısıcak, olmasaydı a daki calısırdı, aclass dan miras alınmıs bclass de override edilmiş bi a variable yok
+        //        System.out.println(obj.b);//1//b variable'ı bclass'ta method içinde islendi
+        //        obj.method();//2//b variable'ı bclass'ta method içinde islendi- void method hiç bie suretle sout içine yazılamaz
         // </editor-fold>       
         //<editor-fold defaultstate="collapsed" desc=" QUESTION-2 ">
-    //    System.out.println("------Q2------");
-      //  CSinifi c = new CSinifi();//nesne olusturunca constructor cagrılır,İNSTANCE BLOKLAR calsıır
-        /*
-            1
-            11
-            ASinifi
-            2
-            3
-        */
+         //System.out.println("------Q2------");
+         //CSinifi c = new CSinifi();//nesne olusturunca constructor cagrılır,İNSTANCE BLOKLAR calsıır
+        //ASinifi ac=new CSinifi();//ykardaki ile aynı
+        //ASinifi ac2=new CSinifi(12);//AYNI YOLU İZLER A VE B NİN DEFAULT CONSTR. CALISIR, C NIN İSE 1PARAM CONSTR. CALISIR
+
+
         // </editor-fold>
+
+
         //<editor-fold defaultstate="collapsed" desc=" QUESTION-3 ">
         /*
         System.out.println("------Q3------");  
@@ -128,7 +128,7 @@ public class JavaOOP extends KalitimliOrnek//main method var bu methodda onu kul
         //<editor-fold defaultstate="collapsed" desc=" QUESTION-5 ">
        //        System.out.println("------Q5------");
 
-     //   Bb.staticMethod();//BbSinifi
+        //Bb.staticMethod();//BbSinifi
 
         // </editor-fold> 
         //<editor-fold defaultstate="collapsed" desc=" QUESTION-6 ">
@@ -138,7 +138,7 @@ public class JavaOOP extends KalitimliOrnek//main method var bu methodda onu kul
         // </editor-fold>
         //<editor-fold defaultstate="collapsed" desc=" QUESTION-7 ">
         //System.out.println("------Q7------");
-       // X x = new Y(15);
+       //X x = new Y(15);
         /*
         21
         75
@@ -153,7 +153,7 @@ public class JavaOOP extends KalitimliOrnek//main method var bu methodda onu kul
         //<editor-fold defaultstate="collapsed" desc=" QUESTION-8 ">
         //System.out.println("------Q8------");
 
-        //L l = new L();
+       // L l = new L();
         /*
             222
             442
@@ -161,7 +161,9 @@ public class JavaOOP extends KalitimliOrnek//main method var bu methodda onu kul
 
         // </editor-fold>
         //<editor-fold defaultstate="collapsed" desc=" QUESTION-9 ">
-                       /*     System.out.println("------Q9------");
+               /*
+                            System.out.println("------Q9------");
+
 
         R r= new R();//
         T t= new T();
@@ -177,33 +179,34 @@ public class JavaOOP extends KalitimliOrnek//main method var bu methodda onu kul
         System.out.println(r.x3);//x3
         System.out.println(t.m2);//m22
         System.out.println(t.x3);//x3
-        */
+*/
 
         // </editor-fold> 
+
         //<editor-fold defaultstate="collapsed" desc=" QUESTION-10 ">
                    //   System.out.println("------Q10------");
-                     //  Q10_Main.main();
+                 //    Q10_Main.main();
 
         // </editor-fold>
         //<editor-fold defaultstate="collapsed" desc=" QUESTION-11 ">
  //System.out.println("------Q11------");
-   //                    Q11_Main.main();
+           //         Q11_Main.main();
     // </editor-fold>   
         //<editor-fold defaultstate="collapsed" desc=" QUESTION-12 ">
       //  System.out.println("------Q12------");
-        //                       Q12_Main.main();
+                             //  Q12_Main.main();
             // </editor-fold>           
         //<editor-fold defaultstate="collapsed" desc=" QUESTION-13 ">
  //System.out.println("------Q13------");
-   //                            Q13_Main.main();
+                              // Q13_Main.main();
     // </editor-fold>
         //<editor-fold defaultstate="collapsed" desc=" QUESTION-14 ">
  //System.out.println("------Q14------");
-                         //      Q14_Main.main();
+                         //     Q14_Main.main();
     // </editor-fold>
         //<editor-fold defaultstate="collapsed" desc=" QUESTION-15 ">
  //System.out.println("------Q15------");
-                             //  Q15_Main.main();
+                        //       Q15_Main.main();
     // </editor-fold>
         //TV_Main.main();
         
@@ -214,15 +217,17 @@ public class JavaOOP extends KalitimliOrnek//main method var bu methodda onu kul
  //Q16_Main.main();
  
     // </editor-fold>
+
+
 //<editor-fold defaultstate="collapsed" desc=" QUESTION-18 ">
  //System.out.println("------Q18------");
-                              // Q18_Main.main();
+                             //  Q18_Main.main();
     // </editor-fold>
 //<editor-fold defaultstate="collapsed" desc=" QUESTION-19 ">
  //System.out.println("------Q19------");
 //Q19_Main.main();  
 // </editor-fold>
-//<editor-fold defaultstate="collapsed" desc=" QUESTION-10 ">
+//<editor-fold defaultstate="collapsed" desc=" QUESTION-20 ">
  //System.out.println("------Q12------");
    //                            Q12_Main.main();
     // </editor-fold>
@@ -232,15 +237,19 @@ public class JavaOOP extends KalitimliOrnek//main method var bu methodda onu kul
         
 
     //</editor-fold>
-    
-    
+
+
         //Abstract class is just for learning the logics
         //Abstract2.main();
+        //MainClasstr.main();
         //abs_int.main();
         //Interface01.main();
+        //MultipleInheritance.main();
+        //Duman d =new Duman();        d.eat();
+        //superclass s=new subsubclass(); s.naber();
         //MainClasst.main();
         //MainClasstr.main();
-        //ComparableUsage.main();
+        ComparableUsage.main();
         //nestedClassUsage.main();
         //main_innerClass.main();
         //Main_Local.main();
@@ -622,10 +631,14 @@ public class JavaOOP extends KalitimliOrnek//main method var bu methodda onu kul
         p1.setName("zeko");p1.setSalary(10000);   p1.showInfos();//non-static:1  static:2
         
         personnel p2=new personnel();
-        p1.setName("duman");p1.setSalary(7000);   p1.showInfos();//non-static:1  static:3
+        p2.setName("duman");p2.setSalary(7000);   p2.showInfos();//non-static:1  static:3
+
+
 
         System.out.println(p.personnelNum);// 3   static public deger            object.variable
         System.out.println(personnel.personnelNum);//3    static public deger    class.variable
+        personnel.personnelNum=10;
+        System.out.println(p.personnelNum);//10
         //ATTENTION! only for static values
         p.law();//seceneklerde cıkmaz ama manuel olarak yazarsan compile error almazsın
         personnel.laww();//static method
@@ -829,11 +842,11 @@ public class JavaOOP extends KalitimliOrnek//main method var bu methodda onu kul
         {
             Scanner input=new Scanner(System.in);
             Circle c = new Circle();
-            System.out.println(c);//null - yazar çünkü toString override edilmiş nesne null olamdı sadece toString'in içi null return ediyor
+            System.out.println(c);//radius = 5.0 area of circle = 75.0
             System.out.println(c.getRadius()+ " " +c.areaCircle());//5.0 75.0
            
             Cylinder cy1=new Cylinder(); //to call no argument constructore
-            System.out.println(cy1);//null height=10.0 area of cylinder= 464.0    
+            System.out.println(cy1);//radius = 5.0 area of circle = 75.0 height=10.0 area of cylinder= 464.0
             //toString method in Cylinder is overrided(super().toString+......)
 
             System.out.println("radius = "+cy1.getRadius());   //radius = 5.0  - CYLINDER Classı superClassından method ve variable çekebilir
@@ -862,12 +875,9 @@ public class JavaOOP extends KalitimliOrnek//main method var bu methodda onu kul
             double h=input.nextDouble();//10
 
             Cylinder cy2=new Cylinder(r,h); //callilng argument constructore
-            System.out.println(cy2.toString());//null height=10.0 area of cylinder= 1228.0
-            
-            
-            
-            
-            
+            System.out.println(cy2.toString());//radius = 10.0 area of circle = 300.0 height=10.0 area of cylinder= 1228.0
+
+
         }
         
 // </editor-fold>
@@ -956,6 +966,10 @@ public class JavaOOP extends KalitimliOrnek//main method var bu methodda onu kul
         
         poly02 pol2=new poly02();
         pol2.eat();
+        poly02.drink();//child parent daki static methodlara variablara ulasır
+        pol2.drink();
+        System.out.println(poly02.word2);
+
         /*
             poly02 YE!
             StaticVariable
@@ -1200,6 +1214,7 @@ public class JavaOOP extends KalitimliOrnek//main method var bu methodda onu kul
     
     public static void binding()
     {
+        //kısacası polimorphism olayında alt sınıflardan sadece override edilmiş methodlara eriilir
         /*
             Static veya Early Binding veya Erken Bağlama
             static ve final metotlar compile time da bind edilir. Çünkübu metotlar override edilemezler. 
@@ -1252,6 +1267,11 @@ public class JavaOOP extends KalitimliOrnek//main method var bu methodda onu kul
         //Üst sınıfın static adını söyle metotu çağrıldı
         //STATIC - EARLY BINDING - COMPILE TIME BINDING - BECAUSE ustSinif object will not search for adiniSoyleStatic() method into other classes
 
+        System.out.println(ustSinif.a);//UstSınıf
+        //late binding olayı sadece overriding olayında olur
+        //superclass'ta String a var subclass'ta da String a var ama overriding olayı yok.
+        System.out.println(altSinifNesnesi.a);//AltSinif
+
         ustSinif.nonStaticMethod();//adiniSoyle() methodu static degil ve override edildi.als sınıftaki method cagrıldı.
         //Alt  sınıfın  1.non-static metotu çağrıldı       
         //DYNAMIC - LATE BINDING - RUN TIME BINDING
@@ -1262,7 +1282,7 @@ public class JavaOOP extends KalitimliOrnek//main method var bu methodda onu kul
         //DYNAMIC - LATE BINDING - RUN TIME BINDING
         ustsınıf.nonStaticMethod();//2 Alt  sınıfın  non-static 1.metotu çağrıldı
         ustsınıf.nonStaticMethod2();//2 Alt sınıfın  non-static 2.metotu çağrıldı
-        ustsınıf.nonStaticMethod3();//Alt sınıfın  non-static 3.metotu çağrıldı-bu method altsinif2 de yok,üst sınıfta var.AMA altsınıf2'den direk üst sınıfa atlamaz teker teker bakar.
+        ustsınıf.nonStaticMethod3();//Alt sınıfın  non-static 3.metotu çağrıldı-bu method altsinif2 de yok,üst sınıfta var.AMA altsınıf2'den direk EN üst sınıfa atlamaz teker teker bakar.
         ustsınıf.methodOfustSinif();//üst sınıfın kendine has methodu-bu method altsinif2 de yok-altsinifta yok üst sınıfta var ve yazdırdı
         //STATIC - EARLY BINDING - COMPILE TIME BINDING
         ustsınıf.StaticMethod();//MANUEL YAZDIM-Üst sınıfın static  metotu çağrıldı
@@ -1289,13 +1309,17 @@ public class JavaOOP extends KalitimliOrnek//main method var bu methodda onu kul
     
 // </editor-fold>
          
+
     //<editor-fold defaultstate="collapsed" desc="Final keyword">
      static public void finalKeyword()
      {
          grandChild o=new grandChild();
          o.callMethod2();
          o.callmethods3();
-         
+
+         grandChild o2=new grandChild();
+         o2.callMethod2();
+
          Finalgrandchild obj=new Finalgrandchild();
          obj.method1();
          obj.method3();
@@ -1304,7 +1328,8 @@ public class JavaOOP extends KalitimliOrnek//main method var bu methodda onu kul
          //System.out.println(obj.a);
          Finalgrandchild.method4();
          Finalgrandchild.method2();
-         System.out.println(Finalgrandchild.a);
+         System.out.println(Finalgrandchild.a);//3
+
          
          //polimorphism ve final method
         child c=new child();
@@ -1562,7 +1587,9 @@ class Student2
 
     
     
-}   // </editor-fold>
+}
+
+// </editor-fold>
 
   //<editor-fold defaultstate="collapsed" desc=" student3 -class Array ">
 
@@ -2020,7 +2047,7 @@ class SabitBilgiler
         public static int personnelNum;//sınıfa özgü nesneler ortak kullanır
 
         
-        static int en =12;  //en=10; static degere tekrar deger atanamaz
+        static int en =12;  {en=10;}// static degere tekrar deger atanabilir
         static int boy=10;
         static int alan;
         static double pi;
@@ -2030,8 +2057,8 @@ class SabitBilgiler
         //otomatik calıstırılır
         static{//ilk üstteki static calısır
             en=5; alan=en*boy; System.out.println(alan);//5*10 = 50
-            int abc=10;//STATIC burada atadığım degerler anca yine bu blok icinde kullanılırlar - baska static blokta ve classtaki baska bir methodda işlem göremezler
-            int abc2=10;//STATIC
+            int abc=10;//burada atadığım degerler anca yine bu blok icinde kullanılırlar - baska static blokta ve classtaki baska bir methodda işlem göremezler
+            int abc2=10;//local variable dır
         }
        
         static{//her değer xtatic olmak zorunda
@@ -2041,8 +2068,7 @@ class SabitBilgiler
             pi=3.14;//deger atamak için kullandık
             System.out.println(alan);//print edebiliriz 40
             
-            //abc=11; //ERROR - ınstance variable'lar degistirilebilir
-            int abc2=15; //yeni bir variable olusturdum
+            int abc2=15; //yeni bir local variable olusturdum
         }
         
         public personnel() //constructor her cagrıldıgında both inside of constr. and insides of static and nonStatic blocks runs
@@ -2114,7 +2140,14 @@ class SabitBilgiler
         Ama bazıdurumlarda bir nesneyi oluşturup, değerlerini atayıp sonrasında o değerlerin değiştirilmemesini isteyebiliriz.
         Böyle nesnelere immutable object ve bu nesnelerin sınıflarına da immutable class denir.
         */
-        
+
+        /*
+        Immutable class means that once an object is created,
+        we cannot change its content. In Java, all the wrapper
+         classes (like Integer, Boolean, Byte, Short) and String class is immutable. ...
+          The class must be declared as final (So that child classes can't be created)
+         */
+
         /*
         primitive data type ları private yap  ve setter koyma , böylece immutable dır
         reference data type lar ise değiştrilebiliyor 
@@ -2214,7 +2247,56 @@ class SabitBilgiler
        }
     }
 
-// </editor-fold>  
+// </editor-fold>
+
+  //<editor-fold defaultstate="collapsed" desc=" super - this ">
+
+
+class superclass
+{
+    int hello=0;
+    void nasılsın(){};
+    void naber()
+    {
+        System.out.println("naber-superclass");
+
+    }
+}
+class subclass extends superclass
+{
+    int hello=1;
+
+    @Override
+    void nasılsın(){};
+
+    @Override
+    void naber() {
+        System.out.println("naber-subclass");
+        super.naber();//naber-superclass
+        super.naber();//naber-superclass
+        //this.naber(); runtime error verir sonsuz dögüye sokar
+        //2 super'a ve asagı yazılmasına runtime compile time errro vermez
+        System.out.println(super.hello);//0
+        System.out.println(this.hello);//1
+        super.nasılsın();
+        this.nasılsın();
+    }
+
+
+
+}
+class subsubclass extends subclass
+{
+    void naber()
+    {
+        super.naber();
+        //superclass.super.naber();normal inheritance da böylr bir sey yok
+        System.out.println("naber-subsubclass");
+    }
+
+}
+
+// </editor-fold>
 
   //<editor-fold defaultstate="collapsed" desc=" different usage of this - thisClass">
 
@@ -2460,7 +2542,7 @@ class Circle extends Object // her class object classını extends eder
     
     public static void staticMethod()
     {
-        System.out.println("staticMethod");
+        System.out.println("staticMethod of Circle class");
     }
 }
 
@@ -2478,11 +2560,10 @@ class Cylinder extends Circle  //Cylinder is subclass(child) and Circle is super
         super(radius); //calls super class argument constructore
         this.height=height;
     }
-    public double getHeight() {return height;}
 
+    public double getHeight() {return height;}
     public void setHeight(double height) {this.height = height;}
-    
-    
+
     public double areaCylinder()
     {
         return (3.14*2*getRadius()*height)+(2*areaCircle());
@@ -2498,6 +2579,108 @@ class Cylinder extends Circle  //Cylinder is subclass(child) and Circle is super
 }
 
         // </editor-fold>
+
+  //<editor-fold defaultstate="collapsed" desc="SuperClass-SubClass CONSTRUCTOR RELATIONSHIP">
+
+
+class dede
+{
+    //olay şu:
+    //superclass'ta constuructor with param create edilirse
+    //subclasslarda herhangi bir constructor uretmek istiyorsak hata alırız default constructor tekrardan create etmemiz gererkir
+    int a=1;
+    dede()
+    {
+        System.out.println("a default");
+    }
+    dede(int a)
+    {
+        System.out.println("a");
+    }
+
+
+
+}
+class baba extends dede
+{
+
+    // when an object is created from subclass any constr of it will run superclass's default constr.
+    public baba()//will inherit default constr of dede
+    {
+        System.out.println("a2 default");
+    }
+
+    public baba(int a)////will inherit default constr of dede
+    {
+        System.out.println("a2 ");
+    }
+
+
+}
+class cocuk extends baba
+{
+    cocuk()//babadaki default xxonstructor olusturulmazsa error verir burası
+    {
+        System.out.println("cocuk-default");
+    }
+    cocuk(int a)//bunu cagırırsam bile baba ve dede default constructor methods will run
+    {//bunu yazmak ıcın babada defalt constructor olması gerek
+        System.out.println("cocuk");
+    }
+}
+
+// </editor-fold>
+
+  //<editor-fold defaultstate="collapsed" desc="SuperClass-SubClass CONSTRUCTOR RELATIONSHIP2">
+
+
+class dede2
+{
+    //olay şu:
+    //superclass'ta constuructor with param create edilirse
+    //subclasslarda herhangi bir constructor uretmek istiyorsak hata alırız default constructor tekrardan create etmemiz gererkir
+    int a=1;
+
+    dede2(int a)
+    {
+        System.out.println("a");
+    }
+
+
+
+}
+class baba2 extends dede2
+{
+
+    // when an object is created from subclass any constr of it will run superclass's default constr.
+    public baba2()//will inherit default constr of dede2 but default constructor is not initialized
+    //so ı need to make this constr. method to inherit dede2's constr with param
+    {
+        super(1);
+        System.out.println("a2 default");
+    }
+
+    public baba2(int a)////will inherit default constr of dede
+    {
+        super(a);
+        System.out.println("a2 ");
+    }
+
+
+}
+class cocuk2 extends baba2
+{
+    cocuk2()//babadaki default xxonstructor olusturulmazsa error verir burası
+    {
+        System.out.println("cocuk-default");
+    }
+    cocuk2(int a)//bunu cagırırsam bile baba ve dede default constructor methods will run
+    {//bunu yazmak ıcın babada defalt constructor olması gerek
+        System.out.println("cocuk");
+    }
+}
+
+// </editor-fold>
 
   //<editor-fold defaultstate="collapsed" desc="A-B-C(inheritance-override-super-this-grandpa-dad-son)">
  
@@ -2995,7 +3178,8 @@ class Polymorphism01
     public static void drink()//child'dan ulasılabiliyor
     {
         System.out.println("staticMethod-drink");
-    }             
+    }
+
     public static String word2;
 }	
 
@@ -3043,6 +3227,7 @@ class poly02 extends Polymorphism01
 // </editor-fold>
 
   //<editor-fold defaultstate="collapsed" desc="hayvan-kopek-kedi(static/dynamic Polymorphism)">
+
 class Hayvan extends Object
 {
     private int ayakSayisi;
@@ -3236,6 +3421,7 @@ class UstSinif
     çalışma anında belirlenmesidir.(Runtime)
     k1.alanHesapla() --> bu ise derleme zamanında belirlenir(Compile time)
     */
+    String a="UstSınıf";
     public static void StaticMethod()//üst-alt
     {
         System.out.println("Üst sınıfın static  metotu çağrıldı");
@@ -3263,6 +3449,8 @@ class UstSinif
 
 class AltSinif extends UstSinif
 {
+    String a="AltSinif",b="AltSinif";
+
     //static method override edilmemez
     public static void StaticMethod()
     {
@@ -3310,6 +3498,7 @@ class KonuyuToparlayalim {
         canli.adiniSoyle();//Ben bir canli sınıfı nesnesiyim
 
         Canli kartal=new Kartal();//canlı constructor + kartal constructor  / ilk superClassın sonra subClassın constructorı cagrıldı
+        System.out.println(kartal.canli);
         System.out.println(kartal);//Kartal{kartal=kartal}//declared type: of the object named kartal is Canli, actual type: of it is Kartal
         kartal.adiniSoyle();//Ben bir kartal sınıfı nesnesiyim - calısma esnasında karar verdi runtime-dynamic Binding
         //crtl+ adiniSoyle ye basrsam beni Canl class'ının adini söyle methoduna yllucak.cunku kartal vaiable canlı sınıfına ait.işlevi ise Kartal sınıfındaki
@@ -3791,7 +3980,9 @@ class Person2 extends Object//extends Object yazmak zornda degiilm the class inh
 // </editor-fold>
 
   //<editor-fold defaultstate="collapsed" desc=" final variable initializing0final methods -final class ">
-//Java program to demonstrate different 
+
+
+//Java program to demonstrate different
 // ways of initializing a final variable 
   
 class Gfg  
@@ -3815,7 +4006,7 @@ class Gfg
       
     // instance initializer block for  
     // initializing CAPACITY 
-    { 
+    {
         CAPACITY = 25; 
     } 
       
@@ -3863,7 +4054,7 @@ class Gfg3
         // final with for-each statement 
         // legal statement 
         for (final int i : arr) 
-            System.out.print(i + " "); 
+            System.out.print(i + " ");
     }     
 } 
 
@@ -3915,11 +4106,13 @@ final class Aj
 
 
 // </editor-fold>
-  
+
   //<editor-fold defaultstate="collapsed" desc="final variable-method-class">
 
-class finalKeyword
+class FinalKeyword
 {
+    int a=1;
+    static int b=2;
     /*final variable
         There are three ways to initialize a final variable :
         You can initialize a final variable when it is declared. This approach is the most common. ...
@@ -3934,7 +4127,7 @@ class finalKeyword
         Therefore, java does not allow final keyword before a constructor
     */
     
-    //int num1=10; num1=15; instance variable cannot be reassigned a new value
+    //final int num1=10; num1=15; //instance variable cannot be reassigned a new value
     static public void method()
     {
         int number=10;   number=15;
@@ -3945,11 +4138,13 @@ class finalKeyword
         
     }
 }
-final class FinalParent//cannot be extended - to prevent ınheritance
+final class FinalParent extends FinalKeyword
 {
+    //final class cannot be extended - to prevent ınheritance
+
     static public void method()
     {
-        
+        System.out.println();
     }
 }
 
@@ -3958,24 +4153,32 @@ final class FinalParent//cannot be extended - to prevent ınheritance
 class  child 
 {
     static public int a=1;
-    
+    public int b=1;
+    static final public int c=1;
+
     final public void method1(){ System.out.println("final method cannot be overrided");}
     final static public void method2(){ System.out.println("final static method cannot be overrided");}
-    void method3(){System.out.println("not final and static method can be overrrided");}
+    void method3(){System.out.println("not final and not static method can be overrrided");}
 }
 
 class grandChild extends child
 {
     public void callMethod2()
-    {      
+    {
+        //final static intance variable of superclass
+        System.out.println(a++ + " "+ b++ + " " + c);
+
         //final-static methods
+        method2();
         child.method2();
+        child nesneChild=new child();  nesneChild.method2();
         this.method2();
         super.method2();//Superda static cıkmaz ben kendim yazdım
     }
 
     @Override
-    void method3() {
+    void method3()
+    {
         super.method3(); //To change body of generated methods, choose Tools | Templates.
     }
     
@@ -4010,9 +4213,17 @@ final class Finalgrandchild extends child//final class can extends a non-final c
 
   //<editor-fold defaultstate="collapsed" desc="abstract classes-methods(grandpa-child-grandchild)">
 
+
+
 class Abstract
 {
     //abstractClass nesne = new abstractClass(1,2);//abstract class cannot be instantiated(somutlastırılamaz) even if it has constructor
+    /*
+    Her ne kadar new ile yeni nesne üretilmese de abstract sınıfların da
+    constructorları vardır ve alt sınıftan bir nesne üretildiğinde bu kurucu
+    metotlar sırasıyla calıstırılır.
+
+     */
 }
 abstract class abstractClass//abstract class private ve final olamaz, çünkü final class cannot be extended
 {
@@ -4024,7 +4235,7 @@ abstract class abstractClass//abstract class private ve final olamaz, çünkü f
         e=10;//böyle de initialized edebilirim
     }
 
-    //public abstractClass() {}//bu nuı yazarsam sub classlar hiç bir constructor(superclasstaki constructor tiplerşnden) method yazmak zorunda değilidir
+    //public abstractClass() {}//bunu yazarsam sub classlar hiç bir constructor(superclasstaki constructor tiplerşnden) method yazmak zorunda değilidir
 
     public abstractClass(int a) {//bunu inherit etmek zrunda degiller cünkü alttaki constructorı inherit ettiler
         this.a = a;
@@ -4037,7 +4248,7 @@ abstract class abstractClass//abstract class private ve final olamaz, çünkü f
     }
     
     public abstract void method1();//cannot have body
-    //private abstract void method1();//abstract method cannot be private - static final private method cannot be overrided
+    //private abstract void method1();//abstract method cannot be private - static - final private method cannot be overrided
     //public final abstract void method1();//abstract method cannot be final
     //public static abstract void method1();//abstract meethod static olamaz
     public abstract void method2();
@@ -4049,10 +4260,10 @@ abstract class abstractClass//abstract class private ve final olamaz, çünkü f
 }
 abstract class abstractClass2 extends abstractClass
 {
-
-    public abstractClass2(int a, int b) {//subclass has to have the constr which parent of it has
+    public abstractClass2(int a, int b) {
         super(a, b);
     }
+
     //super classdan bir tane constructor inherit edildi hepsini inherit etmek zorunda değiliz
     @Override
     public void method1() {}//babadaki abstract method override edildi - cocukta tekrardan override edilmek zorunda degil 
@@ -4070,18 +4281,15 @@ abstract class abstractClass2 extends abstractClass
 
 class abstractClass3 extends abstractClass2
 {
-
-    public abstractClass3(int a, int b) {////subclass has to have the constr which parent of it has
-        super(a, b);//abstractClass2 classındaki constructoru super olarak kabul eder
+    public abstractClass3(int a, int b) {
+        super(a, b);
     }
-    
-    
     //@Override
     //public void method1() {} //override edilmese de olur - bu abstract method dedede initiliazed edildi babada normallestiridi
-    
+
     @Override
     public void method2() {}//babadaki hala abstract olan methodu overide etmek zorunda
-    
+
     @Override
     public void method4() {}//sadece babada var - dedede yok  - override etmek zorunda
    
@@ -4090,7 +4298,8 @@ class abstractClass3 extends abstractClass2
 class Class1 extends abstractClass
 {
 
-    public Class1(int a) {//uperclasstan bir tane constructr almalı
+
+    public Class1(int a) {
         super(a);
     }
 
@@ -4140,6 +4349,7 @@ class Abstract2
         rectangle.perimeter();
         rectangle.area();
         rectangle.sayObjectName();
+        ((Rectanglee)rectangle).adınıSoyle();
 
         System.out.println("\n********** CIRCLE **********");
         GeometricShape circle=new Circlee(5);
@@ -4168,6 +4378,7 @@ class Abstract2
         shapeList.add(circle);
         for(GeometricShape i: shapeList)
             System.out.println(i);
+        shapeList.stream().forEach(t-> System.out.println(t));
     }
 
     public static void show_Area_and_Perimeter(GeometricShape gs1){//polimorphism
@@ -4225,7 +4436,7 @@ abstract class GeometricShape extends Object//abstract class bos ya da abstract 
      //bunu olusturayımki subclassların nesneleri güncellensin
    
     abstract public void perimeter();//ortak bir özellik oldugu için içi bos, her class kendisi dolduracak
-  
+    //astract yazmazsak  compile error alırız
     abstract public void area();
     
     abstract public void sayObjectName();
@@ -4249,7 +4460,7 @@ class Square extends GeometricShape
 { 
 
     Square(int firstSide) {
-        super(firstSide);       
+        super(firstSide);
         this.setCalculatedPerimeter(4*this.getFirstSide());
         this.setCalculatedArea((int)Math.pow(this.getFirstSide(), 2));
     }
@@ -4272,16 +4483,16 @@ class Square extends GeometricShape
     public void adınıSoyle() {//subClass'ın kendisine ait methodu
         System.out.println("Ben bir kare nesnesiyim");
     }
-    
+
 
     @Override
     public String toString() {
         return "GeometricShape{ Square{ " + "firstSide=" + getFirstSide() + ", calculatedPerimeter=" + getCalculatedPerimeter() + ", calculatedArea=" + getCalculatedArea() + " } }" ;    }
 
-    
-    
-    
-    
+
+
+
+
 }
 
 class Rectanglee extends GeometricShape{
@@ -4314,19 +4525,15 @@ class Rectanglee extends GeometricShape{
         System.out.println("Ben bir dikdortgen nesnesiyim");
     }
 
+    public void adınıSoyle() {//subClass'ın kendisine ait methodu
+        System.out.println("Ben bir kare nesnesiyim");
+    }
 
     @Override
     public String toString() {
         return "GeometricShape{ Rectangle{ " + "firstSide=" + getFirstSide() + " secondSide=" + secondSide +", calculatedPerimeter=" + getCalculatedPerimeter() + ", calculatedArea=" + getCalculatedArea() + " } }"  ;
     }
 
-    
- 
-
-
-
- 
-    
 }
 
 class Circlee extends GeometricShape{
@@ -4335,7 +4542,6 @@ class Circlee extends GeometricShape{
         super(radius);    
         this.setCalculatedPerimeter(  (int)(2*Math.PI*getFirstSide())  );
         this.setCalculatedArea((int)(Math.PI*Math.pow(2,getFirstSide())));
-
     }
   
     @Override
@@ -4368,6 +4574,7 @@ class Circlee extends GeometricShape{
 abstract class Atr
 {
     abstract void myMethod(Number N);
+    public static void staticMethod(){}
 }
  
 abstract class Btr extends Atr
@@ -4396,10 +4603,21 @@ class MainClasstr
 {
     public static void main()
     {
-        Atr a = new Ctr();
+        Atr aa= new Atr() {//abstract classından nesne üretilemez ama anonymous inner class olusturulabilir.
+            @Override
+            void myMethod(Number N) {
+
+            }
+        };
+        Atr a = new Ctr();//declared type Atr ve Atr classındaki tüm field and methodlara ulasabilirim
+        //eger Ctr de override edilmisse onlar yazar(late binding),
+        //Ctr de yoksa Btr de override edilmişşse olar yazılır
+        //Btrde de yoksa Atrdeki ler calısır.
+        Atr.staticMethod();//abstract classta static method olusturulur ama biliyoruzki static methodlar childlerda override edilemez
  
         //a.myMethod(Number N);
         a.myMethod(new Integer(121));//Integer Number
+        //a.myMethod(new String("String"));
  
         
         Btr b = new Ctr();//
@@ -4412,6 +4630,7 @@ class MainClasstr
         Ctr c = new Ctr();
  
         c.myMethod(new Integer(121));//ınteger number
+
     }
 }
 
@@ -4431,7 +4650,7 @@ abstract class A2
  
 interface B2
 {
-    abstract void myMethod(Object O);
+    abstract void myMethod(Object O);//abstract yazmaya gerek yok
 }
  
 class C2 extends A2 implements B2
@@ -4474,19 +4693,28 @@ class Interface01
 {
     static void main()
     {
-        //Eidible e=new Eidible();//interface'den nesne olusturulamaz
+        //Eidible e= new Eidible(); //interface'den nesne olusturulamaz
+
+       Eidible e1= new Eidible()  //this is a anonymous class
+       {
+            @Override
+            public void yenmeSekli() { }
+
+            @Override
+            public void taste() { }
+        };
 
         ArrayList <Object> ObjectList = new ArrayList<>();
         
         Apple a=new Apple();
         a.yenmeSekli();//interface Eidible'dan
         a.appleMethod();//kendisinden
-        a.ekle(ObjectList);//ekle() superClass'tan
+        a.ekle(ObjectList);//ekle()  superClass'tan
      
         Meat m=new Meat();
         m.yenmeSekli();//interface Eidible'dan
         m.meatVoid();//kendisinden
-        m.ekle(ObjectList);// superClass'tan
+        m.ekle(ObjectList);//  superClass'tan
         
         System.out.println(ObjectList);//[javaoop.Apple@3532ec19, javaoop.Meat@68c4039c]
         
@@ -4504,17 +4732,16 @@ class Interface01
         EidibleList.add(apple);
         EidibleList.add(meat);
         System.out.println(EidibleList);//[javaoop.Apple@ae45eb6, javaoop.Meat@59f99ea]
-        
-
-        
     }
-    
-  
 }
+
 interface Eidible//interface'in içinde sadece gövdesiz method olabilir.
 {
     
-    static final public int a=10;
+    static final public int a=10;//interface daki bir field static public ve finaldır.
+    //protected private default olamaz
+
+    //abstract classlarda ise concrete classlardaki gibidir durum
     
     /*constructor method olamaz interface'in
     public Eidible(int i)
@@ -4523,21 +4750,26 @@ interface Eidible//interface'in içinde sadece gövdesiz method olabilir.
     }
     */
     
-    void yenmeSekli();//interfacedeki her method abstract'tır.
-    abstract void taste();
-    
+    void yenmeSekli();//interfacedeki her method abstract ve public'tir.
+    abstract public void taste();
+
     //void yenmeSekli(){};//interface abstract method cannot have body
-    
+
+    default public void yenmeSekli2()
+    {};//interface abstract method can have body with default keyword
+    //private protected default olamaz , publictir.
+
 }
 
-class superClass
+class SuperClass
 {
     void ekle(ArrayList<Object> liste)
     {
         liste.add(this);
     }
 }
-class Apple extends superClass implements Eidible
+
+class Apple extends SuperClass implements Eidible
 {
     
     void appleMethod()
@@ -4557,7 +4789,7 @@ class Apple extends superClass implements Eidible
     
 }
 
-class Meat extends superClass implements Eidible//extends implementden önce yazlır 
+class Meat extends SuperClass implements Eidible//extends implementden önce yazlır
 {
     void meatVoid()
     {
@@ -4591,25 +4823,55 @@ class MultipleInheritance
         singer1.eatFood();//interface Personn
         singer1.signSong();//abstract class Singer implements Personn
         singer1.singerMethod2();//abstract class Singer implements Personn
-        
+        ((PopSinger)singer1).doDancing();
+
+
         Singer singer2=new RockSinger();
         singer2.doSport();//interface Personn
         singer2.eatFood();//interface Personn
         singer2.signSong();//abstract class Singer implements Personn
         singer2.singerMethod2();///abstract class Singer implements Personn
-        
+        ((RockSinger)singer2).playGuitar();
         
         PopSingerFeatures popcu1=new Tarkan();
+        popcu1.doDancing();
+        ((Tarkan)popcu1).playGuitar();
+        ((Tarkan)popcu1).doDancing();//PopSingerFeature bu işleme gerek yok demek istiyor ( fate )
+        ((Tarkan)popcu1).doSport();//interface personn
+        ((Tarkan)popcu1).eatFood();//interface personn
+        ((Tarkan)popcu1).signSong();//abstract Singer classtan
+
+
+        RockSingerFeatures popcu01=new Tarkan();
+        popcu01.playGuitar();
+        ((Tarkan)popcu01).doDancing();
+
         PopSingerFeatures popcu2=new Hadise();
-       
-        PopSingerFeatures[] dizi=new PopSingerFeatures[5];
+
+        Tarkan tarkann=new Tarkan();//class implements PopSingerFeatures
+
+        PopSingerFeatures[] dizi=new PopSingerFeatures[5];//interface
         dizi[0]=popcu1;
         dizi[1]=popcu2;
-        
+        dizi[2]=tarkann;
+
+        Singer[] dizi2=new Singer[5];//abstract class
+        dizi2[0]=tarkann;
+        System.out.println( dizi2);
+
+
         ArrayList<PopSingerFeatures> arraylist=new ArrayList<>();
         arraylist.add(popcu1);
         arraylist.add(popcu2);
-        
+        arraylist.add(tarkan);//declared type: Tarkan
+
+        ArrayList<Personn> arraylist2=new ArrayList<>();
+        arraylist2.add(tarkan);//Tarkan classından
+        arraylist2.add(singer1);//Singer singer1=new PopSinger();//singer abstract classtır
+        arraylist2.add(singer2);//Singer singer2=new RockSinger();
+
+
+
         popcu1.doDancing();//playGuitar() cıkmaz
         popcu2.doDancing();
         
@@ -4625,7 +4887,7 @@ abstract class person2
 {
     abstract void sleep();
 }
-interface person3 //extends person2 - interface class ya da abstract class extends yapamaz
+interface person3 //extends person2// - interface class ya da abstract class extends yapamaz
 {
     /*
     Java interfaces cannot extend classes, which makes sense since classes contain implementation details 
@@ -4645,18 +4907,18 @@ interface Personn // implements person3 - interface cannot implements an interfa
     /*
     An interface cannot implement another interface in Java. ...
     An interface is defined just like a class except for the keyword interface in place of a class, 
-    the variables are declared in an interface are static and final and 
+    the variables are declared in an interface are static and final ,public and
     the methods are defined in an interface are public abstract methods
     */
-    void eatFood();
-    void doSport();
+    void eatFood();//public,abstract
+    public abstract void doSport();
 }
 abstract class Singer implements Personn //abstrac class nesne üretmediği için extends ve implement ettiği methodları override etmek zorunda degildir
 {
    abstract void signSong();
    
    private final static void singerMehod()//private final static olabilr
-   {
+   {//concrete claslardaki gibi
        System.out.println("singer methodu");
    }
    
@@ -4686,7 +4948,7 @@ interface RockSingerFeatures
    public abstract void playGuitar();//abstract yazmasam da abstracttır
 }
 
-class PopSinger extends Singer
+class PopSinger extends Singer implements PopSingerFeatures
 {
     @Override
     void signSong() {
@@ -4703,9 +4965,14 @@ class PopSinger extends Singer
     @Override
     public void doSport() {
     }
+
+    @Override
+    public void doDancing() {
+        System.out.println("pop singer do dancing");
+    }
 }
 
-class RockSinger extends Singer
+class RockSinger extends Singer implements RockSingerFeatures
 {
     @Override
     void signSong() {
@@ -4722,21 +4989,42 @@ class RockSinger extends Singer
     @Override
     public void doSport() {
     }
+
+    @Override
+    public void playGuitar() {
+        System.out.println("rock singer play guitar");
+    }
 }
 
 //class Tarkan extends PopSinger,RockSinger{  }// olmaz cünkü aynı methodlara sahipler,olmasalar bile olabilme ihtimallerinden dolayı 2 class extends edilemez JAVADA
 
-class Tarkan implements PopSingerFeatures,RockSingerFeatures
+class Tarkan extends Singer implements PopSingerFeatures,RockSingerFeatures
 {//tarkanı hem popcu hem rock olarak dusun
 
     @Override
     public void doDancing() {
+        System.out.println("tarkan do dancing");
     }
 
     @Override
     public void playGuitar() {
+        System.out.println("tarkan play guitar");
     }
-    
+
+    @Override
+    public void eatFood() {
+
+    }
+
+    @Override
+    public void doSport() {
+
+    }
+
+    @Override
+    void signSong() {
+
+    }
 }
 
 class Hadise implements PopSingerFeatures
@@ -4756,22 +5044,94 @@ class Teoman implements RockSingerFeatures
 }
         // </editor-fold>
 
+  //<editor-fold defaultstate="collapsed" desc=" interface-super-this ">
+
+interface I01
+{
+    public static final int INSTANCE=0;
+    void method1();
+    default void method2(){
+        System.out.println("I01 - default - method2");
+    };
+}
+interface I02 extends I01
+{
+    public static final int INSTANCE=1;
+
+    public default void method()
+    {
+        System.out.println("I02 - default - method");
+        //I01.super.method1();//bodysiz oyuzden compile error verir
+        I01.super.method2();
+    }
+}
+
+//1-interfacelerde biri birini kapsıyorsa kapsıyan interface(child)ile super keywordunu kuullan
+//2-super keywordu interfaceName.super.MethodName olarak kullanulır
+class Run implements I01,I02{//hata vermez
+
+    public static final int INSTANCE=2;
+
+
+    @Override
+    public void method()//public yazmak zorundayım cünkü override ediyorum ve interfacelerde her method publictir
+    {
+        System.out.println("Run class - method");
+    }
+
+    void main() {
+        //I01.super.method2();//normal sartlarda calısır ama burda mantık hatası var
+                                //I02 Interface'i I01'i kapsasdıgı için I02 yi kullanmamızı istiyor javac
+        I02.super.method2();//method2() I01 in asıl malı ama I02 I01'in cocugu inheritance var yani
+        I02.super.method();
+        this.method();
+        System.out.println(I01.INSTANCE);//0 - INTERFACE LERDEN VARİABLE CAGIRMANIN TEK BUDUR
+        System.out.println(I02.INSTANCE);//1
+        System.out.println(this.INSTANCE);//2
+        System.out.println(Run.INSTANCE);//2
+        System.out.println(INSTANCE);//2
+
+    }
+
+    @Override
+    public void method1() { }
+}
+
+class Run2 implements I01{
+
+    void main()
+    {
+        I01.super.method2();//burada calsıır
+        this.method2();
+    }
+
+    @Override
+    public void method2()//override yok I02 implements edilmedi çünkü
+    {
+        System.out.println("Run class - method2");
+    }
+
+    @Override
+    public void method1() { }
+}
+// </editor-fold>
+
   //<editor-fold defaultstate="collapsed" desc=" interface2 ">
 
 class run
 {
     boolean check=kisii.emailControl("duman@gmail.com");
+
     {
         System.out.println(check);
     }
 }
-class superclass
-{
-    
-}
+
+
 abstract interface kisii //static final olamaz sadece defaulttur(package icinden erisilir,default olarak abstract tır
 {
-    
+    //Java 8 ile beraber default ve static metot tanımları yapabiliyoruz.
+
     //bir interface'in icinde constructor olmaz, static ve normal instance initializng block olmaz
     /*
     kisii()
@@ -4846,14 +5206,17 @@ interface ogrencii extends kisii
 interface employeee extends kisii
 {
     void work();
+
+    default void work2(){
+        System.out.println("work2- employee");
+    };
 }
 interface uniOgrencii extends ogrencii,employeee//bu 2 interface'de de aynı methodlar var ama abstract'lar concrete bodyli değilller sorun teskil etmez
 {
     void studyForFinals();
 }
 
-class Duman implements uniOgrencii
-{
+class Duman implements uniOgrencii, kisii {//kisii hem ogrencii hem employee hem de uniOgrencii de var
 
     @Override
     public void studyForFinals() {
@@ -4869,29 +5232,37 @@ class Duman implements uniOgrencii
 
     @Override
     public void eat() {
+        //employeee.super.work2();//employeee interface'i uniOgrencii interface tarafından implememtn edildiği icin uniOgrenccii yi kullan
+        uniOgrencii.super.work2();//work2- employee
+        uniOgrencii.super.work2();//work2- employee
+//2tane super runtime error vermedi
     }
 
     @Override
     public void drink() {//kisii de default ogrencide de default - ama class icinde public olmak zorunda cünkğü artık abstract degıl concrete
+    //kisii.super.drink();//drink() abstract tır
+       // kisii.super.sayYourSurname();//kisii uniOgrencii tarafından extended edildi oyuzden direk kisiden bunu super etmek yanlıs
+    uniOgrencii.super.sayYourSurname();//bu olur
     }
 
     @Override
     public void work() {
+        //uniOgrencii.super.studyForFinals();//this method has no body
+        uniOgrencii.super.sayYourSurname();//thsi method has body
     }
 
     @Override
     public void sayYourName() {
-        System.out.println("ı am duman"); 
+        uniOgrencii.super.sayYourName2();
+        System.out.println("ı am duman");
     }
 
     @Override
     public void sayYourSurname() {
         uniOgrencii.super.sayYourSurname(); //To change body of generated methods, choose Tools | Templates.
+        System.out.println(uniOgrencii.Age);
+
     }
-    
-    
-    
-    
 }
 
     // </editor-fold>
@@ -5032,14 +5403,45 @@ class MainClassr
     {
         Mr m = new Mr();
  
-        m.method(new Ar());
+        m.method(new Ar());//2
  
-        m.method(new Br());
+        m.method(new Br());//3
  
-        m.method(new Cr());//Cr Br - Ar ye gelmeden Br'deki methodu uygular
+        m.method(new Cr());//3 - Cr Br - Ar ye gelmeden Br'deki methodu uygular
     }
 }
 
+
+
+
+interface InterfaceAa
+{
+    void metotA();
+}
+
+class SinifBb
+{
+    public void metotA()
+    {
+        System.out.println("B Sınıfındaki metot");
+    }
+}
+
+class SinifCc extends SinifBb implements InterfaceAa
+{
+
+}
+
+class MainClass01
+{
+    public static void main(String[] args)
+    {
+        InterfaceAa a = new SinifCc();
+
+        a.metotA();//B Sınıfındaki metot  - SinifCc de override edilmedi ama SinifBb de override edikmiştir ve o yazar
+        // SinifBb nin implements interface yapmasına gerek yok
+    }
+}
 
 
 // </editor-fold>
@@ -5082,7 +5484,13 @@ class ComparableUsage
             Studentt{id=1, name=Pilot}
         */
         
-        
+        //to understand compareTo() method
+        System.out.println("a".compareTo("c"));// a is less than c / -2
+
+        System.out.println("a".compareTo("a"));//equal / 0
+        System.out.println("b".compareTo("aaaa"));//b is greater than a / 1
+        System.out.println("bb".compareTo("aa"));//b is greater than a / 1
+        System.out.println("ab".compareTo("ac"));//b is greater than a / -1 ilk harfler esitse yana gecilir
     }
 }
 
@@ -5103,28 +5511,30 @@ class Studentt implements Comparable<Studentt>//bu interface'in içinde sadece b
 
     @Override
     public int compareTo(Studentt o) {
-        
-        if(this.id< o.id)//bu id bir sonraki id'den küçükse
+
+        if(this.id < o.id)
             return 1;
         else if(this.id > o.id)
             return -1;
         else
             return 0;
+
         /*
-        if(this.name< o.name)//bu id bir sonraki id'den küçükse
-            return 1;
-        else if(this.name > o.name)
-            return -1;
+        if(this.name.compareTo(o.name)<0)//bu name in ilk harfinin ascii kodu bir sonraki name'inkinden küçükse
+            return 1;//nesne diğerinden küçükse - deger cıkar , sart saglanır
+        else if(this.name.compareTo(o.name) > 0)
+            return -1;//büyükse sart sasglanır
         else
             return 0;
-        */
+*/
     }
+
+
     
 }
 
 // </editor-fold>
 
- 
   //<editor-fold defaultstate="collapsed" desc=" access modifier ">
 
 //public class'ın adı ile .java uzantılı class dosyası ile aynı olmalı
@@ -5183,7 +5593,7 @@ class class2//baska
         
     }
 }
-//class class3 extends class2 {} //super class sadece  private constructor içeriyorsa, extends ediliemez
+//class class3 extends class2 {} //super class private default constructor içeriyorsa onu baska classlar extends edemez
 
 
 
@@ -5207,6 +5617,7 @@ class nestedClassUsage {
                 nesne.publicInnerClassVar//0 
                 
                 //nesne ile outerClass'ın attribute and methoslarına erişilemez
+                //inner/member class can reach directly to fields or methods of outerclass
         );
         
         
@@ -5221,7 +5632,11 @@ class nestedClassUsage {
         
         class11.class22.class33 nesnee=new class11().new class22().new class33(); 
         nesnee.methodclass33();
-        
+
+        {
+            System.out.println(class11.class22.class33.staticFinalClass33Var);
+        }
+
         class11.class22 nesnee2=new class11().new class22();
         nesnee2.meethodclass22();
         nesnee2.new class33().methodclass33();
@@ -5254,6 +5669,7 @@ class outerClass
     public void publicVar(){};
     final void finalVar(){};
     static void staticVar(){};
+
     
     
     
@@ -5265,9 +5681,14 @@ class outerClass
         int defaultInnerClassVar;
         protected int protectedInnerClassVar;
         public int publicInnerClassVar;
-        //static int staticVar;static Var - stataic method olamaz
+        //static int staticVar;static Var - stataic method olamaz - static block olamaz
         final int finalInnerClassVar=10;
-        
+        static final int staticFinalVar=10;//static final olabilir
+
+        {//static variable method block tanımlanamaz ama cagırılabilir
+            System.out.println(staticVar);
+            staticVar();
+        }
         private void innerclassMethod()
         {
             //outer classın variables and methods are accessible from inner class
@@ -5283,10 +5704,16 @@ class outerClass
             protectedVar();
             publicVar();
             finalVar();
-            staticVar();
+            staticVar();//static method cagırılabilir
             
         }
-        
+
+        void defaultVar2(){}
+        protected void protectedVar2(){}
+        public void publicVar2(){};
+        final void finalVar2(){};
+        //static final void staticVar2(){};error
+
         void printStringArray(String[] array)
         {
             for(String i : array)
@@ -5302,7 +5729,16 @@ class outerClass
     final class finalInnerClass{}
     abstract class abstractInnerClass{}
     static class staticInnerClass{}//inner classlar static olabilir
-    //static classların içinde sadece static var ve static method can be declared
+    static final class staticFinalClass{}
+    interface InnerInterface{}
+    /*
+Inner sınıfı statik olarak belirleyebiliriz. Bu sınıflarda hem statik hem
+statik olmayan metot ve değişkenler bulunabilir.
+Statik inner sınıftan dışardaki sınıfın statik alanlarına erişilebilir, ama
+statik olmayan alanlara erişemeyiz.
+Bir static inner sınıf abstract olabilir, ama statik metotlar abstract olamaz.
+ */
+
 }
 
 
@@ -5313,13 +5749,39 @@ class class11
 {
     static int sttaicInstanceVar;
     int i=sttaicInstanceVar+new class22().finaLInnerClassVar;//inner classlara onların nesneleri ile ulasırız
+
+    {
+        System.out.println(class22.staticFinalInnerClassVar);
+        System.out.println(class22.class33.staticFinalClass33Var);
+        //className.innerClassName olur
+        //className.StaticMethod or StaticVariable olur
+
+        class22.class33 nesneOfClass33= new class22().new class33();
+        nesneOfClass33.methodclass33();
+
+        //class22.class33.methodclass33();olamaz method static değil
+
+        new class22().new class33().methodclass33();
+
+    }
+
+    protected void method(){
+        System.out.println("class11");
+    };
+
     class class22
-    {        
+    {
+        //@Override İŞLEMİ SADECE SUPERCLASS-SUBCLASS ILISKILERINDE OLUR
+        protected void method(){
+            System.out.println("class22");
+        };
+
     //  static int staticInnerVar;//static sadeece constant variablelar iindir
         
     //  static{
     //      static blok innerclasslarda kullanılaz        
     //  }
+
         {
         //instance initializg block can be typed in a innerclass
         }
@@ -5328,10 +5790,19 @@ class class11
 
         static final int staticFinalInnerClassVar=10;// static final olabilir
         final int finaLInnerClassVar=11;
-        
+
+        {
+            new class33().methodclass33();
+            System.out.println(class33.staticFinalClass33Var);
+
+            class33 nesne =new class33();
+            nesne.methodclass33();
+        }
+
         class class33
         {
             void methodclass33() { System.out.println("merhaba class33"); }
+            static final int staticFinalClass33Var=10;
         }
     }
 }
@@ -5374,8 +5845,13 @@ class Calculator
     static private void methodx(){}
     
     
-    public static int multiply(int a,int b)
+    public static int multiply(int a,int b)//static methodun içinde static olmayan deger yazılamaz
     {
+        int a1=1;
+        //static int a2=2; herhangi bir method içinde static deger yazılamaz
+        //static sınıfa özgü demektir
+
+
         Multiplication nesne=new Multiplication();
         return nesne.multiply(a, b);
     }
@@ -5445,9 +5921,24 @@ class Main_Local
 
 class local_innerClass
 {
+    class asdsaf
+    {
+        {
+
+        }
+    }
+    //Local inner class static olmayan inner classların bir diğer türüdür. Bir metot
+    //veya bir blogun içinde tanımlanan sınıflara denir.
+
+    /*
+    Local inner sınıflar statik olamaz. Local değişken olarak düşünülürse, local
+    değişkenler statik olamaz. Ayrıca bu sınıflar static metot veya değişkene de
+    sahip olamazlar. Ama istisna olarak static final değerleri saklayabilirler.
+     */
+
     static
-    {//////static blokte member inner class olabilir
-        class Division//static member inner class
+    {
+        class Division//static local inner class
         {
             public String divide(int n1,int n2 )
             {
@@ -5462,7 +5953,7 @@ class local_innerClass
         }
     }
 
-    {//////instance initializng blockta da member inner class olabilir
+    {
         class Division
         {
             public String divide(int n1,int n2 )
@@ -5491,12 +5982,19 @@ class local_innerClass
         }
         
         //static{
-            //methodda static blok olablir static classa özgü demektir
-            //biz ise method i.çideyiz
+            //methodda static blok olamaz static classa özgü demektir
         //}
         class Division//static private public protected olamaz çünkü methodun içinde  kullanılacak okadar,final ya da abstract olabilir 
         {
-            //static block member  and local inner classlarda olamaz
+            /*
+            Bu sınıflar sadece tanımlandıkları yerde geçerlidir.Bu sınıflar
+            tanımlandıkları metotun içinde bulunan değişkenleri kullanabilir.
+            Bu sınıfları belirtirken erişim belirleyici kullanılmaz, ama bu sınıfın içinde
+            tüm erişim belirleyicilere sahip değişken ve metotlar olabilir.
+            Bu sınıflar abstract veya final olabilir, ikisi aynı anda olamaz.
+             */
+
+            //static block , member  and local inner classlarda olamaz
             {
                 System.out.println(a);//methodun malını class kullanabilir
             }
@@ -5535,17 +6033,20 @@ class local_innerClass
                     }
                 }
             }
-        }
+
+
+        }//end of local class
         
         System.out.println("staticFinalVar_of_localInnerClass:"+Division.staticFinalVar_of_localInnerClass);
                 
         Division nesne =new Division();
         return nesne.divide(n1, n2);
         
-    }
+    }//end of method
     
 
-}
+}//end of class
+
 // </editor-fold>
 
   //<editor-fold defaultstate="collapsed" desc=" Anonymous Inner Class ">
@@ -5727,7 +6228,10 @@ class Main_StaticInnerClass
         
         outerClasss.staticInnerClass.staticInnerClassStaticVar=5;//nesne olusturmaya gerek yok 
         outerClasss.staticInnerClass.staticInnerClassStaticMethod();//class.class.staticVar yada static method
-        
+
+        //bu olay non-static inner classlardaki sitatic attributelericin de ggecerlidir.
+        //ClassName.InnerClassName olur
+        //ClassName.staticVariable or staticMethod
 
     }
     
@@ -5763,16 +6267,35 @@ class outerClasss
             //outerClass'ın sadece static Var ve methodlarına ulasır
             StaticInstanceNumber++;
             staticMethod();
+            outerClasss.StaticInstanceNumber++;
+
+            this.InnerClassVar++;
+            staticInnerClass.staticInnerClassStaticMethod();
+
             
-            //number++; errror
+            //number++; //errror because it is not static
             //Method(); errror
             outerClasss nesne=new outerClasss();nesne.number++;
             nesne.Method();
+
+
+            /*
+            Inner sınıfı statik olarak belirleyebiliriz. Bu sınıflarda hem statik hem
+            statik olmayan metot ve değişkenler bulunabilir.
+            Statik inner sınıftan dışardaki sınıfın statik alanlarına erişilebilir, ama
+            statik olmayan alanlara erişemeyiz.
+            Bir static inner sınıf abstract olabilir, ama statik metotlar abstract olamaz.
+            Statik inner sınıflar final olabilir.
+             */
        }
     }
     
     void method()
     {
+        outerClasss outerClasssNesne=new outerClasss();//bit sınıf kendi içinde kendi nesnesini olusturabilir
+        outerClasssNesne.Method();//ama sacmaca gereksiz
+
+
        staticInnerClass staticInnerClassnesne=new staticInnerClass();
       
        staticInnerClassnesne.InnerClassVar++;
@@ -5787,6 +6310,46 @@ class outerClasss
     }
     
 }
+// </editor-fold>
+
+  //<editor-fold defaultstate="collapsed" desc=" InnerStaticClassPractice ">
+
+
+class InnerStaticClassPractice
+{
+    {
+        System.out.println(OuterrClass.StaticInnerClass.ClassA.sfa);
+        System.out.println(new OuterrClass.StaticInnerClass().new ClassA().a);
+
+        OuterrClass.StaticInnerClass.ClassA nesneA=new OuterrClass.StaticInnerClass().new ClassA();
+        System.out.println(nesneA.a);
+
+
+        System.out.println(OuterrClass.StaticInnerClass.ClassB.sb);
+        System.out.println(new OuterrClass.StaticInnerClass.ClassB().b);
+
+        OuterrClass.StaticInnerClass.ClassB nesneB=new OuterrClass.StaticInnerClass.ClassB();
+        System.out.println(nesneB.b);
+    }
+}
+class OuterrClass
+{
+    static class StaticInnerClass
+    {
+        class ClassA
+        {
+            int a=1;
+            static final int sfa=2;
+        }
+
+        static class ClassB
+        {
+            int b=3;
+            static int sb=4;
+        }
+    }
+}
+
 // </editor-fold>
 
   //<editor-fold defaultstate="collapsed" desc=" Generic Class ">
@@ -5810,9 +6373,11 @@ class Generic_Main
         PrintStringArray nesne=new PrintStringArray()//ANONYMOUS CLASS'ın nesnesi
         {
             @Override//anonymousda override yapabilmek için methodun non-static olması gerek
+                     //override olabilmesi icin yine (String[] array) demek zorundayız ozaman
+                     //anonymous class ise yaramıyor
             public void print(String[] array) {
-                super.print(array); //To change body of generated methods, choose Tools | Templates.
-            }    
+                Arrays.stream(array).forEach(t-> System.out.println(t));
+            }
         };
         
         //SO GENERIC CLASS CONCEPT ARE REQUIRED TO BE USED not to create classes which have diferent data type
@@ -5954,16 +6519,17 @@ class genericMethod
     
     
     
-    /*
+
     static public void printt2(Object[] array)//polimorphism olayı methodlarda işimizi kolaylastırır
     {
         for(Object i : array){
             System.out.print(((String)i).length()+" ");//(casting)olamaz der exception verir
             System.out.print(((String)i).contains("1")+" ");///casting)olamaz der exception verir
         }
+        //İnteger deger yollarsak patlar polimorphism sistemi
         System.out.println("");
     }  
-    */
+
     
     static public void print(String[] array)
     {
@@ -6350,7 +6916,7 @@ class genericMethod
             }
         }
 
-// </editor-fold>
+// </editor-fold>   //Im HERE  // Im Here!!!
 
   //<editor-fold defaultstate="collapsed" desc="Naming Convention ">
 
@@ -6787,16 +7353,17 @@ class RationalNumbers implements Comparable<RationalNumbers>
   
     //<editor-fold defaultstate="collapsed" desc="create your own stack area with arrayList ">
 
-            class stackArea {
+            class stackArea
+            {
             public static void main() {
 
                 MyStack myStack = new MyStack();//arrayList olusturuldu.
 
-                pupil ogr1=new pupil(10,"emre");    ogr1.setPupilName("dmn");
-                pupil ogr2=new pupil(20,"hasan");
-                pupil ogr3=new pupil(30,"ayşe");
-                pupil ogr4=new pupil(40,"ali");
-                pupil ogr5=new pupil(50,"duman");
+                Pupil ogr1=new Pupil(10,"emre");    ogr1.setPupilName("dmn");
+                Pupil ogr2=new Pupil(20,"hasan");
+                Pupil ogr3=new Pupil(30,"ayşe");
+                Pupil ogr4=new Pupil(40,"ali");
+                Pupil ogr5=new Pupil(50,"duman");
 
                 //ogr1.getPupilName()="emmmre";error - Exception in thread "main" java.lang.RuntimeException: Uncompilable source code - unexpected type
                 System.out.println(ogr1.getPupilName());//dmn
@@ -6834,7 +7401,7 @@ class RationalNumbers implements Comparable<RationalNumbers>
 
 
 
-                ArrayList<Object> liste2=myStack.getListe();//liste2 ile liste aynı araylist alanını temsil eder
+                ArrayList<Pupil> liste2=myStack.getListe();//liste2 ile liste aynı araylist alanını temsil eder
                 System.out.println(liste2);//aynısı liste ile
                 liste2.set(0, ogr5);
                 System.out.println(liste2);//degisti
@@ -6860,35 +7427,34 @@ class RationalNumbers implements Comparable<RationalNumbers>
             }
         }
 
-        class pupil
+        class Pupil extends Object
         {
             private int pupilNumber;
             private String pupilName;
             private byte pupilClassroom;
             static private boolean aktivity;
 
-            public pupil() {//1
+            public Pupil()
+            {
+                //1
             }
 
-            public pupil(int pupilNumber) {//2
+            public Pupil(int pupilNumber) {//2
                 this.pupilNumber = pupilNumber;
             }
 
-            public pupil(int pupilNumber, String pupilName) {//3
-                this.pupilNumber = pupilNumber;
+            public Pupil(int pupilNumber, String pupilName) {//3
+                this(pupilNumber);
                 this.pupilName = pupilName;
             }
 
-            public pupil(int pupilNumber, String pupilName, byte pupilClassroom) {//4
-                this.pupilNumber = pupilNumber;
-                this.pupilName = pupilName;
+            public Pupil(int pupilNumber, String pupilName, byte pupilClassroom) {//4
+               this(pupilNumber,pupilName);
                 this.pupilClassroom = pupilClassroom;
             }
-            public pupil(int pupilNumber, String pupilName, byte pupilClassroom, boolean a) {//5
-                this.pupilNumber = pupilNumber;
-                this.pupilName = pupilName;
-                this.pupilClassroom = pupilClassroom;
-                pupil.aktivity = a;
+            public Pupil(int pupilNumber, String pupilName, byte pupilClassroom, boolean a) {//5
+                this(pupilNumber,pupilName,pupilClassroom);
+                Pupil.aktivity = a;
             }
 
 
@@ -6902,7 +7468,7 @@ class RationalNumbers implements Comparable<RationalNumbers>
             public void setPupilClassroom(byte pupilClassroom) { this.pupilClassroom = pupilClassroom; }
 
             public boolean getAktivity() { return aktivity;}
-            public void setAktivity(boolean aktivity) {pupil.aktivity = aktivity;}
+            public void setAktivity(boolean aktivity) {Pupil.aktivity = aktivity;}
 
             @Override
             public String toString() {
@@ -6917,14 +7483,15 @@ class RationalNumbers implements Comparable<RationalNumbers>
 
         class MyStack
         {
-            private ArrayList<Object> liste;
+            private ArrayList<Pupil> liste;
 
-            public ArrayList<Object> getListe() {
-                return liste;
-            }
 
             public MyStack(){
                 liste = new ArrayList<>();
+            }
+
+            public ArrayList<Pupil> getListe() {
+                return liste;
             }
 
             public int kacElemanVar(){
@@ -6955,7 +7522,7 @@ class RationalNumbers implements Comparable<RationalNumbers>
 
             }
 
-            public void push(Object eklenecekEleman){
+            public void push(Pupil eklenecekEleman){
                 liste.add(eklenecekEleman);
             }
 
@@ -6997,7 +7564,12 @@ class RationalNumbers implements Comparable<RationalNumbers>
         @Override
         public void method()
         {
-            b=2;System.out.println(b);
+            b=2;System.out.println(b);//2
+            System.out.println(super.b +" "+this.b +" "+ b);
+            System.out.println(a);//20
+            System.out.println(this.a);//20
+            System.out.println(super.a);//10
+
         }
     }
     // </editor-fold>
@@ -7007,7 +7579,15 @@ class RationalNumbers implements Comparable<RationalNumbers>
         class ASinifi
         {
 
-            public ASinifi() {  System.out.println("ASinifi"); }//constructor en son bu yazdırılır
+            public ASinifi()//DEFAULT CONSTRUCTOR
+            {
+                System.out.println("ASinifi");
+            }//constructor en son bu yazdırılır
+
+            public ASinifi(int a )//YAZDIRMAZ
+            {
+                System.out.println("ASinifi - int a ");
+            }
 
             {//INSTANCE INITIALIZER BLOCK
                 System.out.println(11);//Sonra bu
@@ -7020,15 +7600,44 @@ class RationalNumbers implements Comparable<RationalNumbers>
 
         class BSinifi extends ASinifi
         {
+            public BSinifi()
+            {
+                System.out.println("BSinifi");
+            }
+
+            public BSinifi(int a )//YAZDIRMAZ
+            {
+                System.out.println("BSinifi - int a ");
+            }
+
             {
                 System.out.println(2);
+            }
+            static{
+                System.out.println(222);
             }
         }
 
         class CSinifi extends BSinifi
         {
+            public CSinifi()
+            {
+                System.out.println("CSinifi");
+            }
+
+            public CSinifi(int a )//YAZDIRMAZ
+            {
+                System.out.println("CSinifi - int a ");
+            }
+
+            static{
+                System.out.println(444);
+            }
             {
                 System.out.println(3);
+            }
+            static{
+                System.out.println(333);
             }
         }
     // </editor-fold>
@@ -7066,55 +7675,59 @@ class CSinif extends BSinif
     }
 }
 // </editor-fold>
+
+
     //<editor-fold defaultstate="collapsed" desc=" QUESTION-4 ">
-class ASinifii
-{
-    {
-        System.out.println("3");//4
-    }
-    static
-    {
-        System.out.println("333");//1
-    }
- 
-    public ASinifii(){
-        System.out.println("A Kurucusu");//5
-    }
-}
- 
-class BSinifii extends ASinifii
-{
-    {
-        System.out.println("2");//6
-    }
-     
-    static
-    {
-        System.out.println("222");//2
-    }
-   
- 
-    public BSinifii(){
-        System.out.println("B Kurucusu");//7
-    }
- 
-}
- 
-class CSinifii extends BSinifii
-{
-    {
-        System.out.println("1");//8
-    }
-    static
-    {
-        System.out.println("111");//3
-    }
- 
-    public CSinifii(){
-        System.out.println("C Kurucusu");//9
-    }
-}
+
+        class ASinifii
+        {
+            {
+                System.out.println("3");//4
+            }
+            static
+            {
+                System.out.println("333");//1
+            }
+
+            public ASinifii(){
+                System.out.println("A Kurucusu");//5
+            }
+        }
+
+        class BSinifii extends ASinifii
+        {
+            {
+                System.out.println("2");//6
+            }
+
+            static
+            {
+                System.out.println("222");//2
+            }
+
+
+            public BSinifii(){
+                System.out.println("B Kurucusu");//7
+            }
+
+        }
+
+        class CSinifii extends BSinifii
+        {
+            {
+                System.out.println("1");//8
+            }
+            static
+            {
+                System.out.println("111");//3
+            }
+
+            public CSinifii(){
+                System.out.println("C Kurucusu");//9
+            }
+        }
     // </editor-fold> 
+
     //<editor-fold defaultstate="collapsed" desc=" QUESTION-5 ">
 
     class Aa
@@ -7132,199 +7745,216 @@ class CSinifii extends BSinifii
             System.out.println("BbSinifi");
         }
     }
-    // </editor-fold> 
-    //<editor-fold defaultstate="collapsed" desc=" QUESTION-6 ">
-class M
-{
-    int i;
- 
-    public M(int i)
-    {
-        this.i = i--;//11 DEN 10 OLAN PARAMETREDIR,INSTANCE VARIABLE DEGILDIR
-    }
-}
- 
-class N extends M
-{
-    public N(int i)
-    {
-        super(++i);
-        System.out.println(i);
-    }
-}
     // </editor-fold>
+
+    //<editor-fold defaultstate="collapsed" desc=" QUESTION-6 ">
+
+        class M
+        {
+            int i;
+
+            public M(int i)
+            {
+                this.i = ++i;//11 DEN 12 OLAN PARAMETREDIR,INSTANCE VARIABLE DEGILDIR
+            }
+        }
+
+        class N extends M
+        {
+            public N(int i)
+            {
+                super(++i);
+                System.out.println(i);
+                System.out.println(super.i);
+            }
+        }
+
+    // </editor-fold>
+
     //<editor-fold defaultstate="collapsed" desc=" QUESTION-7 ">
-class X
-{
-    int i = 21;
- 
-    public X(int j)
-    {
-        System.out.println(i);//21
- 
-        this.i = j * 5;//15*5=75
-    }
-}
- 
-class Y extends X
-{
-    public Y(int j)
-    {
-        super(j);
- 
-        System.out.println(i);//75
- 
-        this.i = j * 10;//15*10=150
-    }
-}
+
+            class X
+            {
+                int i = 21;
+
+                public X(int j)//15
+                {
+                    System.out.println(i);//21
+
+                    this.i = j * 5;//15*5=75
+                }
+            }
+
+            class Y extends X
+            {
+                public Y(int j)
+                {
+                    super(j);
+
+                    System.out.println(i);//75
+
+                    this.i = j * 10;//15*10=150
+                }
+            }
  
             // </editor-fold>
+
     //<editor-fold defaultstate="collapsed" desc=" QUESTION-8 ">
 
-class K
-{
-    int m = 222;
- 
-    {
-        m = m++;//222
- 
-        System.out.println(m);//222
-    }
-}
- 
-class L extends K
-{
-    {
-        System.out.println(methodL());
-    }
- 
-    int methodL()
-    {
-        return m-- + --m;//222+220
-    }
-}
+            class K
+            {
+                int m = 222;
+
+                {
+                    m = m++;//222
+
+                    System.out.println(m);//222
+                }
+            }
+
+            class L extends K
+            {
+                {
+                    System.out.println(methodL());
+                }
+
+                int methodL()
+                {
+                    return m-- + --m;//222+220
+                }
+            }
+
             // </editor-fold>
+
+
     //<editor-fold defaultstate="collapsed" desc=" QUESTION-9 ">
-class T
-{
-    static String metin = "AAA";
-    String m2="m2";
-    String x3="x3";
-   
-    
-    static
-    {
-        metin = metin + "BBB";//AAABBB
-    }
- 
-    {//static instance'lar default instance initializer'ıniçinde compie olurlar
-        metin = "AAABBB";
-    }
-    
-     {//kalıtımla alınanı sadece bu sınıf için değiştirmek
-        m2="m22";
-        System.out.println(m2);//m22
-        System.out.println(this.x3);//x3
-        String x3="x33"; System.out.println(x3);//x33
-    }
-}
- 
-class R extends T
-{
-    static
-    {
-        metin = metin + "BBBAAA";//AAABBB+BBBAAA
-    }
- 
-    {
-        System.out.println(metin);//AAABBB
-    }
-    
-    {
-        System.out.println(m2);//m22
-        m2="m222";System.out.println(m2);//m222
-    }
-}
-class J  extends R
-{
-    {
-        System.out.println(m2);//m222
-    }
-}
+
+                class T
+                {
+                    static String metin = "AAA";
+                    String m2="m2";
+                    String x3="x3";
 
 
-    // </editor-fold>     
+                    static
+                    {
+                        metin = metin + "BBB";//AAABBB
+                    }
+
+                    {//static instance'lar default instance initializer'ıniçinde compie olurlar
+                        metin = "AAABBBb";
+                    }
+
+                     {//kalıtımla alınanı sadece bu sınıf için değiştirmek
+                        m2="m22";
+                        System.out.println(m2);//m22
+                        System.out.println(this.x3);//x3
+                        String x3="x33"; System.out.println(x3);//x33
+                    }
+                }
+
+                class R extends T
+                {
+                    static
+                    {
+                        metin = metin + "BBBAAA";//AAABBBb+BBBAAA
+                    }
+
+                    {
+                        System.out.println(metin);//AAABBB
+                    }
+
+                    {
+                        System.out.println(m2);//m22
+                        m2="m222";System.out.println(m2);//m222
+                    }
+                }
+                class J  extends R
+                {
+                    {
+                        System.out.println(m2);//m222
+                    }
+                }
+
+
+    // </editor-fold>
+
     //<editor-fold defaultstate="collapsed" desc=" QUESTION-10 ">
-class Q10
-{
-    int i = 1010;
- 
-    public Q10()
-    {
-        i = i++ + i-- - i;//1010 + 1011 - 1010 =1011
-    }
- 
-    static int staticMethod(int i)//1011
-    {
-        return --i;//1010
-    }
-}
- 
-class Q10_2 extends Q10
-{
-    public Q10_2()
-    {
-        System.out.println(staticMethod(i));//1010
-    }
-}
- 
-class Q10_Main
-{
-    public static void main()
-    {
-        Q10_2 b = new Q10_2();//1010 - Q10_2 den nesne olusturnca üst sınıflarından da olusturulur.
-    }
-}
+
+            class Q10
+            {
+                int i = 1010;
+
+                public Q10()
+                {
+                    i = i++ + i-- - i;//1010 + 1011 - 1010 =1011
+                }
+
+                static int staticMethod(int i)//1011
+                {
+                    return --i;//1010
+                }
+            }
+
+            class Q10_2 extends Q10
+            {
+                public Q10_2()
+                {
+                    System.out.println(staticMethod(i));//1010
+                }
+            }
+
+            class Q10_Main
+            {
+                public static void main()
+                {
+                    Q10_2 b = new Q10_2();//1010 - Q10_2 den nesne olusturnca üst sınıflarından da olusturulur.
+                }
+            }
+
     // </editor-fold>
+
+
     //<editor-fold defaultstate="collapsed" desc=" QUESTION-11 ">
-class   Q11
-{
-    int i = 1010;
-}
- 
-class Q11_2 extends Q11
-{
-    Q11 q;
- 
-    public Q11_2(Q11 a)
-    {
-        this.q = a;
-    }
-}
- 
-class Q11_Main
-{
-    public static void main()
-    {
-        Q11 a = new Q11();//Q11 classın'da a nesnesi olustu ve i=1010 yazdı
-        
-        Q11_2 b = new Q11_2(a);//Q11_2 de b nesnesi olustu ve i=1010 yazdı ve Q11 clasına ait a nesnesi refer eden q degişkenini a=123445667 barındıryor
- 
-        System.out.println(a.i);//1010
- 
-        System.out.println(b.i);//1010
- 
-        System.out.println(b.q.i);//1010
- 
-        b.q.i = 3232;//b nin  refer ettiği nesnesin  içindeki q nün refer ettiği nesnesi ile a'nın refer ettiği kutu aynı kutudur.
- 
-        System.out.println("--------");
- 
-        System.out.println(a.i);//3232 oldu kutu içi degiştiği için
- 
-        System.out.println(b.i);//1010
-    }
-}
+
+            class   Q11
+            {
+                int i = 1010;
+            }
+
+            class Q11_2 extends Q11
+            {
+                Q11 q;
+
+                public Q11_2(Q11 a)
+                {
+                    this.q = a;
+                }
+            }
+
+            class Q11_Main
+            {
+                public static void main()
+                {
+                    Q11 a = new Q11();//Q11 classın'da a nesnesi olustu ve i=1010 yazdı
+
+                    Q11_2 b = new Q11_2(a);//Q11_2 de b nesnesi olustu ve i=1010 yazdı ve Q11 clasına ait a nesnesi refer eden q degişkenini a=123445667 barındıryor
+
+                    System.out.println(a.i);//1010
+
+                    System.out.println(b.i);//1010
+
+                    System.out.println(b.q.i);//1010
+
+                    b.q.i = 3232;//b nin  refer ettiği nesnesin  içindeki q nün refer ettiği nesnesi ile a'nın refer ettiği kutu aynı kutudur.
+
+                    System.out.println("--------");
+
+                    System.out.println(a.i);//3232 oldu kutu içi degiştiği için
+
+                    System.out.println(b.i);//1010
+                }
+            }
 
 
 
@@ -7334,41 +7964,45 @@ class Q11_Main
 
 
     // </editor-fold>
+
     //<editor-fold defaultstate="collapsed" desc=" QUESTION-12 ">
-class Q12
-{
-    static int a, b = 1414;
- 
-    {//CALISMAYACAK
-        --a;
-    }
- 
-    {//CALISMAYACAK
-        b++;
-    }
-}
- 
-class Q12_Main extends Q12
-{
-    static
-    {
-        a++;//1
-    }
- 
-    static
-    {
-        --b;//1413
-    }
- 
-    public static void main()
-    {
-        System.out.println(a);// 1 NESNE OLUSTURMA YOK O ZAMAN SUPERCLASS'DAKİ BLOKLAR CALISMAYACAK
- 
-        System.out.println(b);//1413
-    }
-}
+
+            class Q12
+            {
+                static int a, b = 1414;//a=0;
+
+                {//CALISMAYACAK
+                    --a;
+                }
+
+                {//CALISMAYACAK
+                    b++;
+                }
+            }
+
+            class Q12_Main extends Q12
+            {
+                static
+                {
+                    a++;//1
+                }
+
+                static
+                {
+                    --b;//1413
+                }
+
+                public static void main()
+                {
+                    System.out.println(a);// 1 NESNE OLUSTURMA YOK O ZAMAN SUPERCLASS'DAKİ BLOKLAR CALISMAYACAK
+
+                    System.out.println(b);//1413
+                }
+            }
     // </editor-fold>
+
     //<editor-fold defaultstate="collapsed" desc=" QUESTION-13 ">
+
 class Q13
 {
     int[] a = new int[5];//HEAP MEMORY'DE a REFERANSLI 5 KUTULU ARRAY OLUSTU
@@ -7397,7 +8031,9 @@ class Q13_Main extends Q13
 
 
     // </editor-fold>
+
     //<editor-fold defaultstate="collapsed" desc=" QUESTION-14 ">
+
 class Q14
 {
     static int statikDegisken;//0
@@ -7418,9 +8054,9 @@ class Q14_2 extends Q14
     {
         --statikDegisken;//0
     }
- 
+
     {//4
-        statikDegisken--;//0
+        statikDegisken++;//2
     }
 }
  
@@ -7428,12 +8064,15 @@ class Q14_Main
 {
     public static void main()
     {
-        System.out.println(new Q14_2().statikDegisken);// 0 - REFERANSI OLMAYAN NESNE OLUSTURDUM
-        System.out.println(Q14_2.statikDegisken);//0
+        System.out.println(new Q14_2().statikDegisken);// 2 - REFERANSI OLMAYAN NESNE OLUSTURDUM
+        System.out.println(Q14_2.statikDegisken);//2
+        System.out.println(Q14.statikDegisken);//2
     }
 }
     // </editor-fold>
+
     //<editor-fold defaultstate="collapsed" desc=" QUESTION-15 ">
+
 //Q15_2 sinifindan nesne üretilirse statikDegisken ve degisken değerleri sırasıyla ne olur
  
 class Q15
@@ -7488,6 +8127,8 @@ class Q15_Main{
                             case 7:turnOffTV();         break;
                             case 8:showMenu();          break;
                             case 9:addNewChannel();     break;
+                            case 10:showAllTvChannels();break;
+                            case 11:showTvInfos();      break;
                             case 0:systemExit=true;    System.out.println("Sistemden çıkılıyor");   break;
                             default: System.out.println("0 ile 9 arasında bir değer giriniz");      break;
                         }
@@ -7495,6 +8136,34 @@ class Q15_Main{
                 }
 
             //if(tvObject!=null) if a tv object was created
+
+
+            private static void showTvInfos()
+            {
+                if(tvObject==null){
+                    System.out.println("Firstly, set up TV and creat channels!");
+
+                }
+                else{
+                    System.out.println(TV.tvObject);//toString()  method is overrided in TV Class
+                }
+            }
+
+            private static void showAllTvChannels()
+            {
+                if(tvObject==null){
+                    System.out.println("Firstly, set up TV and creat channels!");
+
+                }
+                else{
+                    TV.ChannelList.stream().forEach(t-> System.out.println(t+" "));
+                    System.out.println("");
+                    System.out.println(TV.ChannelList);
+                }
+
+            }
+
+
             private static void showChannelINFOs() {
                 if(tvObject!=null){
                     tvObject.showAactiveChannel();
@@ -7572,7 +8241,12 @@ class Q15_Main{
                         "5 -- Kanal Değiştir\n" +
                         "6 -- Kanal Bilgisini Goster\n" +
                         "7 -- Televizyon Kapat\n" +
-                        "8 -- Menüyü Göster\n");
+                        "8 -- Menüyü Göster\n"+
+                        "9 -- addNewChannel\n"+
+                        "10 - showAllTvChannels\n"+
+                        "11 - showTvInfos\n"+
+                        "0 -- systemExit"
+                );
             }
 
             private static void addNewChannel()
@@ -7589,16 +8263,20 @@ class Q15_Main{
 
 
             }
+
+
         class TV
         {
             Scanner scan=new Scanner(System.in);
             private String Brand;
             private int Size;
-            ArrayList <Channel> ChannelList ;//composition - Channel data type polimorphism - baska sınıfın nesnesi
+            public static List <Channel> ChannelList ;//composition - Channel data type polimorphism - baska sınıfın nesnesi
 
             private boolean turnOn;//false
             private int volume;//0
             int activeChannel;//0
+
+            public static TV tvObject;
 
 
 
@@ -7609,6 +8287,7 @@ class Q15_Main{
                 activeChannel=1;
                 ChannelList=new ArrayList<>();//CHANNELSLIST
                 setUpDefaultChannels();//CHANNELS
+                tvObject=this;
             }
 
             public String getBrand() {return Brand;}
@@ -7620,8 +8299,8 @@ class Q15_Main{
             public Scanner getScan() {return scan; }
             public void setScan(Scanner scan) { this.scan = scan;}
 
-            public ArrayList<Channel> getChannelList() { return ChannelList;}
-            public void setChannelList(ArrayList<Channel> ChannelList) {this.ChannelList = ChannelList;}
+            public List<Channel> getChannelList() { return ChannelList;}
+            public void setChannelList(List<Channel> ChannelList) {this.ChannelList = ChannelList;}
 
             public boolean isTurnOn() { return turnOn;}
             public void setTurnOn(boolean turnOn) { this.turnOn = turnOn;}
@@ -7855,11 +8534,11 @@ class Q15_Main{
 
         static class BSinifi
         {
-            static int y = x++;//1212 x:1211
+            static int y = x++;//1212 x:1213
 
             static class Z
             {
-                static int z = y++;//1212 y:1211
+                static int z = y++;//1212 y:1213
             }
         }
     }
@@ -7873,6 +8552,7 @@ class Q15_Main{
             System.out.println(Q16.BSinifi.y);//1212
 
             System.out.println(Q16.BSinifi.Z.z);//1212
+            System.out.println(Q16.x);//1213
         }
     }
         // </editor-fold>
@@ -7899,6 +8579,7 @@ class Q15_Main{
 
 
         // </editor-fold>
+
     //<editor-fold defaultstate="collapsed" desc=" QUESTION-18 ">
 
     class Q18
@@ -7948,6 +8629,7 @@ class Q15_Main{
         }
     }
         // </editor-fold>
+
     //<editor-fold defaultstate="collapsed" desc=" QUESTION-19 ">
 
     class Q19
