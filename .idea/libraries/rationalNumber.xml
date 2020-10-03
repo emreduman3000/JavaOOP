@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="rationalNumber">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../rationalNumber/out/artifacts/rationalNumber_jar/rationalNumber.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

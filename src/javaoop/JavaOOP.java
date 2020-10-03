@@ -15,8 +15,6 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Random;
 import java.util.Scanner;
-import org.w3c.dom.Node;
-import package2.*;//import all public classes 
 
 /**
  *
@@ -249,18 +247,23 @@ public class JavaOOP extends KalitimliOrnek//main method var bu methodda onu kul
         //superclass s=new subsubclass(); s.naber();
         //MainClasst.main();
         //MainClasstr.main();
-        ComparableUsage.main();
+        //ComparableUsage.main();
         //nestedClassUsage.main();
         //main_innerClass.main();
         //Main_Local.main();
         //AnonymousInnerClass.main();
         //Generic_Main.main();
         //generic_ArrayList.main();
-        //genericMethod.main();
+        //GenericMethod.main();
         //Animal_Main.main();
         //IfPractice.main();
         //OyunaGiris.main();
-        //RationalNumbers o=new RationalNumbers();        o.main();
+        RationalNumbers rationalNumbers=new RationalNumbers(1,2);
+        RationalNumbers rationalNumbers2=new RationalNumbers(1,3);
+        RationalNumbers sum=rationalNumbers.add(rationalNumbers2);
+        System.out.println(sum);//5/6
+        RationalNumbers o=new RationalNumbers();        o.main();
+
         //PerfectNumber.main();
     }
     
@@ -2058,9 +2061,13 @@ class SabitBilgiler
         static{//ilk üstteki static calısır
             en=5; alan=en*boy; System.out.println(alan);//5*10 = 50
             int abc=10;//burada atadığım degerler anca yine bu blok icinde kullanılırlar - baska static blokta ve classtaki baska bir methodda işlem göremezler
-            int abc2=10;//local variable dır
+            int abc2=10;//static local variable dır
         }
-       
+
+        //static block her nesne olustrulunca calısmaz
+        //sadece 1kez calısır.
+        //static degerler her nesnede ortaktır
+        //staic blogun asıl amacı static variable method tanımlamaktır
         static{//her değer xtatic olmak zorunda
             //abc2++; error
             en=4;//deger degiştirmek için kullandık
@@ -2069,6 +2076,10 @@ class SabitBilgiler
             System.out.println(alan);//print edebiliriz 40
             
             int abc2=15; //yeni bir local variable olusturdum
+
+        }
+        {
+           //static yada initializer blok icine method tanımlanamz
         }
         
         public personnel() //constructor her cagrıldıgında both inside of constr. and insides of static and nonStatic blocks runs
@@ -2593,6 +2604,7 @@ class dede
     {
         System.out.println("a default");
     }
+
     dede(int a)
     {
         System.out.println("a");
@@ -4335,7 +4347,7 @@ class Abstract2
     */
     public static void main() {
 
-        //GeometricShape nesne = new GeometricShape();//abstract class cannot be initialized 
+        //GeometricShape nesne = new GeometricShape();//abstract class cannot be initialized
         
         System.out.println("********** SQUARE **********");
         GeometricShape square = new Square(12);//square nesnesi geometricShape classına özgü methodlara erişir
@@ -5130,6 +5142,11 @@ class run
 
 abstract interface kisii //static final olamaz sadece defaulttur(package icinden erisilir,default olarak abstract tır
 {
+    interface kisi02
+    {
+
+    }
+
     //Java 8 ile beraber default ve static metot tanımları yapabiliyoruz.
 
     //bir interface'in icinde constructor olmaz, static ve normal instance initializng block olmaz
@@ -5604,7 +5621,9 @@ class class2//baska
   //<editor-fold defaultstate="collapsed" desc=" member innerClass ">
 
 class nestedClassUsage {
-    
+
+    interface I01{}//inner interface olabilir
+
     public static void main ()
     {
         String[] cities={"istanbul","toronto","köln"};
@@ -5653,7 +5672,12 @@ class outerClass
     public int publicVar;
     static int staticVar;
     final int finalVar=10;
-    
+
+    /*
+    An inner class is a nested class that is not explicitly or implicitly declared static.
+    Inner classes may not declare static initializers (§8.7) or member interfaces.
+    Inner classes may not declare static members, unless they are compile-time constant fields
+     */
     private void privateVar()
     {   
         innerClass nesne=new innerClass();//inerclass da olsa nesne üretilmeli
@@ -5670,8 +5694,7 @@ class outerClass
     final void finalVar(){};
     static void staticVar(){};
 
-    
-    
+
     
     private class privateInnerClass{}
     
@@ -5685,7 +5708,7 @@ class outerClass
         final int finalInnerClassVar=10;
         static final int staticFinalVar=10;//static final olabilir
 
-        {//static variable method block tanımlanamaz ama cagırılabilir
+        {//static variable = method = block tanımlanamaz ama cagırılabilir
             System.out.println(staticVar);
             staticVar();
         }
@@ -5725,7 +5748,11 @@ class outerClass
     }
    
     protected class protectedInnerClass{ }///static final var olabilir ama static final method olamaz
-    public class publicInnerClass{ }
+    public class publicInnerClass
+    {
+        //interface I01{}//inner inner interface olamaz
+        abstract class A01 {}
+    }
     final class finalInnerClass{}
     abstract class abstractInnerClass{}
     static class staticInnerClass{}//inner classlar static olabilir
@@ -5938,7 +5965,7 @@ class local_innerClass
 
     static
     {
-        class Division//static local inner class
+        class Division//static  inner member class
         {
             public String divide(int n1,int n2 )
             {
@@ -6057,6 +6084,8 @@ class AnonymousInnerClass
     {
         System.out.println("AnonymousInnerClass_Method");
     }
+    public void methoddd() { System.out.println("lbfsvlbsjv"); }
+
     static public void main()
     {
         System.out.println("*****AnonymousInnerClass********");
@@ -6068,8 +6097,15 @@ class AnonymousInnerClass
         
         calculator2 nesne3=new calculator3();
         System.out.println(nesne2.add(1, 2));//total:3
-        
-        //AnonymousInnerClass
+
+        /*
+         üst sınıfı GeometrikSekil olan bir alt sınıf ve bunun
+        nesnesi oluştuurlur ve bu nesne üst sınıf tipindeki değişkene bağlanmış olur.
+        Burda da polimorfizm kullanmış oluruz aslında.
+        GeometrikSekil nesne = new IsimsizInnerClass() gibi bir durum oldu.
+         */
+
+        //AnonymousInnerClass - isimsiz local class superclass'ı calculator2
         calculator2 nesne4=new calculator2()///AnonymousInnerClass LUSTURDUM VE İSTEDİĞİM METHODU OVERRİDE ETTİM
         {
             @Override
@@ -6091,8 +6127,9 @@ class AnonymousInnerClass
         };
         System.out.println(nesne44.add(1, 4));//AnonymousInnerClass nesnesi ile içindeki add methodunu cagırdım/polimorphism varmış gibi
 
-    
-    
+
+
+
         AbstractClass nesne5=new AbstractClass()
         {
             @Override
@@ -6130,7 +6167,7 @@ class AnonymousInnerClass
         };
         nesne6.interfacePublicAbstractMethod();
     
-        AnonymousInnerClass nesne7=new AnonymousInnerClass()
+        AnonymousInnerClass nesne7=new AnonymousInnerClass()//local class yazdım
         {
             @Override
             public String toString() {
@@ -6152,7 +6189,16 @@ class AnonymousInnerClass
         System.out.println(nesne7.toString());//javaoop.AnonymousInnerClass$3@8bd1b6a
     }
     
-    
+
+}
+
+//ANONYMOUS CLASS OLMASAYDI YENI BİR SUBCLASS OLUSTURMAK ZORUNDA KALACAKTIM
+class InnerClassOFAnonymousClass extends AnonymousInnerClass
+{
+    @Override
+    public void methoddd() {
+        System.out.println("overide edildi");
+    }
 }
 
 /*
@@ -6245,8 +6291,19 @@ class outerClasss
     
     public void Method(){System.out.println("method");}
     public static void staticMethod(){System.out.println("staticMethod");}
-    
-    
+
+    final class qas{}
+    static final class qwer{
+        static int a=1;
+        static class InnerInnerClass{static int a=2;}
+        class dafav{}
+    }
+    static abstract public class asdf
+    {
+        //static public inner class olabilir
+        //abstract public inner class olabilir
+        //aynı anda static abstract public inner class da olabilir
+    }
     static public class staticInnerClass
     {
        int InnerClassVar;
@@ -6257,6 +6314,10 @@ class outerClasss
        static{
            staticInnerClassStaticVar=1;
            //InnerClassVar=1; error
+           //number++; static değil direk dış classın field ına ersemez
+
+           outerClasss nesne=new outerClasss();
+           nesne.number++;
        }
        void staticInnerClassMethod(){
            //kendi attributelerine ulasır 
@@ -6379,10 +6440,12 @@ class Generic_Main
                 Arrays.stream(array).forEach(t-> System.out.println(t));
             }
         };
+        nesne.print(names);
         
         //SO GENERIC CLASS CONCEPT ARE REQUIRED TO BE USED not to create classes which have diferent data type
         Generic_Main.GenericClass<String> nesne2=new Generic_Main().new GenericClass<String>();
         nesne2.print(names);//type:String'tir
+        //nesne2.print(numbers);error
         Generic_Main.GenericClass<Integer> nesne3=new Generic_Main().new GenericClass<>();
         nesne3.print(numbers);//type:Integer'tir
         Generic_Main.GenericClass<Character> nesne4=new Generic_Main().new GenericClass<Character>();
@@ -6396,6 +6459,9 @@ class Generic_Main
 
     class GenericClass<wishedClass> //static generic member inner class
     {
+       // we can't have static method in a nested inner class
+       // because an inner class is implicitly associated with an object
+       // of its outer class so it cannot define any static method for itself.
        public void print(wishedClass[] array)
         {
             for(wishedClass i : array)
@@ -6439,10 +6505,9 @@ class Generic_Main
 
 // </editor-fold>
 
-
   //<editor-fold defaultstate="collapsed" desc="Generic Method ">
 
-class genericMethod
+class GenericMethod
 {
     //NOTE: INTERFACES CAN ALSO BE GENERIC.FOR EXP. Comparable<T> interface can take any class as parameter and commit it into its compare(T) method
     public static void main()
@@ -6452,16 +6517,21 @@ class genericMethod
         Integer[] numbers={1,2,3};
         Double[] doubles={1.1,2.2,3.3};
         Character[] chars={'a','b','c'};
-        print(names);////emre duman komando 
-        print(numbers);////emre duman komando 
-        print(chars);//a b c 
+
+        //4 different method by overloading
+        print(names);////emre duman komando
+        print(numbers);//
+        print(chars);//a b c
+        print(doubles);
         
         
         genericMethod(names);//emre duman komando 
         genericMethod(numbers);//1 2 3 
         genericMethod(chars);//a b c 
+        genericMethod(doubles);//1.1,2.2,3.3
+
+        //classType extends Number dedik
         //genericMethod2(chars);//errror
-        
         genericMethod2(numbers);//1 2 3 
        // genericMethod2(doubles);//Double Numberın altıdır, ama intValue metodu işi bozar
         
@@ -6478,8 +6548,15 @@ class genericMethod
         printt2(numbers);
         printt2(chars);
         */
-        
-        
+
+
+        ArrayList<Integer> intArrayList= new ArrayList<Integer>();
+        Integer[] intArray={6,7,8};
+        for(Object i : intArray)//Integer deseydim casting yapmama gerek yoktu
+        {
+            intArrayList.add((Integer)i);//i Object olarak geliyor ama intArrayList int degerler tutar
+        }
+        GenericMethod.NestedInnerStaticGenericClass.genericMethod(intArrayList);
     }
     
     static public void printt(Object i)//polimorphism olayı methodlarda işimizi kolaylastırır
@@ -6503,7 +6580,8 @@ class genericMethod
     static public <classType extends Number> void genericMethod2(classType[] array)//Number Class is SuperClass of Float Integer Double
     {//farklı farklı sınıflar bu methodu kullansın ama belli bir katagoridekiler kulansın diyorsak extends .... dicez
         for(classType i : array)
-             System.out.print(((Float)i).floatValue()+" ");
+             //System.out.print(((Float)i).floatValue()+" ");//java.lang.ClassCastException:
+            System.out.println((Integer)i.intValue()+ " ");
         System.out.println("");
     } 
     
@@ -6544,15 +6622,29 @@ class genericMethod
         for(Integer i : array)
             System.out.print(i+" ");
         System.out.println("");
-    } 
-    
+    }
+
     static public void print(Character[] array)
     {
         for(Character i : array)
             System.out.print(i+" ");
         System.out.println("");
-    }   
-    
+    }
+    static public void print(Double[] array)
+    {
+        for(Double i : array)
+            System.out.print(i+" ");
+        System.out.println("");
+    }
+
+    static public class NestedInnerStaticGenericClass<classType1>
+    {
+        static public <classType>void genericMethod(List<classType> list)
+        {
+            list.stream().forEach(t-> System.out.println(t) );
+        }
+    }
+
 }
 // </editor-fold>
 
@@ -6591,13 +6683,7 @@ class genericMethod
 
                 System.out.println(arraylist2);//[emre, duman, komando]
 
-                for(Object i: arraylist)
-                    System.out.println(String.valueOf(i).length());
-                 /*
-                4
-                5
-                7
-                */
+                arraylist2.stream().forEach(t-> System.out.println(t));
             }
         }
 
@@ -6984,48 +7070,23 @@ static final int GET_THE_CPU = 1;
 
   //<editor-fold defaultstate="collapsed" desc="UsageOfPackages  ">
 
-    //intelliJ'de yazdım kodları
-
-/*
-package packageusage;
-
-import package2.Package2Class;
-import org.jsoup.nodes.Node;
-
-import java.util.Scanner;
-//import org.w3c.dom.Node;olmaz cunku complier sasırır hangi packageı kullanacagını
-
-public class UsageOfPackage
-{
-    public static void main(String[] args)
-    {
-        //bircok Node classı var farklı packagelarda
-        Node node=null;
-        org.w3c.dom.Node node2=null;
-        Package2Class object=null;
+//JDK 8 DE nODE CLASSLARI VAR
+//com.emreduman package ına git
 
 
-        Deneme d=new Deneme();//aynı packagedaki classı import etmene gerek yok
-        //bir package'da aynı isimde classlar olamaz
-
-
-
-    }
-}
-class Deneme
-{
-
-}
-
-
-
-
-
-*/
  
-// </editor-fold>//watch again
+// </editor-fold>//watch again JDK 8
 
   //<editor-fold defaultstate="collapsed" desc="Rational Numbers - create jar file ">
+
+//File>ProjectStructure>Artifacts> click + > JAR >from modules with dependecies>ok>apply>okay
+//Build>Build Artifacts>Build
+//out folder'ında artifacts diye sub-folder olustu
+//yukardaki 3 line'ı projeyi yazdıgım workplacede artifact diye dosya içinde jar file olusturdum
+//bu jar  JavaOOP workplace'imde kullanmak için libraries olarak eklemeliyim
+//File>ProjectStructure>libraries> clck + > java > jar file'ın oldugu projeye git jarı şeç>apply>okay
+//artık external librarieslerde jar file'ım var
+//silmek için librarieslere git > click -
 
 
 // ı creeated a class named RationalNumbers and copied-pasted the codes below into that class
@@ -7167,7 +7228,7 @@ class RationalNumbers implements Comparable<RationalNumbers>
             sortedList.add(i, list.get(i));
         }
         Collections.sort(sortedList);
-        Collections.sort(sortedList,Collections.reverseOrder());//tamtersi sıralama yaparr
+        //Collections.sort(sortedList,Collections.reverseOrder());//tamtersi sıralama yaparr
         System.out.println(sortedList);
         System.out.println("size:"+sortedList.size());
     }
@@ -7253,10 +7314,11 @@ class RationalNumbers implements Comparable<RationalNumbers>
     
     @Override
     public int compareTo(RationalNumbers o) {
-        if(this.substract(o).share>0)//1/2 - 2/2 >0 ise kucugu al
-            return 1;
+        if(this.substract(o).share>0)//1/2 - 2/2 >0
+            //this ilk sayıyı barındıran nesne, o ise 2.sayı
+            return -1;//büyük sayı için 1 öne koy
         else if(this.substract(o).share<0)
-            return -1;//buyugu al
+            return 1;//küçük sayı için -1 al arkaya koy
         else
             return 0; //esitse bir aynı bırak
         
@@ -7299,19 +7361,28 @@ class RationalNumbers implements Comparable<RationalNumbers>
                     showRationalNumbers(); break;
 
                 case 3:
-                    System.out.println("1.For Addition - Press 1\n"
-                            + "2.For Substraction - Press 2\n"
-                            + "3.For Multiplication - Press 3\n"
-                            + "4.For Addition - Press 4");
-                    int option=scan.nextInt();
-                    
-                    if(option>0 && option<5 )
-                        transaction(option); 
-                    else
-                        System.out.println("Wrong Transaction!!!");
- 
-                    break;
-                
+                    try
+                    {
+                        System.out.println("1.For Addition - Press 1\n"
+                                + "2.For Substraction - Press 2\n"
+                                + "3.For Multiplication - Press 3\n"
+                                + "4.For Addition - Press 4");
+                        int option=scan.nextInt();
+
+                        if(option>0 && option<5 )
+                            transaction(option);
+                        else
+                            System.out.println("Wrong Transaction!!!");
+
+                        break;
+
+                    }
+                    catch(Exception e)
+                    {
+
+                        System.out.println("Selection is wrong");
+                    }
+
                 case 4:
                     RationalNumbers obje=new RationalNumbers(2,4);
                     RationalNumbers obje2=new RationalNumbers(3,4);
