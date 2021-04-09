@@ -1,8 +1,9 @@
 package jarfile;
 
+
 import rationalnumber.RationalNumbers;
 
-public class JarFileDeneme extends RationalNumbers{//JDK 8-11-14 DOES NT MATTER
+public class JarFileDeneme extends RationalNumbers {//JDK 8-11-14 DOES NT MATTER
     public static void main(String[] args) {//main + enter
 
         RationalNumbers rs01=new RationalNumbers(1,2);
